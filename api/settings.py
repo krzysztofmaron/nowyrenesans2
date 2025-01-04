@@ -19,11 +19,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECRET_KEY = os.environ.get('SECRET_KEY')
 SECRET_KEY = '^b*k4*fq_!w=%am4zrpxkrlszzruy!*hb3uglcrhdh00=@p_^s'
+API_KEY = '613d7984-a0ee-4558-b026-9882ac5a97a6'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app', 'www.visua.media', 'visua.media']
+ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app']
 
 TAILWIND_APP_NAME = 'theme'
 INTERNAL_IPS = [
@@ -41,7 +42,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'tailwind',
-    'theme'
+    'theme',
+    'rest_framework'
 ]
 
 MIDDLEWARE = [
@@ -81,7 +83,12 @@ WSGI_APPLICATION = 'api.wsgi.app'
 # Note: Django modules for using databases are not support in serverless
 # environments like Vercel. You can use a database over HTTP, hosted elsewhere.
 
-DATABASES = {}
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
+}
 
 
 # Password validation

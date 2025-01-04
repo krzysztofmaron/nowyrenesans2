@@ -44,19 +44,21 @@ module.exports = {
     theme: {
         extend: {
             colors: {
-                customDark: "#242424",
-                customPurple: "#5E36FF",
-                hoverPurple: "#502CE3",
-                customGray: '#ABABAB',
-                lighterPurple: '#8668FF',
-                customHover: '#343434',
-                hoverHover: '#282828',
-                customHoverTrans: '#40404050',
+                'darkBg': '#0C0C0C',
+                'mainRed': '#FF0000',
+                'redTransparent': '#FF00005C',
+                'red10': '#FF00001A',
+                'darkgray': '#222222',
+                'grayBorder': '#404040',
+                'tGray': '#9A9A9A1A',
+                'redtext': '#BB4A4A',
             },
             fontFamily: {
-                spartan: ["League Spartan", "sans-serif"],
-                opensans: ["Open Sans", "sans-serif"],
+                inter: ['Inter', 'sans-serif'],
             },
+            aspectRatio: {
+                'wide': '4 / 1',
+            }
         },
     },
     plugins: [

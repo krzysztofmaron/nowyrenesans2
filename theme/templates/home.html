@@ -2,187 +2,508 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    {% tailwind_css %}
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="{% static 'img/icon.png' %}" type="image/png">
-    <title>Visua Media</title>
-    <script src="{% static 'js/home.js' %}"></script>
-    <link rel="stylesheet" href="{% static 'css/scroll.css' %}">
-</head>
-<body class="bg-customDark overflow-x-hidden" id="home">
-    <nav id="nav-big" class="hidden xl:flex transition-all duration-500 items-center justify-between h-32 opacity-0 xl:opacity-100 text-white text-xl font-bold px-16 font-opensans select-none">
-        <span><img src="{% static 'img/visua_media_logo.png' %}" alt="company logo" class="w-10 cursor-pointer"></span>
-        <span class="cursor-pointer hover:text-[#BFAAFF] whitespace-nowrap transition-all" id="HomeBtn">Home</span>
-        <span class="cursor-pointer hover:text-[#BFAAFF] whitespace-nowrap transition-all" id="BenefitsBtn">Benefits</span>
-        <button class="bg-customPurple h-[6vh] w-56 flex whitespace-nowrap items-center justify-center rounded-md hover:bg-hoverPurple transition-all" id="BookACallBtn"><span class="text-3xl">BOOK A CALL</span></button>
-        <span class="cursor-pointer hover:text-[#BFAAFF] whitespace-nowrap transition-all" id="CaseStudiesBtn">Case Studies</span>
-        <span class="cursor-pointer hover:text-[#BFAAFF] whitespace-nowrap transition-all" id="TestimonialsBtn">Testimonials</span>
-        <span class="cursor-pointer hover:text-[#BFAAFF] whitespace-nowrap transition-all" id="FAQBtn">FAQ</span>
-    </nav>
-    <nav id="nav-small" class="hidden xl:flex transition-all duration-500 pointer-events-none opacity-0 xl:opacity-0 backdrop-blur-2xl items-center gap-24 h-24 rounded-xl z-50 text-white text-xl font-bold px-16 font-opensans select-none fixed -top-24 top-2 left-[50%] -translate-x-[50%]">
-        <span><img src="{% static 'img/visua_media_logo.png' %}" alt="company logo" class="w-10 cursor-pointer"></span>
-        <span class="cursor-pointer hover:text-[#BFAAFF] whitespace-nowrap transition-all" id="HomeBtn2">Home</span>
-        <span class="cursor-pointer hover:text-[#BFAAFF] whitespace-nowrap transition-all" id="BenefitsBtn2">Benefits</span>
-        <button class="bg-customPurple h-[6vh] w-72 flex whitespace-nowrap items-center justify-center rounded-md hover:bg-hoverPurple transition-all" id="BookACallBtn2"><span class="text-3xl">BOOK A CALL</span></button>
-        <span class="cursor-pointer hover:text-[#BFAAFF] whitespace-nowrap transition-all" id="CaseStudiesBtn2">Case Studies</span>
-        <span class="cursor-pointer hover:text-[#BFAAFF] whitespace-nowrap transition-all" id="TestimonialsBtn2">Testimonials</span>
-        <span class="cursor-pointer hover:text-[#BFAAFF] whitespace-nowrap transition-all" id="FAQBtn2">FAQ</span>
-    </nav>
-    <div class="hidden xl:block">
-        
-        <h1 class="text-white text-5xl xl:text-7xl font-opensans font-bold mt-96 ml-6 xl:ml-24 tracking-tighter load-left">Coaches &<br>Niche Experts</h1>
-        <p class="text-customGray text-2xl ml-24 mt-8 leading-10 font-light load-left">With our expertise in <span class="font-bold text-white">content creation</span> and <span class="font-bold text-white">tailored strategies</span>,<br>
-            we’ll help you grow your <span class="text-[#D45656] font-bold">YouTube channel</span><br>
-            and create <span class="text-lighterPurple font-bold">strong authority</span> in your niche that will<br>
-            boost your <span class="text-lighterPurple font-bold">conversion rates.</span>
-        </p>
-        
-        <!-- <img id="imageLanding" src="{% static 'img/image01.png' %}" alt="" class="absolute w-96 right-[9.5vw] top-[15vh] -z-40 select-none">
-        <img id="imageLanding" src="{% static 'img/image02.png' %}" alt="" class="absolute w-96 right-[5vw] top-[58.5vh] -z-40 select-none">
-        <img id="imageLanding" src="{% static 'img/image03.png' %}" alt="" class="absolute w-96 right-[24.35vw] top-[35vh] -z-40 select-none"> -->
-        <img id="imageLanding" src="{% static 'img/image04.png' %}" alt="" class="absolute w-[35vw] right-[5vw] top-[10vh] -z-40 select-none">
-        <span class="text-[#161616] text-[640px] font-opensans font-bold absolute -top-20 left-0 -z-50 scale-[1.1] select-none">VISUA</span>
+	<head>
+    <title>Nowy Renesans</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<script src="{% static 'js/home.js' %}"></script>
+		{% tailwind_css %}
+	</head>
 
-        <div class="h-56 w-full bg-gradient-to-t from-[#242424] to-[#24242400] absolute left-0 top-[85vh] -z-10"></div>
-    </div>
-    <!-- BENEFITS SECTION -->
-    <div class="mt-36 py-36 hidden xl:flex flex-col items-center" id="Benefits">
-        <h1 class="text-5xl text-white font-opensans font-bold scroll-appear">Why you need a strategicaly managed YouTube channel.</h1>
-        <div class="flex flex-wrap px-56 w-full justify-between mt-24 gap-y-8">
-            <div class="rounded-md font-opensans flex flex-col gap-6 hover:bg-customHoverTrans backdrop-blur-2xl p-4 w-[37.5vw] transition-all scroll-left">
-                <div class="flex gap-4 items-center text-white font-bold text-4xl select-none">
-                    <img src="{% static 'img/diamond.png' %}" alt="diamond">
-                    <h1>build authority</h1>
-                </div>
-                <p class="text-customGray text-xl">
-                    YouTube builds enormous authority and trust.<br>
-                    Having your own channel can easily get you more clients.<br>
-                    They will already trust you, so selling isn’t a thing anymore.
-                </p>
-            </div>
-            <div class="rounded-md font-opensans flex flex-col gap-6 hover:bg-customHoverTrans backdrop-blur-2xl p-4 w-[37.5vw] transition-all scroll-right">
-                <div class="flex gap-4 items-center text-white font-bold text-4xl select-none">
-                    <img src="{% static 'img/umbrella.png' %}" alt="diamond">
-                    <h1>low effort</h1>
-                </div>
-                <p class="text-customGray text-xl">
-                    We do almost everything for you. You will have to just record videos<br>
-                    and we’ll take care of thumbnails, SEO, publishing and optimizations.<br>
-                    We’ll also regularly update you on strategies and results.
-                </p>
-            </div>
-            <div class="rounded-md font-opensans flex flex-col gap-6 hover:bg-customHoverTrans backdrop-blur-2xl p-4 w-[37.5vw] transition-all scroll-left">
-                <div class="flex gap-4 items-center text-white font-bold text-4xl select-none">
-                    <img src="{% static 'img/money.png' %}" alt="diamond">
-                    <h1>get clients</h1>
-                </div>
-                <p class="text-customGray text-xl">
-                    Clients come on autopilot, you are gaining new viewers and their<br>
-                    trust with every video. There is no need for manual outreach or paid<br>
-                    ads and the videos will generate views for years to come.
-                </p>
-            </div>
-            <div class="rounded-md font-opensans flex flex-col gap-6 hover:bg-customHoverTrans backdrop-blur-2xl p-4 w-[37.5vw] transition-all scroll-right">
-                <div class="flex gap-4 items-center text-white font-bold text-4xl select-none">
-                    <img src="{% static 'img/clock.png' %}" alt="diamond">
-                    <h1>efficiency</h1>
-                </div>
-                <p class="text-customGray text-xl">
-                    It makes everything easier. Think about how much time you could<br>
-                    save on explaining everything to a potential client and gaining their<br>
-                    trust if you could just let your channel do that.
-                </p>
-            </div>
-        </div>
-    </div>
-    <!-- CASE STUDY SECTION -->
-    <div class="py-36 hidden xl:flex flex-col items-center" id="Case-Studies">
-        <h1 class="text-5xl text-white font-opensans font-bold scroll-appear">Our Latest Case Study</h1>
+	<body class="bg-darkBg font-inter">
+		<div id="sparks-overlay" class="sparks w-full h-full">
 
-        <span class="h-[50%] w-12 absolute -left-12 rounded-xl bg-[#A100FF] blur-2xl scroll-appear"></span>
-        <span class="h-[50%] w-12 absolute -right-12 rounded-xl bg-[#A100FF] blur-2xl scroll-appear"></span>
+			<div id="hero" class="h-[100svh] w-full flex gap-24 justify-center items-center">
+				<div class="flex flex-col gap-10">
+					<h1 class="text-white font-black text-6xl">TWOJA TRANSFORMACJA<br>ZACZYNA SIĘ TUTAJ</h1>
+					<p class="text-neutral-400 text-2xl">Odkryj system, który w 3 miesiące pozwoli Ci osiągnąć<br>cele i zbudować życie, jakiego zawsze pragnąłeś.</p>
+					<div class="flex gap-10 items-center text-white text-2xl">
+						<button id="order-btn" class="bg-mainRed font-bold rounded-md h-16 w-72">Zacznij Teraz</button>
+						<p class="font-light">lub</p>
+						<button id="vsl-btn" class="bg-red10 border border-mainRed rounded-md h-16 w-72 font-bold backdrop-blur-sm">Obejrzyj Wideo</button>
+					</div>
+					<div class="flex text-neutral-400 gap-24 mt-16">
+						<div class="flex flex-col items-center">
+							<h1 class="text-6xl font-bold">16+</h1>
+							<p class="font-semibold text-base">Ekskluzywnych Kursów</p>
+						</div>
+						<div class="w-[1px] h-20 bg-neutral-400"></div>
+						<div class="flex flex-col items-center">
+							<h1 class="text-6xl font-bold">300+</h1>
+							<p class="font-semibold text-base">Aktywnych Użytkowników</p>
+						</div>
+					</div>
+				</div>
+				<div class="flex relative w-[28vw] h-[28vw]">
+					<img src="{% static 'img/nrBig.png' %}" alt="" class="w-[100%] h-[100%]">
+					<div class="absolute left-0 top-0 w-full h-full rounded-[50%] bg-redTransparent blur-3xl"></div>
+				</div>
+			</div>
 
-        <div class="flex gap-6 mt-24 p-4 rounded-xl border-[1px] bg-[#32323275] backdrop-blur-2xl border-[#525252] scroll-appear">
-            <div class="flex gap-6 pr-6">
-                <img src="{% static 'img/youtube.png' %}" alt="" class="w-[35vw] select-none">
-                <div class="flex flex-col py-2 justify-between">
-                    <h1 class="font-opensans font-bold text-4xl text-white">Kacper Chalcarz</h1>
-                    <p class=" text-xl font-opensans text-customGray">
-                        In two moths of working together we managed to increase<br>
-                        viewers’ engagement and double the number of our client’s<br>
-                        paid community members.<br>
-                        He went from monthly earnings of 9,000 to over 20,000<br>
-                        during our collaboration.
-                    </p>
-                    <div class="flex gap-2 items-center self-end select-none">
-                        <img src="{% static 'img/Notion_app_logo.png' %}" alt="" class="w-6 h-6">
-                        <a href="https://cloudy-cayenne-28e.notion.site/Case-study-Kacper-Chalcarz-13f6829d32a8803695c3f53c7c694ee4" target="_blank" class="text-lighterPurple font-opensans underline text-xl">open in notion</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- VIDEOS -->
-    <div class="py-36 hidden xl:flex flex-col items-center" id="Testimonials">
-        <h1 class="text-5xl text-white font-opensans font-bold scroll-appear">A few words from our clients</h1>
-        <iframe class="my-24 scroll-appear" width="640" height="360" src="https://www.youtube.com/embed/BpSuztjpWMU?si=H-UcrnJNlHpCPIWJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </div>
-    <!-- STEPS -->
-    <div class="py-36 hidden xl:flex flex-col items-center" id="FAQ">
-        <h1 class="text-5xl text-white font-opensans font-bold scroll-appear">Our simple process</h1>
-        <div class="flex flex-wrap my-24 gap-8 w-[60%]">
-            <div class="flex flex-col hover:bg-customHoverTrans backdrop-blur-2xl p-4 rounded-md gap-4 transition-all cursor-pointer scroll-left">
-                <h1 class="text-3xl text-white font-opensans font-bold"><span class="text-lighterPurple">1.</span>&nbsp;detailed audit</h1>
-                <p class="text-xl text-customGray font-opensans w-[33vw]">We analyze your channel and current state of your online business and create the best action plan for your growth.</p>
-            </div>
-            <div class="flex items-center w-80 select-none pointer-events-none scroll-left">
-                <img src="{% static 'img/arrow.png' %}" alt="">
-            </div>
-            <div class="flex items-center w-80 select-none pointer-events-none scroll-right-x">
-                <img src="{% static 'img/arrow.png' %}" alt="">
-            </div>
-            <div class="flex flex-col hover:bg-customHoverTrans backdrop-blur-2xl p-4 rounded-md gap-4 transition-all cursor-pointer scroll-right">
-                <h1 class="text-3xl text-white font-opensans font-bold"><span class="text-lighterPurple">2.</span>&nbsp;strategy</h1>
-                <p class="text-xl text-customGray font-opensans w-[33vw]">After diagnosing we come up with a strategy to make sure that you grow as fast as possible while gaining clients on autopilot.</p>
-            </div>
-            <div class="flex flex-col hover:bg-customHoverTrans backdrop-blur-2xl p-4 rounded-md gap-4 transition-all cursor-pointer scroll-left">
-                <h1 class="text-3xl text-white font-opensans font-bold"><span class="text-lighterPurple">3.</span>&nbsp;content creation</h1>
-                <p class="text-xl text-customGray font-opensans w-[33vw]">Almost everything happens on our side. You only need to record videos and upload them to a shared drive.</p>
-            </div>
-            <div class="flex items-center w-80 select-none pointer-events-none scroll-left">
-                <img src="{% static 'img/arrow.png' %}" alt="">
-            </div>
-            <span class="block w-80 select-none pointer-events-none"></span>
-            <div class="flex flex-col hover:bg-customHoverTrans backdrop-blur-2xl p-4 rounded-md gap-4 transition-all cursor-pointer scroll-right">
-                <h1 class="text-3xl text-white font-opensans font-bold"><span class="text-lighterPurple">4.</span>&nbsp;packaging</h1>
-                <p class="text-xl text-customGray font-opensans w-[33vw]">After You upload the video, we do eveything else: editing, thumbnails, YouTube SEO, uploading and more.</p>
-            </div>
-        </div>
-    </div>
-    <!-- BOOK A CALL -->
-    <div class="hidden py-36 xl:flex flex-col items-center" id="BookACall">
-        <h1 class="text-5xl text-white font-opensans font-bold scroll-appear">Book a call with us!</h1>
-        <div class="calendly-inline-widget scroll-appear" data-url="https://calendly.com/visua-contact/30min?background_color=343434&text_color=ffffff&primary_color=8668FF" style="min-width:1200px;height:700px;"></div>
-        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-    </div>
-    <!-- FOOTER -->
-    <div class="hidden xl:flex gap-4 px-12 border-t border-customHover text-customGray font-opensans py-4 items-center">
-        <img src="{% static 'img/visua_media_logo.png' %}" alt="" class="h-4 select-none pointer-events-none">
-        <p class="select-none pointer-events-none">© 2024 Visua Media</p>
-        <p class="absolute right-12 text-lighterPurple">contact@visua.media</p>
-    </div>
-    <!-- GO-UP-BTN -->
-    <span class="hidden xl:flex items-center justify-center bg-customHover hover:bg-hoverHover hover:border border-customPurple w-16 h-16 rounded-lg fixed bottom-24 right-12 select-none cursor-pointer pointer-events-none opacity-0 scale-0 transition-all" id="upBtn">
-        <img src="{% static 'img/arrow-up.svg' %}" alt="" class="w-6 pointer-events-none select-none cursor-pointer">
-    </span>
-    
-    <div class="flex items-center justify-center flex-col xl:hidden w-[100vw] h-[100vh]">
-        <img src="{% static 'img/construction.png' %}" alt="" class="w-24">
-        <h1 class="text-xl text-center text-customGray w-72 my-12">If you're seing this it means our site is in development.</h1>
-        <p class="text-md text-center text-lighterPurple">Viewing on desktop is supported</p>
-        <p class="text-md text-center text-lighterPurple">If you're already on desktop please run your browser on full screen.</p>
-    </div>
-</body>
+			<div class="flex flex-col items-center">
+				<span class="text-white font-semibold text-2xl leading-loose w-[60%] text-center">
+					<span class="bg-mainRed rounded-br-xl p-1">Nowy Renesans</span>
+					isn't just a learning platform - it's a launchpad for your online business journey. Get access to a curated selection of proven business models, specifically tailored for
+					<span class="bg-mainRed rounded-br-xl p-1">beginners.</span>
+					Discover how to choose the right career path based on your personality, and master strategies to build a profitable business while balancing other
+					<span class="bg-mainRed rounded-br-xl p-1">commitments.</span>
+				</span>
+			</div>
+			<!-- WHOSITFOR SECTION -->
+			<div class="flex flex-col items-center gap-24 mt-40">
+				<h1 class="text-white text-5xl font-black">DLA KOGO JEST NOWY RENESANS?</h1>
+				<div class="flex items-center gap-6">
+					<div class="flex flex-col gap-6">
+						<div class="flex flex-col gap-3 w-72 bg-darkgray border border-grayBorder rounded-xl p-2 h-28">
+							<div class="flex gap-2">
+								<img src="{% static 'img/book.svg' %}" class="select-none w-6">
+								<span class="text-base text-white font-bold">Osoby Początkujące</span>
+							</div>
+							<p class="text-xs text-neutral-400">Nowy Renesans to miejsce przede wszystkim nakierowane na pomoc osobom, które dopiero wkraczają w świat rozwoju osobistego.</p>
+						</div>
+						<div class="flex flex-col gap-3 w-72 bg-darkgray border border-grayBorder rounded-xl p-2 h-28">
+							<div class="flex gap-2">
+								<img src="{% static 'img/crown.svg' %}" class="select-none w-6">
+								<span class="text-base text-white font-bold">Osoby Zaawansowane</span>
+							</div>
+							<p class="text-xs text-neutral-400">Nowy Renesans to miejsce przede wszystkim nakierowane na pomoc osobom, które dopiero wkraczają w świat rozwoju osobistego.</p>
+						</div>
+					</div>
+					<img src="{% static 'img/arrows_right.png' %}" class="h-36 select-none"> 
+					<div class="flex items-center justify-center w-44 h-44 border border-mainRed bg-red10 rounded-xl">
+						<img src="{% static 'img/nrLogo.svg' %}" class="w-[50%] select-none">
+					</div>
+					<img src="{% static 'img/arrows_left.png' %}" class="h-36 select-none"> 
+					<div class="flex flex-col gap-6">
+						<div class="flex flex-col gap-3 w-72 bg-darkgray border border-grayBorder rounded-xl p-2 h-28">
+							<div class="flex gap-2">
+								<img src="{% static 'img/briefcase.svg' %}" class="select-none w-6">
+								<span class="text-base text-white font-bold">Przedsiębiorcy</span>
+							</div>
+							<p class="text-xs text-neutral-400">Nowy Renesans to miejsce przede wszystkim nakierowane na pomoc osobom, które dopiero wkraczają w świat rozwoju osobistego.</p>
+						</div>
+						<div class="flex flex-col gap-3 w-72 bg-darkgray border border-grayBorder rounded-xl p-2 h-28">
+							<div class="flex gap-2">
+								<img src="{% static 'img/user.svg' %}" class="select-none w-6">
+								<span class="text-base text-white font-bold">Osoby w Każdym Wieku</span>
+							</div>
+							<p class="text-xs text-neutral-400">Nowy Renesans to miejsce przede wszystkim nakierowane na pomoc osobom, które dopiero wkraczają w świat rozwoju osobistego.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- CONTENT SECTION -->
+			<div class="flex flex-col items-center gap-24 mt-40">
+				<h1 class="text-white text-5xl font-black">CO ZNAJDUJE SIĘ W ŚRODKU</h1>
+				<div class="flex gap-8 items-center justify-center">
+					<div class="flex flex-col w-[28%] gap-4">
+						<div class="flex gap-4">
+							<h1 class="text-7xl text-mainRed font-black">16+</h1>
+							<h1 class="text-4xl text-white font-black">EKSKLUZYWNYCH<br>KURSÓW</h1>
+						</div>
+						<p class="text-xl text-neutral-400 leading-loose">
+							W nowym renesansie znajdziesz wiele kursów, które najpierw pomogą Ci zerwać ze złymi nawykami, 
+							przeprowadzą Cię przez tamto i owamto i w ogóle zaczniesz wyrywać dupy, zarabiać siano i będziesz 
+							jebaną totalną dominującą alfa sigmą żeby mnie drzwi ścisły jeżeli tak się nie stanie przysięgam 
+							na wszystkie biedronkowe maskotki które uzbierałem przez te lata.
+						</p>
+					</div>
+
+					<div class="flex items-center justify-center w-[35%] h-auto bg-darkgray p-3 rounded-xl red-shadow border border-mainRed">
+						<img src="{% static 'img/kursy.png' %}" class="w-full">
+					</div>
+				</div>
+				<div class="grid grid-rows-2 grid-cols-2 gap-8 w-[70%]">
+
+					<div class="flex flex-col gap-4 p-4 bg-darkBg border border-darkgray rounded-xl">
+						<div class="flex items-center gap-4">
+							<img src="{% static 'img/money.svg' %}" class="w-11">
+							<span class="text-white font-black text-4xl">CENNE ZNAJOMOŚCI</span>
+						</div>
+						<p class="text-neutral-400 leading-loose text-xl">
+							Osoby, które spotkasz w Nowym Renesansie to te, które mają takie same cele i problemy jak ty. Znajomości, 
+							które nawiążesz przydadzą Ci się nie tylko aby skutecznie przejść tę drogę, ale i w przyszłości.
+						</p>
+					</div>
+					<div class="flex flex-col gap-4 p-4 bg-darkBg border border-darkgray rounded-xl">
+						<div class="flex items-center gap-4">
+							<img src="{% static 'img/bookred.svg' %}" class="w-11">
+							<span class="text-white font-black text-4xl">SPOTKANIA I WEBINARY</span>
+						</div>
+						<p class="text-neutral-400 leading-loose text-xl">
+							W Nowym Renesansie często pojawiają się konkursy, bonusy oraz wyzwania. 
+							Dostępne są też nagrody za poziom w społeczności (m.in. spotkania z Kacprem)
+						</p>
+					</div>
+					<div class="flex flex-col gap-4 p-4 bg-darkBg border border-darkgray rounded-xl">
+						<div class="flex items-center gap-4">
+							<img src="{% static 'img/help.svg' %}" class="w-11">
+							<span class="text-white font-black text-4xl">POMOC CZŁONKÓW</span>
+						</div>
+						<p class="text-neutral-400 leading-loose text-xl">
+							W naszej społeczności - każdy jest równy, nie spotkasz się z byciem ocenianym ani nie będziesz czuł 
+							się dziwnie na ścieżce rozwoju osobistego. Możesz liczyć na pomoc.
+						</p>
+					</div>
+					<div class="flex flex-col gap-4 p-4 bg-darkBg border border-darkgray rounded-xl">
+						<div class="flex items-center gap-4">
+							<img src="{% static 'img/gift.svg' %}" class="w-11">
+							<span class="text-white font-black text-4xl">WIELE BONUSÓW</span>
+						</div>
+						<p class="text-neutral-400 leading-loose text-xl">
+							W Nowym Renesansie często pojawiają się konkursy, bonusy oraz wyzwania. 
+							Dostępne są też nagrody za poziom w społeczności (m.in. spotkania z Kacprem)
+						</p>
+					</div>
+
+				</div>
+			</div>
+			<!-- QUALITIES SECTION -->
+			<div class="flex flex-col items-center gap-24 mt-40">
+				<h1 class="text-white text-5xl font-black">OSIĄGNIESZ SUKCES DZIĘKI TEMU</h1>
+				<div class="flex items-center w-[80%] justify-between gap-3">
+					<div class="flex flex-col gap-4 p-4 bg-darkgray border border-grayBorder rounded-xl w-[80%] red-shadow-2">
+						<div class="flex items-center gap-4">
+							<img src="{% static 'img/help.svg' %}" class="w-8">
+							<span class="text-white font-bold text-3xl">Pomoc</span>
+						</div>
+						<p class="text-neutral-400 leading-loose text-xl">
+							Pomoc innych członków da Ci siłę srututut bądź jak najlepszy w tym co robisz dzięki nieustannej 
+							pomocy ode mnie i innych członków Nowego Renesansu.
+						</p>
+					</div>
+					<img src="{% static 'img/arrows-left-right.png' %}" class="w-14">
+					<div class="flex flex-col gap-4 p-4 bg-darkgray border border-grayBorder rounded-xl w-[80%] red-shadow-2">
+						<div class="flex items-center gap-4">
+							<img src="{% static 'img/productivity.svg' %}" class="w-7">
+							<span class="text-white font-bold text-3xl">Produktywność</span>
+						</div>
+						<p class="text-neutral-400 leading-loose text-xl">
+							Dzięki braku złych nawyków oraz pomocy otrzymywanej ode mnie oraz innych członków, staniesz się 
+							produktywny i osiągniesz swoje cele.
+						</p>
+					</div>
+					<img src="{% static 'img/arrows-left-right.png' %}" class="w-14">
+					<div class="flex flex-col gap-4 p-4 bg-darkgray border border-grayBorder rounded-xl w-[80%] red-shadow-2">
+						<div class="flex items-center gap-4">
+							<img src="{% static 'img/discipline.svg' %}" class="w-6">
+							<span class="text-white font-bold text-3xl">Dyscyplina</span>
+						</div>
+						<p class="text-neutral-400 leading-loose text-xl">
+							Dzięki braku złych nawyków oraz pomocy otrzymywanej ode mnie oraz innych członków, 
+							staniesz się produktywny i osiągniesz swoje cele.
+						</p>
+					</div>
+				</div>
+			</div>
+			<!-- BONUSES SECTION -->
+			<div class="flex flex-col items-center gap-24 mt-40">
+				<div class="flex flex-col items-center gap-2">
+					<h2 class="text-mainRed font-black text-2xl">PO DRODZE</h2>
+					<h1 class="text-white text-5xl font-black">OSIĄGNIESZ SUKCES DZIĘKI TEMU</h1>
+				</div>
+				<img src="{% static 'img/userarrow.svg' %}" class="select-none sticky top-64">
+				<div class="flex flex-col items-center">
+					<div class="flex justify-center gap-6">
+						<div class="w-[35%] my-4 h-44 bg-tGray opacity-0 pointer-events-none"></div>
+						<img src="{% static 'img/path-right.svg' %}" class="select-none h-52">
+						<div class="w-[35%] my-4 h-44 bg-tGray backdrop-blur-sm rounded-xl flex flex-col px-4 py-2 gap-4">
+							<h1 class="font-bold text-white text-2xl"><span class="text-4xl text-mainRed font-extrabold">1 </span>MIESIĄC</h1>
+							<p class="text-neutral-400 leading-relaxed text-lg">
+								Po pierwszym miesiącu odblokujesz lorem ipsum dolor sit amet consecetieur dolor sit amet lorem ispum dolot sit amet.
+							</p>
+						</div>
+					</div>
+					<div class="flex justify-center gap-6">
+						<div class="w-[35%] my-4 h-44 bg-tGray backdrop-blur-sm rounded-xl flex flex-col px-4 py-2 gap-4">
+							<h1 class="font-bold text-white text-2xl"><span class="text-4xl text-mainRed font-extrabold">2 </span>MIESIĄCE</h1>
+							<p class="text-neutral-400 leading-relaxed text-lg">
+								Po pierwszym miesiącu odblokujesz lorem ipsum dolor sit amet consecetieur dolor sit amet lorem ispum dolot sit amet.
+							</p>
+						</div>
+						<img src="{% static 'img/path-left.svg' %}" class="select-none h-52">
+						<div class="w-[35%] my-4 h-44 bg-tGray opacity-0 pointer-events-none"></div>
+					</div>
+					<div class="flex justify-center gap-6">
+						<div class="w-[35%] my-4 h-44 bg-tGray opacity-0 pointer-events-none"></div>
+						<img src="{% static 'img/path-right.svg' %}" class="select-none h-52">
+						<div class="w-[35%] my-4 h-44 bg-tGray backdrop-blur-sm rounded-xl flex flex-col px-4 py-2 gap-4">
+							<h1 class="font-bold text-white text-2xl"><span class="text-4xl text-mainRed font-extrabold">3 </span>MIESIĄCE</h1>
+							<p class="text-neutral-400 leading-relaxed text-lg">
+								Po pierwszym miesiącu odblokujesz lorem ipsum dolor sit amet consecetieur dolor sit amet lorem ispum dolot sit amet.
+							</p>
+						</div>
+					</div>
+					<div class="flex justify-center gap-6">
+						<div class="w-[35%] my-4 h-44 bg-tGray backdrop-blur-sm rounded-xl flex flex-col px-4 py-2 gap-4">
+							<h1 class="font-bold text-white text-2xl"><span class="text-4xl text-mainRed font-extrabold">4 </span>MIESIĄCE</h1>
+							<p class="text-neutral-400 leading-relaxed text-lg">
+								Po pierwszym miesiącu odblokujesz lorem ipsum dolor sit amet consecetieur dolor sit amet lorem ispum dolot sit amet.
+							</p>
+						</div>
+						<img src="{% static 'img/path-left.svg' %}" class="select-none h-52">
+						<div class="w-[35%] my-4 h-44 bg-tGray opacity-0 pointer-events-none"></div>
+					</div>
+					<div class="flex justify-center gap-6">
+						<div class="w-[35%] my-4 h-44 bg-tGray opacity-0 pointer-events-none"></div>
+						<img src="{% static 'img/path-right.svg' %}" class="select-none h-52">
+						<div class="w-[35%] my-4 h-44 bg-tGray backdrop-blur-sm rounded-xl flex flex-col px-4 py-2 gap-4">
+							<h1 class="font-bold text-white text-2xl"><span class="text-4xl text-mainRed font-extrabold">5 </span>MIESIĘCY</h1>
+							<p class="text-neutral-400 leading-relaxed text-lg">
+								Po pierwszym miesiącu odblokujesz lorem ipsum dolor sit amet consecetieur dolor sit amet lorem ispum dolot sit amet.
+							</p>
+						</div>
+					</div>
+					<div class="flex justify-center gap-6">
+						<div class="w-[35%] my-4 h-44 backdrop-blur-sm rounded-xl px-4 py-2 custom-gradient-bg border border-mainRed flex flex-col gap-4">
+							<h1 class="font-bold text-white text-2xl"><span class="text-4xl text-mainRed font-extrabold">6 </span>MIESIĘCY</h1>
+							<p class="text-neutral-400 leading-relaxed text-lg">
+								Po pierwszym miesiącu odblokujesz lorem ipsum dolor sit amet consecetieur dolor sit amet lorem ispum dolot sit amet.
+							</p>
+						</div>
+						<img src="{% static 'img/path-left.svg' %}" class="select-none h-52">
+						<div class="w-[35%] my-4 h-44 bg-tGray opacity-0 pointer-events-none"></div>
+					</div>
+					<div class="flex justify-center gap-6">
+						<div class="w-[35%] my-4 h-44 bg-tGray opacity-0 pointer-events-none"></div>
+						<img src="{% static 'img/path-last.svg' %}" class="select-none h-52">
+						<div class="w-[35%] my-4 h-44 backdrop-blur-sm rounded-xl px-4 py-2 custom-gradient-bg border border-mainRed flex flex-col gap-4">
+							<h1 class="font-bold text-white text-2xl"><span class="text-4xl text-mainRed font-extrabold">12 </span>MIESIĘCY</h1>
+							<p class="text-neutral-400 leading-relaxed text-lg">
+								Po pierwszym miesiącu odblokujesz lorem ipsum dolor sit amet consecetieur dolor sit amet lorem ispum dolot sit amet.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- MORE ALIKE PEOPLE SECTION -->
+			<div class="flex flex-col items-center gap-24 mt-72">
+				<div class="flex justify-center gap-10">
+					<div class="grid grid-rows-3 grid-cols-2 gap-4">
+						<img src="" class="w-64 h-48 bg-darkgray">
+						<img src="" class="w-64 h-48 bg-darkgray">
+						<img src="" class="w-64 h-48 bg-darkgray">
+						<img src="" class="w-64 h-48 bg-darkgray">
+						<img src="" class="w-64 h-48 bg-darkgray">
+						<img src="" class="w-64 h-48 bg-darkgray">
+					</div>
+					<div class="flex flex-col w-[30%] gap-10">
+						<h1 class="text-white font-black text-5xl">PONAD <span class="text-mainRed">300</span><br>OSÓB TAKICH JAK TY</h1>
+						<p class="text-xl text-neutral-400 leading-relaxed">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer porta diam non turpis gravida, 
+							a luctus sem laoreet. Curabitur ut commodo erat. Curabitur malesuada, felis vel dapibus congue, 
+							leo elit lobortis mauris, nec feugiat ligula risus quis velit. Praesent a dictum eros. In venenatis 
+							tempor sem non faucibus. Cras id malesuada lorem. Sed non tristique est, vel interdum augue. Duis lectus diam, 
+							blandit id purus ut, blandit fermentum libero. Mauris ornare aliquet purus, sed congue urna feugiat vitae. 
+							Nam tincidunt, justo a iaculis maximus, elit ante feugiat lacus.
+						</p>
+						<button id="order-2-btn" class="bg-mainRed text-white font-black text-2xl py-6 rounded-xl w-[80%]">KUP SUBSKRYPCJĘ</button>
+					</div>
+				</div>
+			</div>
+			<!-- VSL SECTION -->
+			<div id="vsl" class="flex flex-col items-center gap-24 mt-72">
+				<div class="flex justify-center gap-10">
+					<iframe class="w-[600px] aspect-video" src="https://www.youtube.com/embed/J5tKsm5VxTg?si=pnpbCaJM3SnD9oJx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+					<div class="flex flex-col gap-10 w-[30%]">
+						<h1 class="text-5xl font-black text-mainRed">KILKA SŁÓW<br><span class="text-white">O MNIE I ODE MNIE</span></h1>
+						<p class="text-xl text-neutral-400 w-[80%] leading-relaxed">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer porta diam non turpis gravida, a luctus sem laoreet. 
+							Curabitur ut commodo erat. Curabitur malesuada, felis vel dapibus congue, leo elit lobortis mauris, nec feugiat ligula 
+							risus quis velit.
+						</p>
+					</div>
+				</div>
+			</div>
+			<!-- PRICING SECTION -->
+			<div id="order" class="flex flex-col items-center gap-24 mt-72">
+				<div class="flex flex-col items-center gap-2">
+					<h2 class="text-mainRed font-black text-2xl">CENA</h2>
+					<h1 class="text-white text-5xl font-black">WYBIERZ PLAN DLA SIEBIE</h1>
+				</div>
+				<div class="flex gap-10">
+					<div class="flex flex-col gap-10 bg-darkBg border border-mainRed w-96 px-6 pt-4 pb-6 rounded-xl">
+						<h1 class="text-white font-black text-3xl self-center">1 MIESIĄC</h1>
+						<h1 class="text-7xl font-black text-white self-center"><span class="text-2xl text-neutral-400 font-bold">PLN</span> 80 <span class="text-2xl text-neutral-400 font-light">/miesiąc</span></h1>
+						<div class="flex flex-col gap-4">
+							<div class="flex gap-6 items-center">
+								<img src="{% static 'img/check.svg' %}" class="w-6">
+								<span class="text-white text-xl">Lorem ipsum dolor sit amet</span>
+							</div>
+							<div class="flex gap-6 items-center">
+								<img src="{% static 'img/check.svg' %}" class="w-6">
+								<span class="text-white text-xl">Lorem ipsum dolor sit amet</span>
+							</div>
+							<div class="flex gap-6 items-center">
+								<img src="{% static 'img/check.svg' %}" class="w-6">
+								<span class="text-white text-xl">Lorem ipsum dolor sit amet</span>
+							</div>
+							<div class="flex gap-6 items-center">
+								<img src="{% static 'img/check.svg' %}" class="w-6">
+								<span class="text-white text-xl">Lorem ipsum dolor sit amet</span>
+							</div>
+							<div class="flex gap-6 items-center">
+								<img src="{% static 'img/x.svg' %}" class="w-6">
+								<span class="text-white text-xl">Lorem ipsum dolor sit amet</span>
+							</div>
+							<div class="flex gap-6 items-center">
+								<img src="{% static 'img/x.svg' %}" class="w-6">
+								<span class="text-white text-xl">Lorem ipsum dolor sit amet</span>
+							</div>
+							<div class="flex gap-6 items-center">
+								<img src="{% static 'img/x.svg' %}" class="w-6">
+								<span class="text-white text-xl">Lorem ipsum dolor sit amet</span>
+							</div>
+						</div>
+						<button id="1mo-btn" class="bg-red10 border border-mainRed rounded-lg text-white font-bold text-2xl py-3 mt-5">KUP TERAZ</button>
+					</div>
+					<div class="flex flex-col gap-10 bg-red10 backdrop-blur-sm border border-mainRed w-96 px-6 pt-4 pb-6 rounded-xl">
+						<h1 class="text-white font-black text-3xl self-center">3 MIESIĄCE</h1>
+						<h1 class="text-7xl font-black text-white self-center"><span class="text-2xl text-redtext font-bold">PLN</span> 60 <span class="text-2xl text-redtext font-light">/miesiąc</span></h1>
+						<div class="flex flex-col gap-4">
+							<div class="flex gap-6 items-center">
+								<img src="{% static 'img/check.svg' %}" class="w-6">
+								<span class="text-white text-xl">Lorem ipsum dolor sit amet</span>
+							</div>
+							<div class="flex gap-6 items-center">
+								<img src="{% static 'img/check.svg' %}" class="w-6">
+								<span class="text-white text-xl">Lorem ipsum dolor sit amet</span>
+							</div>
+							<div class="flex gap-6 items-center">
+								<img src="{% static 'img/check.svg' %}" class="w-6">
+								<span class="text-white text-xl">Lorem ipsum dolor sit amet</span>
+							</div>
+							<div class="flex gap-6 items-center">
+								<img src="{% static 'img/check.svg' %}" class="w-6">
+								<span class="text-white text-xl">Lorem ipsum dolor sit amet</span>
+							</div>
+							<div class="flex gap-6 items-center">
+								<img src="{% static 'img/check.svg' %}" class="w-6">
+								<span class="text-white text-xl">Lorem ipsum dolor sit amet</span>
+							</div>
+							<div class="flex gap-6 items-center">
+								<img src="{% static 'img/check.svg' %}" class="w-6">
+								<span class="text-white text-xl">Lorem ipsum dolor sit amet</span>
+							</div>
+							<div class="flex gap-6 items-center">
+								<img src="{% static 'img/check.svg' %}" class="w-6">
+								<span class="text-white text-xl">Lorem ipsum dolor sit amet</span>
+							</div>
+						</div>
+						<button id="3mo-btn" class="bg-mainRed border border-mainRed rounded-lg text-white font-bold text-2xl py-3 mt-5">KUP TERAZ</button>
+					</div>
+					<div class="flex flex-col gap-10 bg-darkBg border border-mainRed w-96 px-6 pt-4 pb-6 rounded-xl">
+						<h1 class="text-white font-black text-3xl self-center">ROCZNA</h1>
+						<h1 class="text-7xl font-black text-white self-center"><span class="text-2xl text-neutral-400 font-bold">PLN</span> 40 <span class="text-2xl text-neutral-400 font-light">/miesiąc</span></h1>
+						<div class="flex flex-col gap-4">
+							<div class="flex gap-6 items-center">
+								<img src="{% static 'img/check.svg' %}" class="w-6">
+								<span class="text-white text-xl">Lorem ipsum dolor sit amet</span>
+							</div>
+							<div class="flex gap-6 items-center">
+								<img src="{% static 'img/check.svg' %}" class="w-6">
+								<span class="text-white text-xl">Lorem ipsum dolor sit amet</span>
+							</div>
+							<div class="flex gap-6 items-center">
+								<img src="{% static 'img/check.svg' %}" class="w-6">
+								<span class="text-white text-xl">Lorem ipsum dolor sit amet</span>
+							</div>
+							<div class="flex gap-6 items-center">
+								<img src="{% static 'img/check.svg' %}" class="w-6">
+								<span class="text-white text-xl">Lorem ipsum dolor sit amet</span>
+							</div>
+							<div class="flex gap-6 items-center">
+								<img src="{% static 'img/check.svg' %}" class="w-6">
+								<span class="text-white text-xl">Lorem ipsum dolor sit amet</span>
+							</div>
+							<div class="flex gap-6 items-center">
+								<img src="{% static 'img/check.svg' %}" class="w-6">
+								<span class="text-white text-xl">Lorem ipsum dolor sit amet</span>
+							</div>
+							<div class="flex gap-6 items-center">
+								<img src="{% static 'img/check.svg' %}" class="w-6">
+								<span class="text-white text-xl">Lorem ipsum dolor sit amet</span>
+							</div>
+						</div>
+						<button id="12mo-btn" class="bg-red10 border border-mainRed rounded-lg text-white font-bold text-2xl py-3 mt-5">KUP TERAZ</button>
+					</div>
+				</div>
+			</div>
+			<!-- PRICING SECTION -->
+			<div class="flex flex-col items-center gap-24 mt-72">
+				<div class="flex flex-col items-center gap-2">
+					<h2 class="text-mainRed font-black text-2xl">FAQ</h2>
+					<h1 class="text-white text-5xl font-black">NAJCZĘSTSZE PYTANIA</h1>
+				</div>
+
+				<div class="flex flex-col w-[50%] select-none">
+					<div class="question q-open transition-all flex flex-col p-6 gap-6 bg-tGray cursor-pointer backdrop-blur-sm tGrayLight transition-all rounded-t-xl">
+						<div class="flex justify-between">
+							<span class="text-xl text-white">Czym jest Nowy Renesans?</span>
+							<img src="{% static 'img/plus.svg' %}" class="w-4 transition-all rotate-diagonal">
+						</div>
+						<p class="w-[90%] text-neutral-400 text-base leading-relaxed">
+							Nowy Renesans jest dobrym wyborem dla każdego, niezależnie czy jesteś studentem, etatowcem czy astronautą. 
+							Lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor.
+						</p>
+					</div>
+					<div class="question transition-all flex flex-col p-6 gap-6 bg-tGray cursor-pointer backdrop-blur-sm hover:bg-darkgray transition-all">
+						<div class="flex justify-between">
+							<span class="text-xl text-white">Jak długo będę mieć dostęp do Nowego Renesansu?</span>
+							<img src="{% static 'img/plus.svg' %}" class="w-4 transition-all">
+						</div>
+						<p class="hidden w-[90%] text-neutral-400 text-base leading-relaxed">
+							Nowy Renesans jest dobrym wyborem dla każdego, niezależnie czy jesteś studentem, etatowcem czy astronautą. 
+							Lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor.
+						</p>
+					</div>
+					<div class="question transition-all flex flex-col p-6 gap-6 bg-tGray cursor-pointer backdrop-blur-sm hover:bg-darkgray transition-all">
+						<div class="flex justify-between">
+							<span class="text-xl text-white">W jaki sposób można szybciej odblokować treści i nagrody?</span>
+							<img src="{% static 'img/plus.svg' %}" class="w-4 transition-all">
+						</div>
+						<p class="hidden w-[90%] text-neutral-400 text-base leading-relaxed">
+							Nowy Renesans jest dobrym wyborem dla każdego, niezależnie czy jesteś studentem, etatowcem czy astronautą. 
+							Lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor.
+						</p>
+					</div>
+					<div class="question transition-all flex flex-col p-6 gap-6 bg-tGray cursor-pointer backdrop-blur-sm hover:bg-darkgray transition-all">
+						<div class="flex justify-between">
+							<span class="text-xl text-white">Czy inne kursy będą regularnie dodawane do platformy?</span>
+							<img src="{% static 'img/plus.svg' %}" class="w-4 transition-all">
+						</div>
+						<p class="hidden w-[90%] text-neutral-400 text-base leading-relaxed">
+							Nowy Renesans jest dobrym wyborem dla każdego, niezależnie czy jesteś studentem, etatowcem czy astronautą. 
+							Lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor.
+						</p>
+					</div>
+					<div class="question transition-all flex flex-col p-6 gap-6 bg-tGray cursor-pointer backdrop-blur-sm hover:bg-darkgray transition-all rounded-b-xl">
+						<div class="flex justify-between">
+							<span class="text-xl text-white">Czy to dobry wybór jeżeli mam mało czasu?</span>
+							<img src="{% static 'img/plus.svg' %}" class="w-4 transition-all">
+						</div>
+						<p class="hidden w-[90%] text-neutral-400 text-base leading-relaxed">
+							Nowy Renesans jest dobrym wyborem dla każdego, niezależnie czy jesteś studentem, etatowcem czy astronautą. 
+							Lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor.
+						</p>
+					</div>
+				</div>
+
+			</div>
+			<!-- FOOTER -->
+			<footer class="flex flex-col items-center mt-72 gap-14 select-none">
+				<div class="flex gap-10 py-4 px-8 bg-red10 border border-mainRed backdrop-blur-sm rounded-xl">
+					<img id="yt" src="{% static 'img/yt.svg' %}" class="h-12 select-none cursor-pointer">
+					<img id="ig" src="{% static 'img/ig.svg' %}" class="w-10 select-none cursor-pointer">
+				</div>
+				<div class="flex gap-10 items-center text-neutral-400 font-semibold text-lg">
+					<a href="">Polityka Prywatności</a>
+					<div class="w-[2px] h-6 bg-neutral-400"></div>
+					<a href="">Zasady i Regulamin</a>
+				</div>
+				<span class="font-regular text-neutral-400">©2024 Kacper Chalcarz. Wszelkie Prawa Zastrzeżone.</span>
+			</footer>
+		</div>
+	</body>
 </html>
