@@ -1,0 +1,188 @@
+{% load static tailwind_tags %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% tailwind_css %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{% static 'img/icon.png' %}" type="image/png">
+    <title>Visua Media</title>
+    <script src="{% static 'js/home.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'css/scroll.css' %}">
+</head>
+<body class="bg-customDark overflow-x-hidden" id="home">
+    <nav id="nav-big" class="hidden xl:flex transition-all duration-500 items-center justify-between h-32 opacity-0 xl:opacity-100 text-white text-xl font-bold px-16 font-opensans select-none">
+        <span><img src="{% static 'img/visua_media_logo.png' %}" alt="company logo" class="w-10 cursor-pointer"></span>
+        <span class="cursor-pointer hover:text-[#BFAAFF] whitespace-nowrap transition-all" id="HomeBtn">Home</span>
+        <span class="cursor-pointer hover:text-[#BFAAFF] whitespace-nowrap transition-all" id="BenefitsBtn">Benefits</span>
+        <button class="bg-customPurple h-[6vh] w-56 flex whitespace-nowrap items-center justify-center rounded-md hover:bg-hoverPurple transition-all" id="BookACallBtn"><span class="text-3xl">BOOK A CALL</span></button>
+        <span class="cursor-pointer hover:text-[#BFAAFF] whitespace-nowrap transition-all" id="CaseStudiesBtn">Case Studies</span>
+        <span class="cursor-pointer hover:text-[#BFAAFF] whitespace-nowrap transition-all" id="TestimonialsBtn">Testimonials</span>
+        <span class="cursor-pointer hover:text-[#BFAAFF] whitespace-nowrap transition-all" id="FAQBtn">FAQ</span>
+    </nav>
+    <nav id="nav-small" class="hidden xl:flex transition-all duration-500 pointer-events-none opacity-0 xl:opacity-0 backdrop-blur-2xl items-center gap-24 h-24 rounded-xl z-50 text-white text-xl font-bold px-16 font-opensans select-none fixed -top-24 top-2 left-[50%] -translate-x-[50%]">
+        <span><img src="{% static 'img/visua_media_logo.png' %}" alt="company logo" class="w-10 cursor-pointer"></span>
+        <span class="cursor-pointer hover:text-[#BFAAFF] whitespace-nowrap transition-all" id="HomeBtn2">Home</span>
+        <span class="cursor-pointer hover:text-[#BFAAFF] whitespace-nowrap transition-all" id="BenefitsBtn2">Benefits</span>
+        <button class="bg-customPurple h-[6vh] w-72 flex whitespace-nowrap items-center justify-center rounded-md hover:bg-hoverPurple transition-all" id="BookACallBtn2"><span class="text-3xl">BOOK A CALL</span></button>
+        <span class="cursor-pointer hover:text-[#BFAAFF] whitespace-nowrap transition-all" id="CaseStudiesBtn2">Case Studies</span>
+        <span class="cursor-pointer hover:text-[#BFAAFF] whitespace-nowrap transition-all" id="TestimonialsBtn2">Testimonials</span>
+        <span class="cursor-pointer hover:text-[#BFAAFF] whitespace-nowrap transition-all" id="FAQBtn2">FAQ</span>
+    </nav>
+    <div class="hidden xl:block">
+        
+        <h1 class="text-white text-5xl xl:text-7xl font-opensans font-bold mt-96 ml-6 xl:ml-24 tracking-tighter load-left">Coaches &<br>Niche Experts</h1>
+        <p class="text-customGray text-2xl ml-24 mt-8 leading-10 font-light load-left">With our expertise in <span class="font-bold text-white">content creation</span> and <span class="font-bold text-white">tailored strategies</span>,<br>
+            we’ll help you grow your <span class="text-[#D45656] font-bold">YouTube channel</span><br>
+            and create <span class="text-lighterPurple font-bold">strong authority</span> in your niche that will<br>
+            boost your <span class="text-lighterPurple font-bold">conversion rates.</span>
+        </p>
+        
+        <!-- <img id="imageLanding" src="{% static 'img/image01.png' %}" alt="" class="absolute w-96 right-[9.5vw] top-[15vh] -z-40 select-none">
+        <img id="imageLanding" src="{% static 'img/image02.png' %}" alt="" class="absolute w-96 right-[5vw] top-[58.5vh] -z-40 select-none">
+        <img id="imageLanding" src="{% static 'img/image03.png' %}" alt="" class="absolute w-96 right-[24.35vw] top-[35vh] -z-40 select-none"> -->
+        <img id="imageLanding" src="{% static 'img/image04.png' %}" alt="" class="absolute w-[35vw] right-[5vw] top-[10vh] -z-40 select-none">
+        <span class="text-[#161616] text-[640px] font-opensans font-bold absolute -top-20 left-0 -z-50 scale-[1.1] select-none">VISUA</span>
+
+        <div class="h-56 w-full bg-gradient-to-t from-[#242424] to-[#24242400] absolute left-0 top-[85vh] -z-10"></div>
+    </div>
+    <!-- BENEFITS SECTION -->
+    <div class="mt-36 py-36 hidden xl:flex flex-col items-center" id="Benefits">
+        <h1 class="text-5xl text-white font-opensans font-bold scroll-appear">Why you need a strategicaly managed YouTube channel.</h1>
+        <div class="flex flex-wrap px-56 w-full justify-between mt-24 gap-y-8">
+            <div class="rounded-md font-opensans flex flex-col gap-6 hover:bg-customHoverTrans backdrop-blur-2xl p-4 w-[37.5vw] transition-all scroll-left">
+                <div class="flex gap-4 items-center text-white font-bold text-4xl select-none">
+                    <img src="{% static 'img/diamond.png' %}" alt="diamond">
+                    <h1>build authority</h1>
+                </div>
+                <p class="text-customGray text-xl">
+                    YouTube builds enormous authority and trust.<br>
+                    Having your own channel can easily get you more clients.<br>
+                    They will already trust you, so selling isn’t a thing anymore.
+                </p>
+            </div>
+            <div class="rounded-md font-opensans flex flex-col gap-6 hover:bg-customHoverTrans backdrop-blur-2xl p-4 w-[37.5vw] transition-all scroll-right">
+                <div class="flex gap-4 items-center text-white font-bold text-4xl select-none">
+                    <img src="{% static 'img/umbrella.png' %}" alt="diamond">
+                    <h1>low effort</h1>
+                </div>
+                <p class="text-customGray text-xl">
+                    We do almost everything for you. You will have to just record videos<br>
+                    and we’ll take care of thumbnails, SEO, publishing and optimizations.<br>
+                    We’ll also regularly update you on strategies and results.
+                </p>
+            </div>
+            <div class="rounded-md font-opensans flex flex-col gap-6 hover:bg-customHoverTrans backdrop-blur-2xl p-4 w-[37.5vw] transition-all scroll-left">
+                <div class="flex gap-4 items-center text-white font-bold text-4xl select-none">
+                    <img src="{% static 'img/money.png' %}" alt="diamond">
+                    <h1>get clients</h1>
+                </div>
+                <p class="text-customGray text-xl">
+                    Clients come on autopilot, you are gaining new viewers and their<br>
+                    trust with every video. There is no need for manual outreach or paid<br>
+                    ads and the videos will generate views for years to come.
+                </p>
+            </div>
+            <div class="rounded-md font-opensans flex flex-col gap-6 hover:bg-customHoverTrans backdrop-blur-2xl p-4 w-[37.5vw] transition-all scroll-right">
+                <div class="flex gap-4 items-center text-white font-bold text-4xl select-none">
+                    <img src="{% static 'img/clock.png' %}" alt="diamond">
+                    <h1>efficiency</h1>
+                </div>
+                <p class="text-customGray text-xl">
+                    It makes everything easier. Think about how much time you could<br>
+                    save on explaining everything to a potential client and gaining their<br>
+                    trust if you could just let your channel do that.
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- CASE STUDY SECTION -->
+    <div class="py-36 hidden xl:flex flex-col items-center" id="Case-Studies">
+        <h1 class="text-5xl text-white font-opensans font-bold scroll-appear">Our Latest Case Study</h1>
+
+        <span class="h-[50%] w-12 absolute -left-12 rounded-xl bg-[#A100FF] blur-2xl scroll-appear"></span>
+        <span class="h-[50%] w-12 absolute -right-12 rounded-xl bg-[#A100FF] blur-2xl scroll-appear"></span>
+
+        <div class="flex gap-6 mt-24 p-4 rounded-xl border-[1px] bg-[#32323275] backdrop-blur-2xl border-[#525252] scroll-appear">
+            <div class="flex gap-6 pr-6">
+                <img src="{% static 'img/youtube.png' %}" alt="" class="w-[35vw] select-none">
+                <div class="flex flex-col py-2 justify-between">
+                    <h1 class="font-opensans font-bold text-4xl text-white">Kacper Chalcarz</h1>
+                    <p class=" text-xl font-opensans text-customGray">
+                        In two moths of working together we managed to increase<br>
+                        viewers’ engagement and double the number of our client’s<br>
+                        paid community members.<br>
+                        He went from monthly earnings of 9,000 to over 20,000<br>
+                        during our collaboration.
+                    </p>
+                    <div class="flex gap-2 items-center self-end select-none">
+                        <img src="{% static 'img/Notion_app_logo.png' %}" alt="" class="w-6 h-6">
+                        <a href="https://cloudy-cayenne-28e.notion.site/Case-study-Kacper-Chalcarz-13f6829d32a8803695c3f53c7c694ee4" target="_blank" class="text-lighterPurple font-opensans underline text-xl">open in notion</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- VIDEOS -->
+    <div class="py-36 hidden xl:flex flex-col items-center" id="Testimonials">
+        <h1 class="text-5xl text-white font-opensans font-bold scroll-appear">A few words from our clients</h1>
+        <iframe class="my-24 scroll-appear" width="640" height="360" src="https://www.youtube.com/embed/BpSuztjpWMU?si=H-UcrnJNlHpCPIWJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <!-- STEPS -->
+    <div class="py-36 hidden xl:flex flex-col items-center" id="FAQ">
+        <h1 class="text-5xl text-white font-opensans font-bold scroll-appear">Our simple process</h1>
+        <div class="flex flex-wrap my-24 gap-8 w-[60%]">
+            <div class="flex flex-col hover:bg-customHoverTrans backdrop-blur-2xl p-4 rounded-md gap-4 transition-all cursor-pointer scroll-left">
+                <h1 class="text-3xl text-white font-opensans font-bold"><span class="text-lighterPurple">1.</span>&nbsp;detailed audit</h1>
+                <p class="text-xl text-customGray font-opensans w-[33vw]">We analyze your channel and current state of your online business and create the best action plan for your growth.</p>
+            </div>
+            <div class="flex items-center w-80 select-none pointer-events-none scroll-left">
+                <img src="{% static 'img/arrow.png' %}" alt="">
+            </div>
+            <div class="flex items-center w-80 select-none pointer-events-none scroll-right-x">
+                <img src="{% static 'img/arrow.png' %}" alt="">
+            </div>
+            <div class="flex flex-col hover:bg-customHoverTrans backdrop-blur-2xl p-4 rounded-md gap-4 transition-all cursor-pointer scroll-right">
+                <h1 class="text-3xl text-white font-opensans font-bold"><span class="text-lighterPurple">2.</span>&nbsp;strategy</h1>
+                <p class="text-xl text-customGray font-opensans w-[33vw]">After diagnosing we come up with a strategy to make sure that you grow as fast as possible while gaining clients on autopilot.</p>
+            </div>
+            <div class="flex flex-col hover:bg-customHoverTrans backdrop-blur-2xl p-4 rounded-md gap-4 transition-all cursor-pointer scroll-left">
+                <h1 class="text-3xl text-white font-opensans font-bold"><span class="text-lighterPurple">3.</span>&nbsp;content creation</h1>
+                <p class="text-xl text-customGray font-opensans w-[33vw]">Almost everything happens on our side. You only need to record videos and upload them to a shared drive.</p>
+            </div>
+            <div class="flex items-center w-80 select-none pointer-events-none scroll-left">
+                <img src="{% static 'img/arrow.png' %}" alt="">
+            </div>
+            <span class="block w-80 select-none pointer-events-none"></span>
+            <div class="flex flex-col hover:bg-customHoverTrans backdrop-blur-2xl p-4 rounded-md gap-4 transition-all cursor-pointer scroll-right">
+                <h1 class="text-3xl text-white font-opensans font-bold"><span class="text-lighterPurple">4.</span>&nbsp;packaging</h1>
+                <p class="text-xl text-customGray font-opensans w-[33vw]">After You upload the video, we do eveything else: editing, thumbnails, YouTube SEO, uploading and more.</p>
+            </div>
+        </div>
+    </div>
+    <!-- BOOK A CALL -->
+    <div class="hidden py-36 xl:flex flex-col items-center" id="BookACall">
+        <h1 class="text-5xl text-white font-opensans font-bold scroll-appear">Book a call with us!</h1>
+        <div class="calendly-inline-widget scroll-appear" data-url="https://calendly.com/visua-contact/30min?background_color=343434&text_color=ffffff&primary_color=8668FF" style="min-width:1200px;height:700px;"></div>
+        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+    </div>
+    <!-- FOOTER -->
+    <div class="hidden xl:flex gap-4 px-12 border-t border-customHover text-customGray font-opensans py-4 items-center">
+        <img src="{% static 'img/visua_media_logo.png' %}" alt="" class="h-4 select-none pointer-events-none">
+        <p class="select-none pointer-events-none">© 2024 Visua Media</p>
+        <p class="absolute right-12 text-lighterPurple">contact@visua.media</p>
+    </div>
+    <!-- GO-UP-BTN -->
+    <span class="hidden xl:flex items-center justify-center bg-customHover hover:bg-hoverHover hover:border border-customPurple w-16 h-16 rounded-lg fixed bottom-24 right-12 select-none cursor-pointer pointer-events-none opacity-0 scale-0 transition-all" id="upBtn">
+        <img src="{% static 'img/arrow-up.svg' %}" alt="" class="w-6 pointer-events-none select-none cursor-pointer">
+    </span>
+    
+    <div class="flex items-center justify-center flex-col xl:hidden w-[100vw] h-[100vh]">
+        <img src="{% static 'img/construction.png' %}" alt="" class="w-24">
+        <h1 class="text-xl text-center text-customGray w-72 my-12">If you're seing this it means our site is in development.</h1>
+        <p class="text-md text-center text-lighterPurple">Viewing on desktop is supported</p>
+        <p class="text-md text-center text-lighterPurple">If you're already on desktop please run your browser on full screen.</p>
+    </div>
+</body>
+</html>
