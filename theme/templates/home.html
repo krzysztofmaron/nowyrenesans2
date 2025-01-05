@@ -14,35 +14,35 @@
 	<body class="bg-darkBg font-inter">
 		<div id="sparks-overlay" class="sparks w-full h-full">
 
-			<div id="hero" class="h-[100svh] w-full flex gap-24 justify-center items-center">
-				<div class="flex flex-col gap-10">
-					<h1 class="text-white font-black text-6xl">TWOJA TRANSFORMACJA<br>ZACZYNA SIĘ TUTAJ</h1>
-					<p class="text-neutral-400 text-2xl">Odkryj system, który w 3 miesiące pozwoli Ci osiągnąć<br>cele i zbudować życie, jakiego zawsze pragnąłeś.</p>
-					<div class="flex gap-10 items-center text-white text-2xl">
-						<button id="order-btn" class="bg-mainRed font-bold rounded-md h-16 w-72">Zacznij Teraz</button>
+			<div id="hero" class="h-[100svh] w-full flex-col lg:flex-row flex gap-24 justify-center items-center">
+				<div class="flex flex-col gap-10 items-center lg:items-start">
+					<h1 class="text-white font-black text-3xl md:text-5xl lg:text-6xl text-center lg:text-left">TWOJA TRANSFORMACJA<br>ZACZYNA SIĘ TUTAJ</h1>
+					<p class="text-neutral-400 text-md md:text-xl lg:text-2xl text-center lg:text-left w-[60%] md:w-auto">Odkryj system, który w 3 miesiące pozwoli Ci osiągnąć<br>cele i zbudować życie, jakiego zawsze pragnąłeś.</p>
+					<div class="flex flex-col md:flex-row gap-4 md:gap-6 lg:gap-10 items-center text-white text-md md:text-xl lg:text-2xl">
+						<button id="order-btn" class="bg-mainRed font-bold rounded-md h-10 w-56 md:w-64 md:h-14 lg:h-16 lg:w-72">Zacznij Teraz</button>
 						<p class="font-light">lub</p>
-						<button id="vsl-btn" class="bg-red10 border border-mainRed rounded-md h-16 w-72 font-bold backdrop-blur-sm">Obejrzyj Wideo</button>
+						<button id="vsl-btn" class="bg-red10 border border-mainRed rounded-md h-10 w-56 md:w-64 md:h-14 lg:h-16 lg:w-72 font-bold backdrop-blur-sm">Obejrzyj Wideo</button>
 					</div>
-					<div class="flex text-neutral-400 gap-24 mt-16">
+					<div class="flex text-neutral-400 gap-4 md:gap-24 mt-16">
 						<div class="flex flex-col items-center">
-							<h1 class="text-6xl font-bold">16+</h1>
-							<p class="font-semibold text-base">Ekskluzywnych Kursów</p>
+							<h1 class="text-2xl md:text-5xl lg:text-6xl font-bold">16+</h1>
+							<p class="w-[80%] md:w-auto font-semibold text-sm md:text-base text-center">Ekskluzywnych Kursów</p>
 						</div>
-						<div class="w-[1px] h-20 bg-neutral-400"></div>
+						<div class="w-[1px] h-18 lg:h-20 bg-neutral-400"></div>
 						<div class="flex flex-col items-center">
-							<h1 class="text-6xl font-bold">300+</h1>
-							<p class="font-semibold text-base">Aktywnych Użytkowników</p>
+							<h1 class="text-2xl md:text-5xl lg:text-6xl font-bold">300+</h1>
+							<p class="w-[80%] md:w-auto font-semibold text-sm md:text-base text-center">Aktywnych Użytkowników</p>
 						</div>
 					</div>
 				</div>
-				<div class="flex relative w-[28vw] h-[28vw]">
+				<div class="hidden lg:flex relative lg:w-[28vw] lg:h-[28vw]">
 					<img src="{% static 'img/nrBig.png' %}" alt="" class="w-[100%] h-[100%]">
 					<div class="absolute left-0 top-0 w-full h-full rounded-[50%] bg-redTransparent blur-3xl"></div>
 				</div>
 			</div>
 
 			<div class="flex flex-col items-center">
-				<span class="text-white font-semibold text-2xl leading-loose w-[60%] text-center">
+				<span class="text-white font-semibold text-md md:text-xl lg:text-2xl leading-loose w-[80%] md:w-[80%] lg:w-[60%] text-center">
 					<span class="bg-mainRed rounded-br-xl p-1">Nowy Renesans</span>
 					isn't just a learning platform - it's a launchpad for your online business journey. Get access to a curated selection of proven business models, specifically tailored for
 					<span class="bg-mainRed rounded-br-xl p-1">beginners.</span>
@@ -52,40 +52,40 @@
 			</div>
 			<!-- WHOSITFOR SECTION -->
 			<div class="flex flex-col items-center gap-24 mt-40">
-				<h1 class="text-white text-5xl font-black">DLA KOGO JEST NOWY RENESANS?</h1>
-				<div class="flex items-center gap-6">
-					<div class="flex flex-col gap-6">
+				<h1 class="text-white text-3xl text-center lg:text-left md:text-4xl lg:text-5xl font-black">DLA KOGO JEST NOWY RENESANS?</h1>
+				<div class="flex flex-col md:flex-row justify-center lg:justify-left items-center gap-2 lg:gap-6">
+					<div class="flex flex-col gap-2 lg:gap-6">
 						<div class="flex flex-col gap-3 w-72 bg-darkgray border border-grayBorder rounded-xl p-2 h-28">
 							<div class="flex gap-2">
-								<img src="{% static 'img/book.svg' %}" class="select-none w-6">
+								<img src="{% static 'img/book.svg' %}" class="select-none w-4 lg:w-6">
 								<span class="text-base text-white font-bold">Osoby Początkujące</span>
 							</div>
 							<p class="text-xs text-neutral-400">Nowy Renesans to miejsce przede wszystkim nakierowane na pomoc osobom, które dopiero wkraczają w świat rozwoju osobistego.</p>
 						</div>
 						<div class="flex flex-col gap-3 w-72 bg-darkgray border border-grayBorder rounded-xl p-2 h-28">
 							<div class="flex gap-2">
-								<img src="{% static 'img/crown.svg' %}" class="select-none w-6">
+								<img src="{% static 'img/crown.svg' %}" class="select-none w-4 lg:w-6">
 								<span class="text-base text-white font-bold">Osoby Zaawansowane</span>
 							</div>
 							<p class="text-xs text-neutral-400">Nowy Renesans to miejsce przede wszystkim nakierowane na pomoc osobom, które dopiero wkraczają w świat rozwoju osobistego.</p>
 						</div>
 					</div>
-					<img src="{% static 'img/arrows_right.png' %}" class="h-36 select-none"> 
-					<div class="flex items-center justify-center w-44 h-44 border border-mainRed bg-red10 rounded-xl">
+					<img src="{% static 'img/arrows_right.png' %}" class="hidden lg:block h-36 select-none"> 
+					<div class="hidden lg:flex items-center justify-center w-44 h-44 border border-mainRed bg-red10 rounded-xl">
 						<img src="{% static 'img/nrLogo.svg' %}" class="w-[50%] select-none">
 					</div>
-					<img src="{% static 'img/arrows_left.png' %}" class="h-36 select-none"> 
-					<div class="flex flex-col gap-6">
+					<img src="{% static 'img/arrows_left.png' %}" class="hidden lg:block h-36 select-none"> 
+					<div class="flex flex-col gap-2 lg:gap-6">
 						<div class="flex flex-col gap-3 w-72 bg-darkgray border border-grayBorder rounded-xl p-2 h-28">
 							<div class="flex gap-2">
-								<img src="{% static 'img/briefcase.svg' %}" class="select-none w-6">
+								<img src="{% static 'img/briefcase.svg' %}" class="select-none w-4 lg:w-6">
 								<span class="text-base text-white font-bold">Przedsiębiorcy</span>
 							</div>
 							<p class="text-xs text-neutral-400">Nowy Renesans to miejsce przede wszystkim nakierowane na pomoc osobom, które dopiero wkraczają w świat rozwoju osobistego.</p>
 						</div>
 						<div class="flex flex-col gap-3 w-72 bg-darkgray border border-grayBorder rounded-xl p-2 h-28">
 							<div class="flex gap-2">
-								<img src="{% static 'img/user.svg' %}" class="select-none w-6">
+								<img src="{% static 'img/user.svg' %}" class="select-none w-4 lg:w-6">
 								<span class="text-base text-white font-bold">Osoby w Każdym Wieku</span>
 							</div>
 							<p class="text-xs text-neutral-400">Nowy Renesans to miejsce przede wszystkim nakierowane na pomoc osobom, które dopiero wkraczają w świat rozwoju osobistego.</p>
@@ -95,14 +95,14 @@
 			</div>
 			<!-- CONTENT SECTION -->
 			<div class="flex flex-col items-center gap-24 mt-40">
-				<h1 class="text-white text-5xl font-black">CO ZNAJDUJE SIĘ W ŚRODKU</h1>
-				<div class="flex gap-8 items-center justify-center">
-					<div class="flex flex-col w-[28%] gap-4">
-						<div class="flex gap-4">
-							<h1 class="text-7xl text-mainRed font-black">16+</h1>
-							<h1 class="text-4xl text-white font-black">EKSKLUZYWNYCH<br>KURSÓW</h1>
+				<h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-black text-center">CO ZNAJDUJE SIĘ W ŚRODKU</h1>
+				<div class="flex flex-col lg:flex-row gap-8 items-center justify-center">
+					<div class="flex flex-col w-[80%] lg:w-[28%] gap-4">
+						<div class="flex items-center gap-4">
+							<h1 class="text-5xl md:text-6xl lg:text-7xl text-mainRed font-black">16+</h1>
+							<h1 class="text-2xl md:text-3xl lg:text-4xl text-white font-black">EKSKLUZYWNYCH<br>KURSÓW</h1>
 						</div>
-						<p class="text-xl text-neutral-400 leading-loose">
+						<p class="text-md md:text-lg lg:text-xl text-neutral-400 leading-loose">
 							W nowym renesansie znajdziesz wiele kursów, które najpierw pomogą Ci zerwać ze złymi nawykami, 
 							przeprowadzą Cię przez tamto i owamto i w ogóle zaczniesz wyrywać dupy, zarabiać siano i będziesz 
 							jebaną totalną dominującą alfa sigmą żeby mnie drzwi ścisły jeżeli tak się nie stanie przysięgam 
@@ -110,48 +110,48 @@
 						</p>
 					</div>
 
-					<div class="flex items-center justify-center w-[35%] h-auto bg-darkgray p-3 rounded-xl red-shadow border border-mainRed">
+					<div class="flex items-center justify-center w-[80%] lg:w-[35%] h-auto bg-darkgray p-3 rounded-xl red-shadow border border-mainRed">
 						<img src="{% static 'img/kursy.png' %}" class="w-full">
 					</div>
 				</div>
-				<div class="grid grid-rows-2 grid-cols-2 gap-8 w-[70%]">
+				<div class="flex lg:grid flex-col grid-rows-2 grid-cols-2 gap-8 w-[80%] lg:w-[70%]">
 
 					<div class="flex flex-col gap-4 p-4 bg-darkBg border border-darkgray rounded-xl">
 						<div class="flex items-center gap-4">
-							<img src="{% static 'img/money.svg' %}" class="w-11">
-							<span class="text-white font-black text-4xl">CENNE ZNAJOMOŚCI</span>
+							<img src="{% static 'img/money.svg' %}" class="w-8 lg:w-11">
+							<span class="text-white font-black text-2xl lg:text-4xl">CENNE ZNAJOMOŚCI</span>
 						</div>
-						<p class="text-neutral-400 leading-loose text-xl">
+						<p class="text-neutral-400 leading-loose text-md md:text-lg lg:text-xl">
 							Osoby, które spotkasz w Nowym Renesansie to te, które mają takie same cele i problemy jak ty. Znajomości, 
 							które nawiążesz przydadzą Ci się nie tylko aby skutecznie przejść tę drogę, ale i w przyszłości.
 						</p>
 					</div>
 					<div class="flex flex-col gap-4 p-4 bg-darkBg border border-darkgray rounded-xl">
 						<div class="flex items-center gap-4">
-							<img src="{% static 'img/bookred.svg' %}" class="w-11">
-							<span class="text-white font-black text-4xl">SPOTKANIA I WEBINARY</span>
+							<img src="{% static 'img/bookred.svg' %}" class="w-8 lg:w-11">
+							<span class="text-white font-black text-2xl lg:text-4xl">SPOTKANIA I WEBINARY</span>
 						</div>
-						<p class="text-neutral-400 leading-loose text-xl">
+						<p class="text-neutral-400 leading-loose text-md md:text-lg lg:text-xl">
 							W Nowym Renesansie często pojawiają się konkursy, bonusy oraz wyzwania. 
 							Dostępne są też nagrody za poziom w społeczności (m.in. spotkania z Kacprem)
 						</p>
 					</div>
 					<div class="flex flex-col gap-4 p-4 bg-darkBg border border-darkgray rounded-xl">
 						<div class="flex items-center gap-4">
-							<img src="{% static 'img/help.svg' %}" class="w-11">
-							<span class="text-white font-black text-4xl">POMOC CZŁONKÓW</span>
+							<img src="{% static 'img/help.svg' %}" class="w-8 lg:w-11">
+							<span class="text-white font-black text-2xl lg:text-4xl">POMOC CZŁONKÓW</span>
 						</div>
-						<p class="text-neutral-400 leading-loose text-xl">
+						<p class="text-neutral-400 leading-loose text-md md:text-lg lg:text-xl">
 							W naszej społeczności - każdy jest równy, nie spotkasz się z byciem ocenianym ani nie będziesz czuł 
 							się dziwnie na ścieżce rozwoju osobistego. Możesz liczyć na pomoc.
 						</p>
 					</div>
 					<div class="flex flex-col gap-4 p-4 bg-darkBg border border-darkgray rounded-xl">
 						<div class="flex items-center gap-4">
-							<img src="{% static 'img/gift.svg' %}" class="w-11">
-							<span class="text-white font-black text-4xl">WIELE BONUSÓW</span>
+							<img src="{% static 'img/gift.svg' %}" class="w-8 lg:w-11">
+							<span class="text-white font-black text-2xl lg:text-4xl">WIELE BONUSÓW</span>
 						</div>
-						<p class="text-neutral-400 leading-loose text-xl">
+						<p class="text-neutral-400 leading-loose text-md md:text-lg lg:text-xl">
 							W Nowym Renesansie często pojawiają się konkursy, bonusy oraz wyzwania. 
 							Dostępne są też nagrody za poziom w społeczności (m.in. spotkania z Kacprem)
 						</p>
@@ -161,36 +161,36 @@
 			</div>
 			<!-- QUALITIES SECTION -->
 			<div class="flex flex-col items-center gap-24 mt-40">
-				<h1 class="text-white text-5xl font-black">OSIĄGNIESZ SUKCES DZIĘKI TEMU</h1>
-				<div class="flex items-center w-[80%] justify-between gap-3">
-					<div class="flex flex-col gap-4 p-4 bg-darkgray border border-grayBorder rounded-xl w-[80%] red-shadow-2">
+				<h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-black text-center">OSIĄGNIESZ SUKCES DZIĘKI TEMU</h1>
+				<div class="flex flex-col lg:flex-row items-center w-[80%] justify-between gap-3">
+					<div class="flex flex-col gap-4 p-4 bg-darkgray border border-grayBorder rounded-xl w-full lg:w-[80%] red-shadow-2">
 						<div class="flex items-center gap-4">
-							<img src="{% static 'img/help.svg' %}" class="w-8">
-							<span class="text-white font-bold text-3xl">Pomoc</span>
+							<img src="{% static 'img/help.svg' %}" class="select-none w-8">
+							<span class="text-white font-bold text-xl md:text-2xl lg:text-3xl">Pomoc</span>
 						</div>
-						<p class="text-neutral-400 leading-loose text-xl">
+						<p class="text-neutral-400 leading-loose text-md md:text-lg lg:text-xl">
 							Pomoc innych członków da Ci siłę srututut bądź jak najlepszy w tym co robisz dzięki nieustannej 
 							pomocy ode mnie i innych członków Nowego Renesansu.
 						</p>
 					</div>
-					<img src="{% static 'img/arrows-left-right.png' %}" class="w-14">
-					<div class="flex flex-col gap-4 p-4 bg-darkgray border border-grayBorder rounded-xl w-[80%] red-shadow-2">
+					<img src="{% static 'img/arrows-left-right.png' %}" class="w-14 rotate-90 lg:rotate-0">
+					<div class="flex flex-col gap-4 p-4 bg-darkgray border border-grayBorder rounded-xl w-full lg:w-[80%] red-shadow-2">
 						<div class="flex items-center gap-4">
-							<img src="{% static 'img/productivity.svg' %}" class="w-7">
-							<span class="text-white font-bold text-3xl">Produktywność</span>
+							<img src="{% static 'img/productivity.svg' %}" class="select-none w-7">
+							<span class="text-white font-bold text-xl md:text-2xl lg:text-3xl">Produktywność</span>
 						</div>
-						<p class="text-neutral-400 leading-loose text-xl">
+						<p class="text-neutral-400 leading-loose text-md md:text-lg lg:text-xl">
 							Dzięki braku złych nawyków oraz pomocy otrzymywanej ode mnie oraz innych członków, staniesz się 
 							produktywny i osiągniesz swoje cele.
 						</p>
 					</div>
-					<img src="{% static 'img/arrows-left-right.png' %}" class="w-14">
-					<div class="flex flex-col gap-4 p-4 bg-darkgray border border-grayBorder rounded-xl w-[80%] red-shadow-2">
+					<img src="{% static 'img/arrows-left-right.png' %}" class="w-14 rotate-90 lg:rotate-0">
+					<div class="flex flex-col gap-4 p-4 bg-darkgray border border-grayBorder rounded-xl w-full lg:w-[80%] red-shadow-2">
 						<div class="flex items-center gap-4">
-							<img src="{% static 'img/discipline.svg' %}" class="w-6">
-							<span class="text-white font-bold text-3xl">Dyscyplina</span>
+							<img src="{% static 'img/discipline.svg' %}" class="select-none w-6">
+							<span class="text-white font-bold text-xl md:text-2xl lg:text-3xl">Dyscyplina</span>
 						</div>
-						<p class="text-neutral-400 leading-loose text-xl">
+						<p class="text-neutral-400 leading-loose text-md md:text-lg lg:text-xl">
 							Dzięki braku złych nawyków oraz pomocy otrzymywanej ode mnie oraz innych członków, 
 							staniesz się produktywny i osiągniesz swoje cele.
 						</p>
@@ -198,79 +198,165 @@
 				</div>
 			</div>
 			<!-- BONUSES SECTION -->
-			<div class="flex flex-col items-center gap-24 mt-40">
+			<div class="flex flex-col md:items-center gap-12 lg:gap-24 mt-40">
 				<div class="flex flex-col items-center gap-2">
-					<h2 class="text-mainRed font-black text-2xl">PO DRODZE</h2>
-					<h1 class="text-white text-5xl font-black">OSIĄGNIESZ SUKCES DZIĘKI TEMU</h1>
+					<h2 class="text-mainRed font-black text-lg md:text-xl lg:text-2xl">PO DRODZE</h2>
+					<h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-black text-center">ODBLOKUJESZ EKSKLUZYWNE BONUSY</h1>
 				</div>
-				<img src="{% static 'img/userarrow.svg' %}" class="select-none sticky top-64">
-				<div class="flex flex-col items-center">
-					<div class="flex justify-center gap-6">
+				<img src="{% static 'img/userarrow.svg' %}" class="select-none w-16 ml-1 lg:ml-0 md:w-20 lg:w-[4.5rem] sticky top-72 lg:top-64">
+				<div class="hidden md:flex flex-col items-center">
+					<!-- 1 MIESIĄC -->
+					<div class="flex justify-center items-center gap-6">
 						<div class="w-[35%] my-4 h-44 bg-tGray opacity-0 pointer-events-none"></div>
-						<img src="{% static 'img/path-right.svg' %}" class="select-none h-52">
+						<img src="{% static 'img/path-right.svg' %}" class="select-none h-52 hidden lg:block">
+						<img src="{% static 'img/path-right-tablet.svg' %}" class="select-none h-52 hidden">
 						<div class="w-[35%] my-4 h-44 bg-tGray backdrop-blur-sm rounded-xl flex flex-col px-4 py-2 gap-4">
+							<h1 class="font-bold text-white md:text-xl lg:text-2xl"><span class="md:text-3xl lg:text-4xl text-mainRed font-extrabold">1 </span>MIESIĄC</h1>
+							<p class="text-neutral-400 leading-relaxed md:text-md lg:text-lg">
+								Po pierwszym miesiącu odblokujesz lorem ipsum dolor sit amet consecetieur dolor sit amet lorem ispum dolot sit amet.
+							</p>
+						</div>
+					</div>
+					<!-- 2 MIESIĄCE -->
+					<div class="flex justify-center items-center gap-6">
+						<div class="w-[35%] my-4 h-44 bg-tGray backdrop-blur-sm rounded-xl flex flex-col px-4 py-2 gap-4">
+							<h1 class="font-bold text-white md:text-xl lg:text-2xl"><span class="md:text-3xl lg:text-4xl text-mainRed font-extrabold">2 </span>MIESIĄCE</h1>
+							<p class="text-neutral-400 leading-relaxed md:text-md lg:text-lg">
+								Po pierwszym miesiącu odblokujesz lorem ipsum dolor sit amet consecetieur dolor sit amet lorem ispum dolot sit amet.
+							</p>
+						</div>
+						<img src="{% static 'img/path-left.svg' %}" class="select-none h-52 hidden lg:block">
+						<img src="{% static 'img/path-left-tablet.svg' %}" class="select-none h-52 lg:hidden">
+						<div class="w-[35%] my-4 h-44 bg-tGray opacity-0 pointer-events-none"></div>
+					</div>
+					<!-- 3 MIESIĄCE -->
+					<div class="flex justify-center items-center gap-6">
+						<div class="w-[35%] my-4 h-44 bg-tGray opacity-0 pointer-events-none"></div>
+						<img src="{% static 'img/path-right.svg' %}" class="select-none h-52 hidden lg:block">
+						<img src="{% static 'img/path-right-tablet.svg' %}" class="select-none h-52 lg:hidden">
+						<div class="w-[35%] my-4 h-44 bg-tGray backdrop-blur-sm rounded-xl flex flex-col px-4 py-2 gap-4">
+							<h1 class="font-bold text-white md:text-xl lg:text-2xl"><span class="md:text-3xl lg:text-4xl text-mainRed font-extrabold">3 </span>MIESIĄCE</h1>
+							<p class="text-neutral-400 leading-relaxed md:text-md lg:text-lg">
+								Po pierwszym miesiącu odblokujesz lorem ipsum dolor sit amet consecetieur dolor sit amet lorem ispum dolot sit amet.
+							</p>
+						</div>
+					</div>
+					<!-- 4 MIESIĄCE -->
+					<div class="flex justify-center items-center gap-6">
+						<div class="w-[35%] my-4 h-44 bg-tGray backdrop-blur-sm rounded-xl flex flex-col px-4 py-2 gap-4">
+							<h1 class="font-bold text-white md:text-xl lg:text-2xl"><span class="md:text-3xl lg:text-4xl text-mainRed font-extrabold">4 </span>MIESIĄCE</h1>
+							<p class="text-neutral-400 leading-relaxed md:text-md lg:text-lg">
+								Po pierwszym miesiącu odblokujesz lorem ipsum dolor sit amet consecetieur dolor sit amet lorem ispum dolot sit amet.
+							</p>
+						</div>
+						<img src="{% static 'img/path-left.svg' %}" class="select-none h-52 hidden lg:block">
+						<img src="{% static 'img/path-left-tablet.svg' %}" class="select-none h-52 lg:hidden">
+						<div class="w-[35%] my-4 h-44 bg-tGray opacity-0 pointer-events-none"></div>
+					</div>
+					<!-- 5 MIESIĘCY -->
+					<div class="flex justify-center items-center gap-6">
+						<div class="w-[35%] my-4 h-44 bg-tGray opacity-0 pointer-events-none"></div>
+						<img src="{% static 'img/path-right.svg' %}" class="select-none h-52 hidden lg:block">
+						<img src="{% static 'img/path-right-tablet.svg' %}" class="select-none h-52 lg:hidden">
+						<div class="w-[35%] my-4 h-44 bg-tGray backdrop-blur-sm rounded-xl flex flex-col px-4 py-2 gap-4">
+							<h1 class="font-bold text-white md:text-xl lg:text-2xl"><span class="md:text-3xl lg:text-4xl text-mainRed font-extrabold">5 </span>MIESIĘCY</h1>
+							<p class="text-neutral-400 leading-relaxed md:text-md lg:text-lg">
+								Po pierwszym miesiącu odblokujesz lorem ipsum dolor sit amet consecetieur dolor sit amet lorem ispum dolot sit amet.
+							</p>
+						</div>
+					</div>
+					<!-- 6 MIESIĘCY -->
+					<div class="flex justify-center items-center gap-6">
+						<div class="w-[35%] my-4 h-44 backdrop-blur-sm rounded-xl px-4 py-2 custom-gradient-bg border border-mainRed flex flex-col gap-4">
+							<h1 class="font-bold text-white md:text-xl lg:text-2xl"><span class="md:text-3xl lg:text-4xl text-mainRed font-extrabold">6 </span>MIESIĘCY</h1>
+							<p class="text-neutral-400 leading-relaxed md:text-md lg:text-lg">
+								Po pierwszym miesiącu odblokujesz lorem ipsum dolor sit amet consecetieur dolor sit amet lorem ispum dolot sit amet.
+							</p>
+						</div>
+						<img src="{% static 'img/path-left.svg' %}" class="select-none h-52 hidden lg:block">
+						<img src="{% static 'img/path-left-tablet.svg' %}" class="select-none h-52 lg:hidden">
+						<div class="w-[35%] my-4 h-44 bg-tGray opacity-0 pointer-events-none"></div>
+					</div>
+					<!-- 12 MIESIĘCY -->
+					<div class="flex justify-center items-center gap-6">
+						<div class="w-[35%] my-4 h-44 bg-tGray opacity-0 pointer-events-none"></div>
+						<img src="{% static 'img/path-last.svg' %}" class="select-none h-52 hidden lg:block">
+						<img src="{% static 'img/path-last-tablet.svg' %}" class="select-none h-52 lg:hidden">
+						<div class="w-[35%] my-4 h-44 backdrop-blur-sm rounded-xl px-4 py-2 custom-gradient-bg border border-mainRed flex flex-col gap-4">
+							<h1 class="font-bold text-white md:text-xl lg:text-2xl"><span class="md:text-3xl lg:text-4xl text-mainRed font-extrabold">12 </span>MIESIĘCY</h1>
+							<p class="text-neutral-400 leading-relaxed md:text-md lg:text-lg">
+								Po pierwszym miesiącu odblokujesz lorem ipsum dolor sit amet consecetieur dolor sit amet lorem ispum dolot sit amet.
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="flex flex-col items-center md:hidden">
+					<!-- 1 MIESIĄC -->
+					<div class="flex justify-center items-center gap-6">
+						<img src="{% static 'img/path-right-mob.svg' %}" class="select-none h-52">
+						<div class="w-[67%] my-4 h-44 bg-tGray backdrop-blur-sm rounded-xl flex flex-col px-4 py-2 gap-4">
 							<h1 class="font-bold text-white text-2xl"><span class="text-4xl text-mainRed font-extrabold">1 </span>MIESIĄC</h1>
-							<p class="text-neutral-400 leading-relaxed text-lg">
+							<p class="text-neutral-400 leading-relaxed text-sm">
 								Po pierwszym miesiącu odblokujesz lorem ipsum dolor sit amet consecetieur dolor sit amet lorem ispum dolot sit amet.
 							</p>
 						</div>
 					</div>
-					<div class="flex justify-center gap-6">
-						<div class="w-[35%] my-4 h-44 bg-tGray backdrop-blur-sm rounded-xl flex flex-col px-4 py-2 gap-4">
+					<!-- 2 MIESIĄCE -->
+					<div class="flex justify-center items-center gap-6">
+						<img src="{% static 'img/path-right-mob.svg' %}" class="select-none h-52">
+						<div class="w-[67%] my-4 h-44 bg-tGray backdrop-blur-sm rounded-xl flex flex-col px-4 py-2 gap-4">
 							<h1 class="font-bold text-white text-2xl"><span class="text-4xl text-mainRed font-extrabold">2 </span>MIESIĄCE</h1>
-							<p class="text-neutral-400 leading-relaxed text-lg">
+							<p class="text-neutral-400 leading-relaxed text-sm">
 								Po pierwszym miesiącu odblokujesz lorem ipsum dolor sit amet consecetieur dolor sit amet lorem ispum dolot sit amet.
 							</p>
 						</div>
-						<img src="{% static 'img/path-left.svg' %}" class="select-none h-52">
-						<div class="w-[35%] my-4 h-44 bg-tGray opacity-0 pointer-events-none"></div>
 					</div>
-					<div class="flex justify-center gap-6">
-						<div class="w-[35%] my-4 h-44 bg-tGray opacity-0 pointer-events-none"></div>
-						<img src="{% static 'img/path-right.svg' %}" class="select-none h-52">
-						<div class="w-[35%] my-4 h-44 bg-tGray backdrop-blur-sm rounded-xl flex flex-col px-4 py-2 gap-4">
+					<!-- 3 MIESIĄCE -->
+					<div class="flex justify-center items-center gap-6">
+						<img src="{% static 'img/path-right-mob.svg' %}" class="select-none h-52">
+						<div class="w-[67%] my-4 h-44 bg-tGray backdrop-blur-sm rounded-xl flex flex-col px-4 py-2 gap-4">
 							<h1 class="font-bold text-white text-2xl"><span class="text-4xl text-mainRed font-extrabold">3 </span>MIESIĄCE</h1>
-							<p class="text-neutral-400 leading-relaxed text-lg">
+							<p class="text-neutral-400 leading-relaxed text-sm">
 								Po pierwszym miesiącu odblokujesz lorem ipsum dolor sit amet consecetieur dolor sit amet lorem ispum dolot sit amet.
 							</p>
 						</div>
 					</div>
-					<div class="flex justify-center gap-6">
-						<div class="w-[35%] my-4 h-44 bg-tGray backdrop-blur-sm rounded-xl flex flex-col px-4 py-2 gap-4">
+					<!-- 4 MIESIĄCE -->
+					<div class="flex justify-center items-center gap-6">
+						<img src="{% static 'img/path-right-mob.svg' %}" class="select-none h-52">
+						<div class="w-[67%] my-4 h-44 bg-tGray backdrop-blur-sm rounded-xl flex flex-col px-4 py-2 gap-4">
 							<h1 class="font-bold text-white text-2xl"><span class="text-4xl text-mainRed font-extrabold">4 </span>MIESIĄCE</h1>
-							<p class="text-neutral-400 leading-relaxed text-lg">
+							<p class="text-neutral-400 leading-relaxed text-sm">
 								Po pierwszym miesiącu odblokujesz lorem ipsum dolor sit amet consecetieur dolor sit amet lorem ispum dolot sit amet.
 							</p>
 						</div>
-						<img src="{% static 'img/path-left.svg' %}" class="select-none h-52">
-						<div class="w-[35%] my-4 h-44 bg-tGray opacity-0 pointer-events-none"></div>
 					</div>
-					<div class="flex justify-center gap-6">
-						<div class="w-[35%] my-4 h-44 bg-tGray opacity-0 pointer-events-none"></div>
-						<img src="{% static 'img/path-right.svg' %}" class="select-none h-52">
-						<div class="w-[35%] my-4 h-44 bg-tGray backdrop-blur-sm rounded-xl flex flex-col px-4 py-2 gap-4">
+					<!-- 5 MIESIĘCY -->
+					<div class="flex justify-center items-center gap-6">
+						<img src="{% static 'img/path-right-mob.svg' %}" class="select-none h-52">
+						<div class="w-[67%] my-4 h-44 bg-tGray backdrop-blur-sm rounded-xl flex flex-col px-4 py-2 gap-4">
 							<h1 class="font-bold text-white text-2xl"><span class="text-4xl text-mainRed font-extrabold">5 </span>MIESIĘCY</h1>
-							<p class="text-neutral-400 leading-relaxed text-lg">
+							<p class="text-neutral-400 leading-relaxed text-sm">
 								Po pierwszym miesiącu odblokujesz lorem ipsum dolor sit amet consecetieur dolor sit amet lorem ispum dolot sit amet.
 							</p>
 						</div>
 					</div>
-					<div class="flex justify-center gap-6">
-						<div class="w-[35%] my-4 h-44 backdrop-blur-sm rounded-xl px-4 py-2 custom-gradient-bg border border-mainRed flex flex-col gap-4">
+					<!-- 6 MIESIĘCY -->
+					<div class="flex justify-center items-center gap-6">
+						<img src="{% static 'img/path-right-mob.svg' %}" class="select-none h-52">
+						<div class="w-[67%] my-4 h-44 backdrop-blur-sm rounded-xl px-4 py-2 custom-gradient-bg border border-mainRed flex flex-col gap-4">
 							<h1 class="font-bold text-white text-2xl"><span class="text-4xl text-mainRed font-extrabold">6 </span>MIESIĘCY</h1>
-							<p class="text-neutral-400 leading-relaxed text-lg">
+							<p class="text-neutral-400 leading-relaxed text-sm">
 								Po pierwszym miesiącu odblokujesz lorem ipsum dolor sit amet consecetieur dolor sit amet lorem ispum dolot sit amet.
 							</p>
 						</div>
-						<img src="{% static 'img/path-left.svg' %}" class="select-none h-52">
-						<div class="w-[35%] my-4 h-44 bg-tGray opacity-0 pointer-events-none"></div>
 					</div>
-					<div class="flex justify-center gap-6">
-						<div class="w-[35%] my-4 h-44 bg-tGray opacity-0 pointer-events-none"></div>
-						<img src="{% static 'img/path-last.svg' %}" class="select-none h-52">
-						<div class="w-[35%] my-4 h-44 backdrop-blur-sm rounded-xl px-4 py-2 custom-gradient-bg border border-mainRed flex flex-col gap-4">
+					<!-- 12 MIESIĘCY -->
+					<div class="flex justify-center items-center gap-6">
+						<img src="{% static 'img/path-last-mob.svg' %}" class="select-none h-52">
+						<div class="w-[67%] my-4 h-44 backdrop-blur-sm rounded-xl px-4 py-2 custom-gradient-bg border border-mainRed flex flex-col gap-4">
 							<h1 class="font-bold text-white text-2xl"><span class="text-4xl text-mainRed font-extrabold">12 </span>MIESIĘCY</h1>
-							<p class="text-neutral-400 leading-relaxed text-lg">
+							<p class="text-neutral-400 leading-relaxed text-sm">
 								Po pierwszym miesiącu odblokujesz lorem ipsum dolor sit amet consecetieur dolor sit amet lorem ispum dolot sit amet.
 							</p>
 						</div>
@@ -278,19 +364,19 @@
 				</div>
 			</div>
 			<!-- MORE ALIKE PEOPLE SECTION -->
-			<div class="flex flex-col items-center gap-24 mt-72">
-				<div class="flex justify-center gap-10">
-					<div class="grid grid-rows-3 grid-cols-2 gap-4">
-						<img src="" class="w-64 h-48 bg-darkgray">
-						<img src="" class="w-64 h-48 bg-darkgray">
-						<img src="" class="w-64 h-48 bg-darkgray">
-						<img src="" class="w-64 h-48 bg-darkgray">
-						<img src="" class="w-64 h-48 bg-darkgray">
-						<img src="" class="w-64 h-48 bg-darkgray">
+			<div class="flex flex-col items-center gap-24 mt-40 lg:mt-72">
+				<div class="flex flex-col md:flex-row items-center md:items-start justify-center gap-10">
+					<div class="grid grid-rows-3 grid-cols-2 gap-x-4 gap-y-4">
+						<img src="" class="w-44 h-32 lg:w-64 lg:h-48 bg-darkgray">
+						<img src="" class="w-44 h-32 lg:w-64 lg:h-48 bg-darkgray">
+						<img src="" class="w-44 h-32 lg:w-64 lg:h-48 bg-darkgray">
+						<img src="" class="w-44 h-32 lg:w-64 lg:h-48 bg-darkgray">
+						<img src="" class="w-44 h-32 lg:w-64 lg:h-48 bg-darkgray">
+						<img src="" class="w-44 h-32 lg:w-64 lg:h-48 bg-darkgray">
 					</div>
-					<div class="flex flex-col w-[30%] gap-10">
-						<h1 class="text-white font-black text-5xl">PONAD <span class="text-mainRed">300</span><br>OSÓB TAKICH JAK TY</h1>
-						<p class="text-xl text-neutral-400 leading-relaxed">
+					<div class="flex flex-col w-[90%] md:w-[45%] lg:w-[30%] gap-10">
+						<h1 class="text-white font-black text-3xl md:text-4xl lg:text-5xl">PONAD <span class="text-mainRed">300</span><br>OSÓB TAKICH JAK TY</h1>
+						<p class="text-md md:text-lg lg:text-xl text-neutral-400 leading-relaxed">
 							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer porta diam non turpis gravida, 
 							a luctus sem laoreet. Curabitur ut commodo erat. Curabitur malesuada, felis vel dapibus congue, 
 							leo elit lobortis mauris, nec feugiat ligula risus quis velit. Praesent a dictum eros. In venenatis 
@@ -298,17 +384,17 @@
 							blandit id purus ut, blandit fermentum libero. Mauris ornare aliquet purus, sed congue urna feugiat vitae. 
 							Nam tincidunt, justo a iaculis maximus, elit ante feugiat lacus.
 						</p>
-						<button id="order-2-btn" class="bg-mainRed text-white font-black text-2xl py-6 rounded-xl w-[80%]">KUP SUBSKRYPCJĘ</button>
+						<button id="order-2-btn" class="bg-mainRed text-white font-black text-2xl py-3 lg:py-6 rounded-md lg:rounded-xl w-[80%]">KUP SUBSKRYPCJĘ</button>
 					</div>
 				</div>
 			</div>
 			<!-- VSL SECTION -->
-			<div id="vsl" class="flex flex-col items-center gap-24 mt-72">
-				<div class="flex justify-center gap-10">
-					<iframe class="w-[600px] aspect-video" src="https://www.youtube.com/embed/J5tKsm5VxTg?si=pnpbCaJM3SnD9oJx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-					<div class="flex flex-col gap-10 w-[30%]">
-						<h1 class="text-5xl font-black text-mainRed">KILKA SŁÓW<br><span class="text-white">O MNIE I ODE MNIE</span></h1>
-						<p class="text-xl text-neutral-400 w-[80%] leading-relaxed">
+			<div id="vsl" class="flex flex-col items-center gap-24 mt-40 lg:mt-72">
+				<div class="flex flex-col lg:flex-row items-center lg:items-start justify-center gap-10">
+					<iframe class="w-[350px] h-[197px] md:w-[600px] md:h-[337px]" src="https://www.youtube.com/embed/J5tKsm5VxTg?si=pnpbCaJM3SnD9oJx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+					<div class="flex flex-col gap-10 w-[90%] md:w-[80%] lg:w-[30%]">
+						<h1 class="text-3xl md:text-4xl lg:text-5xl font-black text-mainRed">KILKA SŁÓW<br><span class="text-white">O MNIE I ODE MNIE</span></h1>
+						<p class="text-md md:text-lg lg:text-xl text-neutral-400 w-[90%] lg:w-[80%] leading-relaxed">
 							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer porta diam non turpis gravida, a luctus sem laoreet. 
 							Curabitur ut commodo erat. Curabitur malesuada, felis vel dapibus congue, leo elit lobortis mauris, nec feugiat ligula 
 							risus quis velit.
@@ -317,173 +403,173 @@
 				</div>
 			</div>
 			<!-- PRICING SECTION -->
-			<div id="order" class="flex flex-col items-center gap-24 mt-72">
+			<div id="order" class="flex flex-col items-center gap-24 mt-40 lg:mt-72">
 				<div class="flex flex-col items-center gap-2">
-					<h2 class="text-mainRed font-black text-2xl">CENA</h2>
-					<h1 class="text-white text-5xl font-black">WYBIERZ PLAN DLA SIEBIE</h1>
+					<h2 class="text-mainRed font-black text-lg md:text-xl lg:text-2xl">CENA</h2>
+					<h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-black text-center">WYBIERZ PLAN DLA SIEBIE</h1>
 				</div>
-				<div class="flex gap-10">
-					<div class="flex flex-col gap-10 bg-darkBg border border-mainRed w-96 px-6 pt-4 pb-6 rounded-xl">
+				<div class="flex flex-col lg:flex-row gap-10">
+					<div class="flex flex-col gap-10 bg-darkBg border border-mainRed w-80 md:w-96 px-6 pt-4 pb-6 rounded-lg lg:rounded-xl">
 						<h1 class="text-white font-black text-3xl self-center">1 MIESIĄC</h1>
-						<h1 class="text-7xl font-black text-white self-center"><span class="text-2xl text-neutral-400 font-bold">PLN</span> 80 <span class="text-2xl text-neutral-400 font-light">/miesiąc</span></h1>
+						<h1 class="text-5xl md:text-6xl lg:text-7xl font-black text-white self-center"><span class="text-lg md:text-xl lg:text-2xl text-neutral-400 font-bold">PLN</span> 80 <span class="text-lg lg:text-2xl text-neutral-400 font-light">/miesiąc</span></h1>
 						<div class="flex flex-col gap-4">
 							<div class="flex gap-6 items-center">
-								<img src="{% static 'img/check.svg' %}" class="w-6">
-								<span class="text-white text-xl">Lorem ipsum dolor sit amet</span>
+								<img src="{% static 'img/check.svg' %}" class="w-4 md:w-5 lg:w-6">
+								<span class="text-white text-md md:text-lg lg:text-xl">Lorem ipsum dolor sit amet</span>
 							</div>
 							<div class="flex gap-6 items-center">
-								<img src="{% static 'img/check.svg' %}" class="w-6">
-								<span class="text-white text-xl">Lorem ipsum dolor sit amet</span>
+								<img src="{% static 'img/check.svg' %}" class="w-4 md:w-5 lg:w-6">
+								<span class="text-white text-md md:text-lg lg:text-xl">Lorem ipsum dolor sit amet</span>
 							</div>
 							<div class="flex gap-6 items-center">
-								<img src="{% static 'img/check.svg' %}" class="w-6">
-								<span class="text-white text-xl">Lorem ipsum dolor sit amet</span>
+								<img src="{% static 'img/check.svg' %}" class="w-4 md:w-5 lg:w-6">
+								<span class="text-white text-md md:text-lg lg:text-xl">Lorem ipsum dolor sit amet</span>
 							</div>
 							<div class="flex gap-6 items-center">
-								<img src="{% static 'img/check.svg' %}" class="w-6">
-								<span class="text-white text-xl">Lorem ipsum dolor sit amet</span>
+								<img src="{% static 'img/check.svg' %}" class="w-4 md:w-5 lg:w-6">
+								<span class="text-white text-md md:text-lg lg:text-xl">Lorem ipsum dolor sit amet</span>
 							</div>
 							<div class="flex gap-6 items-center">
-								<img src="{% static 'img/x.svg' %}" class="w-6">
-								<span class="text-white text-xl">Lorem ipsum dolor sit amet</span>
+								<img src="{% static 'img/x.svg' %}" class="w-4 md:w-5 lg:w-6">
+								<span class="text-white text-md md:text-lg lg:text-xl">Lorem ipsum dolor sit amet</span>
 							</div>
 							<div class="flex gap-6 items-center">
-								<img src="{% static 'img/x.svg' %}" class="w-6">
-								<span class="text-white text-xl">Lorem ipsum dolor sit amet</span>
+								<img src="{% static 'img/x.svg' %}" class="w-4 md:w-5 lg:w-6">
+								<span class="text-white text-md md:text-lg lg:text-xl">Lorem ipsum dolor sit amet</span>
 							</div>
 							<div class="flex gap-6 items-center">
-								<img src="{% static 'img/x.svg' %}" class="w-6">
-								<span class="text-white text-xl">Lorem ipsum dolor sit amet</span>
+								<img src="{% static 'img/x.svg' %}" class="w-4 md:w-5 lg:w-6">
+								<span class="text-white text-md md:text-lg lg:text-xl">Lorem ipsum dolor sit amet</span>
 							</div>
 						</div>
-						<button id="1mo-btn" class="bg-red10 border border-mainRed rounded-lg text-white font-bold text-2xl py-3 mt-5">KUP TERAZ</button>
+						<button id="1mo-btn" class="bg-red10 border border-mainRed rounded-md lg:rounded-lg text-white font-bold text-lg md:text-xl lg:text-2xl py-3 mt-5">KUP TERAZ</button>
 					</div>
-					<div class="flex flex-col gap-10 bg-red10 backdrop-blur-sm border border-mainRed w-96 px-6 pt-4 pb-6 rounded-xl">
+					<div class="flex flex-col gap-10 bg-red10 backdrop-blur-sm border border-mainRed w-80 md:w-96 px-6 pt-4 pb-6 rounded-lg lg:rounded-xl">
 						<h1 class="text-white font-black text-3xl self-center">3 MIESIĄCE</h1>
-						<h1 class="text-7xl font-black text-white self-center"><span class="text-2xl text-redtext font-bold">PLN</span> 60 <span class="text-2xl text-redtext font-light">/miesiąc</span></h1>
+						<h1 class="text-5xl md:text-6xl lg:text-7xl font-black text-white self-center"><span class="text-lg md:text-xl lg:text-2xl text-redtext font-bold">PLN</span> 60 <span class="text-lg lg:text-2xl text-redtext font-light">/miesiąc</span></h1>
 						<div class="flex flex-col gap-4">
 							<div class="flex gap-6 items-center">
-								<img src="{% static 'img/check.svg' %}" class="w-6">
-								<span class="text-white text-xl">Lorem ipsum dolor sit amet</span>
+								<img src="{% static 'img/check.svg' %}" class="w-4 md:w-5 lg:w-6">
+								<span class="text-white text-md md:text-lg lg:text-xl">Lorem ipsum dolor sit amet</span>
 							</div>
 							<div class="flex gap-6 items-center">
-								<img src="{% static 'img/check.svg' %}" class="w-6">
-								<span class="text-white text-xl">Lorem ipsum dolor sit amet</span>
+								<img src="{% static 'img/check.svg' %}" class="w-4 md:w-5 lg:w-6">
+								<span class="text-white text-md md:text-lg lg:text-xl">Lorem ipsum dolor sit amet</span>
 							</div>
 							<div class="flex gap-6 items-center">
-								<img src="{% static 'img/check.svg' %}" class="w-6">
-								<span class="text-white text-xl">Lorem ipsum dolor sit amet</span>
+								<img src="{% static 'img/check.svg' %}" class="w-4 md:w-5 lg:w-6">
+								<span class="text-white text-md md:text-lg lg:text-xl">Lorem ipsum dolor sit amet</span>
 							</div>
 							<div class="flex gap-6 items-center">
-								<img src="{% static 'img/check.svg' %}" class="w-6">
-								<span class="text-white text-xl">Lorem ipsum dolor sit amet</span>
+								<img src="{% static 'img/check.svg' %}" class="w-4 md:w-5 lg:w-6">
+								<span class="text-white text-md md:text-lg lg:text-xl">Lorem ipsum dolor sit amet</span>
 							</div>
 							<div class="flex gap-6 items-center">
-								<img src="{% static 'img/check.svg' %}" class="w-6">
-								<span class="text-white text-xl">Lorem ipsum dolor sit amet</span>
+								<img src="{% static 'img/check.svg' %}" class="w-4 md:w-5 lg:w-6">
+								<span class="text-white text-md md:text-lg lg:text-xl">Lorem ipsum dolor sit amet</span>
 							</div>
 							<div class="flex gap-6 items-center">
-								<img src="{% static 'img/check.svg' %}" class="w-6">
-								<span class="text-white text-xl">Lorem ipsum dolor sit amet</span>
+								<img src="{% static 'img/check.svg' %}" class="w-4 md:w-5 lg:w-6">
+								<span class="text-white text-md md:text-lg lg:text-xl">Lorem ipsum dolor sit amet</span>
 							</div>
 							<div class="flex gap-6 items-center">
-								<img src="{% static 'img/check.svg' %}" class="w-6">
-								<span class="text-white text-xl">Lorem ipsum dolor sit amet</span>
+								<img src="{% static 'img/check.svg' %}" class="w-4 md:w-5 lg:w-6">
+								<span class="text-white text-md md:text-lg lg:text-xl">Lorem ipsum dolor sit amet</span>
 							</div>
 						</div>
-						<button id="3mo-btn" class="bg-mainRed border border-mainRed rounded-lg text-white font-bold text-2xl py-3 mt-5">KUP TERAZ</button>
+						<button id="3mo-btn" class="bg-mainRed border border-mainRed rounded-md lg:rounded-lg text-white font-bold text-lg md:text-xl lg:text-2xl py-3 mt-5">KUP TERAZ</button>
 					</div>
-					<div class="flex flex-col gap-10 bg-darkBg border border-mainRed w-96 px-6 pt-4 pb-6 rounded-xl">
+					<div class="flex flex-col gap-10 bg-darkBg border border-mainRed w-80 md:w-96 px-6 pt-4 pb-6 rounded-lg lg:rounded-xl">
 						<h1 class="text-white font-black text-3xl self-center">ROCZNA</h1>
-						<h1 class="text-7xl font-black text-white self-center"><span class="text-2xl text-neutral-400 font-bold">PLN</span> 40 <span class="text-2xl text-neutral-400 font-light">/miesiąc</span></h1>
+						<h1 class="text-5xl md:text-6xl lg:text-7xl font-black text-white self-center"><span class="text-lg md:text-xl lg:text-2xl text-neutral-400 font-bold">PLN</span> 40 <span class="text-lg lg:text-2xl text-neutral-400 font-light">/miesiąc</span></h1>
 						<div class="flex flex-col gap-4">
 							<div class="flex gap-6 items-center">
-								<img src="{% static 'img/check.svg' %}" class="w-6">
-								<span class="text-white text-xl">Lorem ipsum dolor sit amet</span>
+								<img src="{% static 'img/check.svg' %}" class="w-4 md:w-5 lg:w-6">
+								<span class="text-white text-md md:text-lg lg:text-xl">Lorem ipsum dolor sit amet</span>
 							</div>
 							<div class="flex gap-6 items-center">
-								<img src="{% static 'img/check.svg' %}" class="w-6">
-								<span class="text-white text-xl">Lorem ipsum dolor sit amet</span>
+								<img src="{% static 'img/check.svg' %}" class="w-4 md:w-5 lg:w-6">
+								<span class="text-white text-md md:text-lg lg:text-xl">Lorem ipsum dolor sit amet</span>
 							</div>
 							<div class="flex gap-6 items-center">
-								<img src="{% static 'img/check.svg' %}" class="w-6">
-								<span class="text-white text-xl">Lorem ipsum dolor sit amet</span>
+								<img src="{% static 'img/check.svg' %}" class="w-4 md:w-5 lg:w-6">
+								<span class="text-white text-md md:text-lg lg:text-xl">Lorem ipsum dolor sit amet</span>
 							</div>
 							<div class="flex gap-6 items-center">
-								<img src="{% static 'img/check.svg' %}" class="w-6">
-								<span class="text-white text-xl">Lorem ipsum dolor sit amet</span>
+								<img src="{% static 'img/check.svg' %}" class="w-4 md:w-5 lg:w-6">
+								<span class="text-white text-md md:text-lg lg:text-xl">Lorem ipsum dolor sit amet</span>
 							</div>
 							<div class="flex gap-6 items-center">
-								<img src="{% static 'img/check.svg' %}" class="w-6">
-								<span class="text-white text-xl">Lorem ipsum dolor sit amet</span>
+								<img src="{% static 'img/check.svg' %}" class="w-4 md:w-5 lg:w-6">
+								<span class="text-white text-md md:text-lg lg:text-xl">Lorem ipsum dolor sit amet</span>
 							</div>
 							<div class="flex gap-6 items-center">
-								<img src="{% static 'img/check.svg' %}" class="w-6">
-								<span class="text-white text-xl">Lorem ipsum dolor sit amet</span>
+								<img src="{% static 'img/check.svg' %}" class="w-4 md:w-5 lg:w-6">
+								<span class="text-white text-md md:text-lg lg:text-xl">Lorem ipsum dolor sit amet</span>
 							</div>
 							<div class="flex gap-6 items-center">
-								<img src="{% static 'img/check.svg' %}" class="w-6">
-								<span class="text-white text-xl">Lorem ipsum dolor sit amet</span>
+								<img src="{% static 'img/check.svg' %}" class="w-4 md:w-5 lg:w-6">
+								<span class="text-white text-md md:text-lg lg:text-xl">Lorem ipsum dolor sit amet</span>
 							</div>
 						</div>
-						<button id="12mo-btn" class="bg-red10 border border-mainRed rounded-lg text-white font-bold text-2xl py-3 mt-5">KUP TERAZ</button>
+						<button id="12mo-btn" class="bg-red10 border border-mainRed rounded-md lg:rounded-lg text-white font-bold text-lg md:text-xl lg:text-2xl py-3 mt-5">KUP TERAZ</button>
 					</div>
 				</div>
 			</div>
-			<!-- PRICING SECTION -->
-			<div class="flex flex-col items-center gap-24 mt-72">
+			<!-- FAQ SECTION -->
+			<div class="flex flex-col items-center gap-24 mt-40 lg:mt-72">
 				<div class="flex flex-col items-center gap-2">
-					<h2 class="text-mainRed font-black text-2xl">FAQ</h2>
-					<h1 class="text-white text-5xl font-black">NAJCZĘSTSZE PYTANIA</h1>
+					<h2 class="text-mainRed font-black text-lg md:text-xl lg:text-2xl">FAQ</h2>
+					<h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-black text-center">NAJCZĘSTSZE PYTANIA</h1>
 				</div>
 
-				<div class="flex flex-col w-[50%] select-none">
-					<div class="question q-open transition-all flex flex-col p-6 gap-6 bg-tGray cursor-pointer backdrop-blur-sm tGrayLight transition-all rounded-t-xl">
+				<div class="flex flex-col w-[90%] lg:w-[50%] select-none">
+					<div class="question q-open transition-all flex flex-col p-6 gap-6 bg-tGray cursor-pointer backdrop-blur-sm tGrayLight transition-all rounded-t-md lg:rounded-t-xl">
 						<div class="flex justify-between">
-							<span class="text-xl text-white">Czym jest Nowy Renesans?</span>
+							<span class="text-md lg:text-xl text-white">Czym jest Nowy Renesans?</span>
 							<img src="{% static 'img/plus.svg' %}" class="w-4 transition-all rotate-diagonal">
 						</div>
-						<p class="w-[90%] text-neutral-400 text-base leading-relaxed">
+						<p class="w-[90%] text-neutral-400 text-sm lg:text-base leading-relaxed">
 							Nowy Renesans jest dobrym wyborem dla każdego, niezależnie czy jesteś studentem, etatowcem czy astronautą. 
 							Lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor.
 						</p>
 					</div>
 					<div class="question transition-all flex flex-col p-6 gap-6 bg-tGray cursor-pointer backdrop-blur-sm hover:bg-darkgray transition-all">
 						<div class="flex justify-between">
-							<span class="text-xl text-white">Jak długo będę mieć dostęp do Nowego Renesansu?</span>
+							<span class="text-md lg:text-xl text-white">Jak długo będę mieć dostęp do Nowego Renesansu?</span>
 							<img src="{% static 'img/plus.svg' %}" class="w-4 transition-all">
 						</div>
-						<p class="hidden w-[90%] text-neutral-400 text-base leading-relaxed">
+						<p class="hidden w-[90%] text-neutral-400 text-sm lg:text-base leading-relaxed">
 							Nowy Renesans jest dobrym wyborem dla każdego, niezależnie czy jesteś studentem, etatowcem czy astronautą. 
 							Lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor.
 						</p>
 					</div>
 					<div class="question transition-all flex flex-col p-6 gap-6 bg-tGray cursor-pointer backdrop-blur-sm hover:bg-darkgray transition-all">
 						<div class="flex justify-between">
-							<span class="text-xl text-white">W jaki sposób można szybciej odblokować treści i nagrody?</span>
+							<span class="text-md lg:text-xl text-white">W jaki sposób można szybciej odblokować treści i nagrody?</span>
 							<img src="{% static 'img/plus.svg' %}" class="w-4 transition-all">
 						</div>
-						<p class="hidden w-[90%] text-neutral-400 text-base leading-relaxed">
+						<p class="hidden w-[90%] text-neutral-400 text-sm lg:text-base leading-relaxed">
 							Nowy Renesans jest dobrym wyborem dla każdego, niezależnie czy jesteś studentem, etatowcem czy astronautą. 
 							Lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor.
 						</p>
 					</div>
 					<div class="question transition-all flex flex-col p-6 gap-6 bg-tGray cursor-pointer backdrop-blur-sm hover:bg-darkgray transition-all">
 						<div class="flex justify-between">
-							<span class="text-xl text-white">Czy inne kursy będą regularnie dodawane do platformy?</span>
+							<span class="text-md lg:text-xl text-white">Czy inne kursy będą regularnie dodawane do platformy?</span>
 							<img src="{% static 'img/plus.svg' %}" class="w-4 transition-all">
 						</div>
-						<p class="hidden w-[90%] text-neutral-400 text-base leading-relaxed">
+						<p class="hidden w-[90%] text-neutral-400 text-sm lg:text-base leading-relaxed">
 							Nowy Renesans jest dobrym wyborem dla każdego, niezależnie czy jesteś studentem, etatowcem czy astronautą. 
 							Lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor.
 						</p>
 					</div>
-					<div class="question transition-all flex flex-col p-6 gap-6 bg-tGray cursor-pointer backdrop-blur-sm hover:bg-darkgray transition-all rounded-b-xl">
+					<div class="question transition-all flex flex-col p-6 gap-6 bg-tGray cursor-pointer backdrop-blur-sm hover:bg-darkgray transition-all rounded-b-md lg:rounded-b-xl">
 						<div class="flex justify-between">
-							<span class="text-xl text-white">Czy to dobry wybór jeżeli mam mało czasu?</span>
+							<span class="text-md lg:text-xl text-white">Czy to dobry wybór jeżeli mam mało czasu?</span>
 							<img src="{% static 'img/plus.svg' %}" class="w-4 transition-all">
 						</div>
-						<p class="hidden w-[90%] text-neutral-400 text-base leading-relaxed">
+						<p class="hidden w-[90%] text-neutral-400 text-sm lg:text-base leading-relaxed">
 							Nowy Renesans jest dobrym wyborem dla każdego, niezależnie czy jesteś studentem, etatowcem czy astronautą. 
 							Lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor.
 						</p>
@@ -492,17 +578,17 @@
 
 			</div>
 			<!-- FOOTER -->
-			<footer class="flex flex-col items-center mt-72 gap-14 select-none">
-				<div class="flex gap-10 py-4 px-8 bg-red10 border border-mainRed backdrop-blur-sm rounded-xl">
-					<img id="yt" src="{% static 'img/yt.svg' %}" class="h-12 select-none cursor-pointer">
-					<img id="ig" src="{% static 'img/ig.svg' %}" class="w-10 select-none cursor-pointer">
+			<footer class="flex flex-col items-center mt-40 lg:mt-72 gap-14 select-none">
+				<div class="flex gap-10 py-4 px-8 bg-red10 border border-mainRed backdrop-blur-sm rounded-md lg:rounded-xl">
+					<img id="yt" src="{% static 'img/yt.svg' %}" class="h-8 lg:h-12 select-none cursor-pointer">
+					<img id="ig" src="{% static 'img/ig.svg' %}" class="w-6 lg:w-10 select-none cursor-pointer">
 				</div>
-				<div class="flex gap-10 items-center text-neutral-400 font-semibold text-lg">
+				<div class="flex gap-10 items-center text-neutral-400 font-semibold text-sm lg:text-lg">
 					<a href="">Polityka Prywatności</a>
 					<div class="w-[2px] h-6 bg-neutral-400"></div>
 					<a href="">Zasady i Regulamin</a>
 				</div>
-				<span class="font-regular text-neutral-400">©2024 Kacper Chalcarz. Wszelkie Prawa Zastrzeżone.</span>
+				<span class="font-regular text-neutral-400 text-center text-sm lg:text-base">©2024 Kacper Chalcarz. Wszelkie Prawa Zastrzeżone.</span>
 			</footer>
 		</div>
 	</body>
