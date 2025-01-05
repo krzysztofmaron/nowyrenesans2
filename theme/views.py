@@ -38,7 +38,7 @@ def create_paid_member(request):
 # DELETE View
 @csrf_exempt
 @api_key_required
-def delete_paid_member(request, email):
+def delete_paid_member(request):
     if request.method == "DELETE":
         try:
             data = json.loads(request.body)
@@ -56,7 +56,7 @@ def delete_paid_member(request, email):
 
 @csrf_exempt
 @api_key_required
-def patch_paid_member(request, email):
+def patch_paid_member(request):
     if request.method == "PATCH":
         try:
             data = json.loads(request.body)
