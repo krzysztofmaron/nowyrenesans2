@@ -42,7 +42,7 @@ def delete_paid_member(request, email):
     if request.method == "DELETE":
         try:
             data = json.loads(request.body)
-            email = data.get('email')
+            email = data["email"]
             if not email:
                 return JsonResponse({"error": "Email is required"}, status = 400)
             member = PaidMember.objects.get(email=email)
@@ -60,8 +60,8 @@ def patch_paid_member(request, email):
     if request.method == "PATCH":
         try:
             data = json.loads(request.body)
-            email = data.get('email')
-            canceled = data.get('canceled')
+            email = data["email"]
+            canceled = data["canceled"]
             if not email and not canceled:
                 return JsonResponse({"error": "Email and cancel is required"}, status = 400)
             member = PaidMember.objects.get(email=email)
