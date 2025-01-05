@@ -38,13 +38,9 @@ def create_paid_member(request):
 # DELETE View
 @csrf_exempt
 @api_key_required
-def delete_paid_member(request):
+def delete_paid_member(request, email):
     if request.method == "DELETE":
         try:
-            data = json.loads(request.body)
-            email = data["email"]
-            if not email:
-                return JsonResponse({"error": "Email is required"}, status = 400)
             member = PaidMember.objects.get(email=email)
             member.delete()
             return JsonResponse({"message": f"Member {email} deleted"}, status = 200)
