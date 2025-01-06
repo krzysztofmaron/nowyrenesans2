@@ -27,3 +27,18 @@
 .rotate-diagonal {
     transform: rotate(45deg);
 }
+
+/* .usrscroll {
+    scrollbar-color: #FF0000 #202020;
+    scrollbar-width: thin;
+} */
+.userscroll {
+    padding-right: 5px;
+}
+.userscroll::-webkit-scrollbar {
+    width: .5vw;
+    background: #252525;
+}
+.userscroll::-webkit-scrollbar-thumb {
+    background: #505050;
+}

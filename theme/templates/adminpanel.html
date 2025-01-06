@@ -1,0 +1,507 @@
+{% load static tailwind_tags %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    <title>NR Admin</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<script src="{% static 'js/home.js' %}"></script>
+		{% tailwind_css %}
+	</head>
+
+	<body class="bg-darkBg font-inter">
+		<div id="sparks-overlay" class="sparks w-full h-full p-20">
+            <span class="block text-white text-2xl font-regular mb-6">User Management</span>
+            <div class="flex gap-10">
+                <div class="flex flex-col gap-4 bg-admingray rounded-xl border border-grayBorder p-4 w-[33vw] h-[76vh]">
+                    <div class="flex gap-4">
+                        <img src="{% static 'img/timer-pause-red.svg' %}" alt="">
+                        <span class="text-white font-semibold text-2xl">Already Canceled Subscriptions</span>
+                    </div>
+                    <p class="text-base text-neutral-400 w-[90%]">The user's subscription has been cancelled and the billing period has finished OR the user's payment failed.</p>
+                    <div class="userscroll flex flex-col gap-2 mt-8 h-full overflow-y-scroll">
+                        <div class="flex justify-between bg-userContainer border border-userBorder rounded-lg p-2">
+                            <div class="flex gap-4">
+                                <img src="{% static 'img/@.svg' %}" class="select-none h-6">
+                                <span class="text-white text-base font-regular">jan.kowalski@gmail.com</span>
+                            </div>
+                            <div class="flex gap-4">
+                                <img src="{% static 'img/status.svg' %}" class="select-none h-6">
+                                <span class="text-mainRed text-base font-semibold">Failed Payment</span>
+                            </div>
+                            <img src="{% static 'img/trash.svg' %}" class="delete-btn h-6 select-none cursor-pointer">
+                        </div>
+                        <!-- DELETE THIS -->
+                        <div class="flex justify-between bg-userContainer border border-userBorder rounded-lg p-2">
+                            <div class="flex gap-4">
+                                <img src="{% static 'img/@.svg' %}" class="select-none h-6">
+                                <span class="text-white text-base font-regular">jan.kowalski@gmail.com</span>
+                            </div>
+                            <div class="flex gap-4">
+                                <img src="{% static 'img/status.svg' %}" class="select-none h-6">
+                                <span class="text-mainRed text-base font-semibold">Failed Payment</span>
+                            </div>
+                            <img src="{% static 'img/trash.svg' %}" class="delete-btn h-6 select-none cursor-pointer">
+                        </div>
+                        <div class="flex justify-between bg-userContainer border border-userBorder rounded-lg p-2">
+                            <div class="flex gap-4">
+                                <img src="{% static 'img/@.svg' %}" class="select-none h-6">
+                                <span class="text-white text-base font-regular">jan.kowalski@gmail.com</span>
+                            </div>
+                            <div class="flex gap-4">
+                                <img src="{% static 'img/status.svg' %}" class="select-none h-6">
+                                <span class="text-mainRed text-base font-semibold">Failed Payment</span>
+                            </div>
+                            <img src="{% static 'img/trash.svg' %}" class="delete-btn h-6 select-none cursor-pointer">
+                        </div>
+                        <div class="flex justify-between bg-userContainer border border-userBorder rounded-lg p-2">
+                            <div class="flex gap-4">
+                                <img src="{% static 'img/@.svg' %}" class="select-none h-6">
+                                <span class="text-white text-base font-regular">jan.kowalski@gmail.com</span>
+                            </div>
+                            <div class="flex gap-4">
+                                <img src="{% static 'img/status.svg' %}" class="select-none h-6">
+                                <span class="text-mainRed text-base font-semibold">Failed Payment</span>
+                            </div>
+                            <img src="{% static 'img/trash.svg' %}" class="delete-btn h-6 select-none cursor-pointer">
+                        </div>
+                        <div class="flex justify-between bg-userContainer border border-userBorder rounded-lg p-2">
+                            <div class="flex gap-4">
+                                <img src="{% static 'img/@.svg' %}" class="select-none h-6">
+                                <span class="text-white text-base font-regular">jan.kowalski@gmail.com</span>
+                            </div>
+                            <div class="flex gap-4">
+                                <img src="{% static 'img/status.svg' %}" class="select-none h-6">
+                                <span class="text-mainRed text-base font-semibold">Failed Payment</span>
+                            </div>
+                            <img src="{% static 'img/trash.svg' %}" class="delete-btn h-6 select-none cursor-pointer">
+                        </div>
+                        <div class="flex justify-between bg-userContainer border border-userBorder rounded-lg p-2">
+                            <div class="flex gap-4">
+                                <img src="{% static 'img/@.svg' %}" class="select-none h-6">
+                                <span class="text-white text-base font-regular">jan.kowalski@gmail.com</span>
+                            </div>
+                            <div class="flex gap-4">
+                                <img src="{% static 'img/status.svg' %}" class="select-none h-6">
+                                <span class="text-mainRed text-base font-semibold">Failed Payment</span>
+                            </div>
+                            <img src="{% static 'img/trash.svg' %}" class="delete-btn h-6 select-none cursor-pointer">
+                        </div>
+                        <div class="flex justify-between bg-userContainer border border-userBorder rounded-lg p-2">
+                            <div class="flex gap-4">
+                                <img src="{% static 'img/@.svg' %}" class="select-none h-6">
+                                <span class="text-white text-base font-regular">jan.kowalski@gmail.com</span>
+                            </div>
+                            <div class="flex gap-4">
+                                <img src="{% static 'img/status.svg' %}" class="select-none h-6">
+                                <span class="text-mainRed text-base font-semibold">Failed Payment</span>
+                            </div>
+                            <img src="{% static 'img/trash.svg' %}" class="delete-btn h-6 select-none cursor-pointer">
+                        </div>
+                        <div class="flex justify-between bg-userContainer border border-userBorder rounded-lg p-2">
+                            <div class="flex gap-4">
+                                <img src="{% static 'img/@.svg' %}" class="select-none h-6">
+                                <span class="text-white text-base font-regular">jan.kowalski@gmail.com</span>
+                            </div>
+                            <div class="flex gap-4">
+                                <img src="{% static 'img/status.svg' %}" class="select-none h-6">
+                                <span class="text-mainRed text-base font-semibold">Failed Payment</span>
+                            </div>
+                            <img src="{% static 'img/trash.svg' %}" class="delete-btn h-6 select-none cursor-pointer">
+                        </div>
+                        <div class="flex justify-between bg-userContainer border border-userBorder rounded-lg p-2">
+                            <div class="flex gap-4">
+                                <img src="{% static 'img/@.svg' %}" class="select-none h-6">
+                                <span class="text-white text-base font-regular">jan.kowalski@gmail.com</span>
+                            </div>
+                            <div class="flex gap-4">
+                                <img src="{% static 'img/status.svg' %}" class="select-none h-6">
+                                <span class="text-mainRed text-base font-semibold">Failed Payment</span>
+                            </div>
+                            <img src="{% static 'img/trash.svg' %}" class="delete-btn h-6 select-none cursor-pointer">
+                        </div>
+                        <div class="flex justify-between bg-userContainer border border-userBorder rounded-lg p-2">
+                            <div class="flex gap-4">
+                                <img src="{% static 'img/@.svg' %}" class="select-none h-6">
+                                <span class="text-white text-base font-regular">jan.kowalski@gmail.com</span>
+                            </div>
+                            <div class="flex gap-4">
+                                <img src="{% static 'img/status.svg' %}" class="select-none h-6">
+                                <span class="text-mainRed text-base font-semibold">Failed Payment</span>
+                            </div>
+                            <img src="{% static 'img/trash.svg' %}" class="delete-btn h-6 select-none cursor-pointer">
+                        </div>
+                        <div class="flex justify-between bg-userContainer border border-userBorder rounded-lg p-2">
+                            <div class="flex gap-4">
+                                <img src="{% static 'img/@.svg' %}" class="select-none h-6">
+                                <span class="text-white text-base font-regular">jan.kowalski@gmail.com</span>
+                            </div>
+                            <div class="flex gap-4">
+                                <img src="{% static 'img/status.svg' %}" class="select-none h-6">
+                                <span class="text-mainRed text-base font-semibold">Failed Payment</span>
+                            </div>
+                            <img src="{% static 'img/trash.svg' %}" class="delete-btn h-6 select-none cursor-pointer">
+                        </div>
+                        <div class="flex justify-between bg-userContainer border border-userBorder rounded-lg p-2">
+                            <div class="flex gap-4">
+                                <img src="{% static 'img/@.svg' %}" class="select-none h-6">
+                                <span class="text-white text-base font-regular">jan.kowalski@gmail.com</span>
+                            </div>
+                            <div class="flex gap-4">
+                                <img src="{% static 'img/status.svg' %}" class="select-none h-6">
+                                <span class="text-mainRed text-base font-semibold">Failed Payment</span>
+                            </div>
+                            <img src="{% static 'img/trash.svg' %}" class="delete-btn h-6 select-none cursor-pointer">
+                        </div>
+                        <div class="flex justify-between bg-userContainer border border-userBorder rounded-lg p-2">
+                            <div class="flex gap-4">
+                                <img src="{% static 'img/@.svg' %}" class="select-none h-6">
+                                <span class="text-white text-base font-regular">jan.kowalski@gmail.com</span>
+                            </div>
+                            <div class="flex gap-4">
+                                <img src="{% static 'img/status.svg' %}" class="select-none h-6">
+                                <span class="text-mainRed text-base font-semibold">Failed Payment</span>
+                            </div>
+                            <img src="{% static 'img/trash.svg' %}" class="delete-btn h-6 select-none cursor-pointer">
+                        </div>
+                        <div class="flex justify-between bg-userContainer border border-userBorder rounded-lg p-2">
+                            <div class="flex gap-4">
+                                <img src="{% static 'img/@.svg' %}" class="select-none h-6">
+                                <span class="text-white text-base font-regular">jan.kowalski@gmail.com</span>
+                            </div>
+                            <div class="flex gap-4">
+                                <img src="{% static 'img/status.svg' %}" class="select-none h-6">
+                                <span class="text-mainRed text-base font-semibold">Failed Payment</span>
+                            </div>
+                            <img src="{% static 'img/trash.svg' %}" class="delete-btn h-6 select-none cursor-pointer">
+                        </div>
+                        <div class="flex justify-between bg-userContainer border border-userBorder rounded-lg p-2">
+                            <div class="flex gap-4">
+                                <img src="{% static 'img/@.svg' %}" class="select-none h-6">
+                                <span class="text-white text-base font-regular">jan.kowalski@gmail.com</span>
+                            </div>
+                            <div class="flex gap-4">
+                                <img src="{% static 'img/status.svg' %}" class="select-none h-6">
+                                <span class="text-mainRed text-base font-semibold">Failed Payment</span>
+                            </div>
+                            <img src="{% static 'img/trash.svg' %}" class="delete-btn h-6 select-none cursor-pointer">
+                        </div>
+                        <div class="flex justify-between bg-userContainer border border-userBorder rounded-lg p-2">
+                            <div class="flex gap-4">
+                                <img src="{% static 'img/@.svg' %}" class="select-none h-6">
+                                <span class="text-white text-base font-regular">jan.kowalski@gmail.com</span>
+                            </div>
+                            <div class="flex gap-4">
+                                <img src="{% static 'img/status.svg' %}" class="select-none h-6">
+                                <span class="text-mainRed text-base font-semibold">Failed Payment</span>
+                            </div>
+                            <img src="{% static 'img/trash.svg' %}" class="delete-btn h-6 select-none cursor-pointer">
+                        </div>
+                        <div class="flex justify-between bg-userContainer border border-userBorder rounded-lg p-2">
+                            <div class="flex gap-4">
+                                <img src="{% static 'img/@.svg' %}" class="select-none h-6">
+                                <span class="text-white text-base font-regular">jan.kowalski@gmail.com</span>
+                            </div>
+                            <div class="flex gap-4">
+                                <img src="{% static 'img/status.svg' %}" class="select-none h-6">
+                                <span class="text-mainRed text-base font-semibold">Failed Payment</span>
+                            </div>
+                            <img src="{% static 'img/trash.svg' %}" class="delete-btn h-6 select-none cursor-pointer">
+                        </div>
+                        <div class="flex justify-between bg-userContainer border border-userBorder rounded-lg p-2">
+                            <div class="flex gap-4">
+                                <img src="{% static 'img/@.svg' %}" class="select-none h-6">
+                                <span class="text-white text-base font-regular">jan.kowalski@gmail.com</span>
+                            </div>
+                            <div class="flex gap-4">
+                                <img src="{% static 'img/status.svg' %}" class="select-none h-6">
+                                <span class="text-mainRed text-base font-semibold">Failed Payment</span>
+                            </div>
+                            <img src="{% static 'img/trash.svg' %}" class="delete-btn h-6 select-none cursor-pointer">
+                        </div>
+                        <div class="flex justify-between bg-userContainer border border-userBorder rounded-lg p-2">
+                            <div class="flex gap-4">
+                                <img src="{% static 'img/@.svg' %}" class="select-none h-6">
+                                <span class="text-white text-base font-regular">jan.kowalski@gmail.com</span>
+                            </div>
+                            <div class="flex gap-4">
+                                <img src="{% static 'img/status.svg' %}" class="select-none h-6">
+                                <span class="text-mainRed text-base font-semibold">Failed Payment</span>
+                            </div>
+                            <img src="{% static 'img/trash.svg' %}" class="delete-btn h-6 select-none cursor-pointer">
+                        </div>
+                        <div class="flex justify-between bg-userContainer border border-userBorder rounded-lg p-2">
+                            <div class="flex gap-4">
+                                <img src="{% static 'img/@.svg' %}" class="select-none h-6">
+                                <span class="text-white text-base font-regular">jan.kowalski@gmail.com</span>
+                            </div>
+                            <div class="flex gap-4">
+                                <img src="{% static 'img/status.svg' %}" class="select-none h-6">
+                                <span class="text-mainRed text-base font-semibold">Failed Payment</span>
+                            </div>
+                            <img src="{% static 'img/trash.svg' %}" class="delete-btn h-6 select-none cursor-pointer">
+                        </div>
+                        <div class="flex justify-between bg-userContainer border border-userBorder rounded-lg p-2">
+                            <div class="flex gap-4">
+                                <img src="{% static 'img/@.svg' %}" class="select-none h-6">
+                                <span class="text-white text-base font-regular">jan.kowalski@gmail.com</span>
+                            </div>
+                            <div class="flex gap-4">
+                                <img src="{% static 'img/status.svg' %}" class="select-none h-6">
+                                <span class="text-mainRed text-base font-semibold">Failed Payment</span>
+                            </div>
+                            <img src="{% static 'img/trash.svg' %}" class="delete-btn h-6 select-none cursor-pointer">
+                        </div>
+                        <!-- UP TO HERE -->
+                    </div>
+                </div>
+                <!-- SECOND TABLE -->
+                <div class="flex flex-col gap-4 bg-admingray rounded-xl border border-grayBorder p-4 w-[33vw] h-[76vh]">
+                    <div class="flex gap-4">
+                        <img src="{% static 'img/timer-pause-yellow.svg' %}" alt="">
+                        <span class="text-white font-semibold text-2xl">Pre-Canceled Subscriptions</span>
+                    </div>
+                    <p class="text-base text-neutral-400 w-[90%]">The users beneath have cancelled their subscription but the billing period has not been finished yet.</p>
+                    <div class="userscroll flex flex-col gap-2 mt-8 h-full overflow-y-scroll">
+                        <div class="flex justify-between bg-userContainer border border-userBorder rounded-lg p-2">
+                            <div class="flex gap-4">
+                                <img src="{% static 'img/@.svg' %}" class="select-none h-6">
+                                <span class="text-white text-base font-regular">jan.kowalski@gmail.com</span>
+                            </div>
+                            <div class="flex gap-4">
+                                <img src="{% static 'img/status.svg' %}" class="select-none h-6">
+                                <span class="text-gold text-base font-semibold">5d left</span>
+                            </div>
+                            <img src="{% static 'img/trash2.svg' %}" class="h-6 select-none cursor-pointer delete-btn">
+                        </div>
+                        <!-- DELETE THIS -->
+                        <div class="flex justify-between bg-userContainer border border-userBorder rounded-lg p-2">
+                            <div class="flex gap-4">
+                                <img src="{% static 'img/@.svg' %}" class="select-none h-6">
+                                <span class="text-white text-base font-regular">jan.kowalski@gmail.com</span>
+                            </div>
+                            <div class="flex gap-4">
+                                <img src="{% static 'img/status.svg' %}" class="select-none h-6">
+                                <span class="text-gold text-base font-semibold">5d left</span>
+                            </div>
+                            <img src="{% static 'img/trash2.svg' %}" class="h-6 select-none cursor-pointer delete-btn">
+                        </div>
+                        <div class="flex justify-between bg-userContainer border border-userBorder rounded-lg p-2">
+                            <div class="flex gap-4">
+                                <img src="{% static 'img/@.svg' %}" class="select-none h-6">
+                                <span class="text-white text-base font-regular">jan.kowalski@gmail.com</span>
+                            </div>
+                            <div class="flex gap-4">
+                                <img src="{% static 'img/status.svg' %}" class="select-none h-6">
+                                <span class="text-gold text-base font-semibold">5d left</span>
+                            </div>
+                            <img src="{% static 'img/trash2.svg' %}" class="h-6 select-none cursor-pointer delete-btn">
+                        </div>
+                        <div class="flex justify-between bg-userContainer border border-userBorder rounded-lg p-2">
+                            <div class="flex gap-4">
+                                <img src="{% static 'img/@.svg' %}" class="select-none h-6">
+                                <span class="text-white text-base font-regular">jan.kowalski@gmail.com</span>
+                            </div>
+                            <div class="flex gap-4">
+                                <img src="{% static 'img/status.svg' %}" class="select-none h-6">
+                                <span class="text-gold text-base font-semibold">5d left</span>
+                            </div>
+                            <img src="{% static 'img/trash2.svg' %}" class="h-6 select-none cursor-pointer delete-btn">
+                        </div>
+                        <div class="flex justify-between bg-userContainer border border-userBorder rounded-lg p-2">
+                            <div class="flex gap-4">
+                                <img src="{% static 'img/@.svg' %}" class="select-none h-6">
+                                <span class="text-white text-base font-regular">jan.kowalski@gmail.com</span>
+                            </div>
+                            <div class="flex gap-4">
+                                <img src="{% static 'img/status.svg' %}" class="select-none h-6">
+                                <span class="text-gold text-base font-semibold">5d left</span>
+                            </div>
+                            <img src="{% static 'img/trash2.svg' %}" class="h-6 select-none cursor-pointer delete-btn">
+                        </div>
+                        <div class="flex justify-between bg-userContainer border border-userBorder rounded-lg p-2">
+                            <div class="flex gap-4">
+                                <img src="{% static 'img/@.svg' %}" class="select-none h-6">
+                                <span class="text-white text-base font-regular">jan.kowalski@gmail.com</span>
+                            </div>
+                            <div class="flex gap-4">
+                                <img src="{% static 'img/status.svg' %}" class="select-none h-6">
+                                <span class="text-gold text-base font-semibold">5d left</span>
+                            </div>
+                            <img src="{% static 'img/trash2.svg' %}" class="h-6 select-none cursor-pointer delete-btn">
+                        </div>
+                        <div class="flex justify-between bg-userContainer border border-userBorder rounded-lg p-2">
+                            <div class="flex gap-4">
+                                <img src="{% static 'img/@.svg' %}" class="select-none h-6">
+                                <span class="text-white text-base font-regular">jan.kowalski@gmail.com</span>
+                            </div>
+                            <div class="flex gap-4">
+                                <img src="{% static 'img/status.svg' %}" class="select-none h-6">
+                                <span class="text-gold text-base font-semibold">5d left</span>
+                            </div>
+                            <img src="{% static 'img/trash2.svg' %}" class="h-6 select-none cursor-pointer delete-btn">
+                        </div>
+                        <div class="flex justify-between bg-userContainer border border-userBorder rounded-lg p-2">
+                            <div class="flex gap-4">
+                                <img src="{% static 'img/@.svg' %}" class="select-none h-6">
+                                <span class="text-white text-base font-regular">jan.kowalski@gmail.com</span>
+                            </div>
+                            <div class="flex gap-4">
+                                <img src="{% static 'img/status.svg' %}" class="select-none h-6">
+                                <span class="text-gold text-base font-semibold">5d left</span>
+                            </div>
+                            <img src="{% static 'img/trash2.svg' %}" class="h-6 select-none cursor-pointer delete-btn">
+                        </div>
+                        <div class="flex justify-between bg-userContainer border border-userBorder rounded-lg p-2">
+                            <div class="flex gap-4">
+                                <img src="{% static 'img/@.svg' %}" class="select-none h-6">
+                                <span class="text-white text-base font-regular">jan.kowalski@gmail.com</span>
+                            </div>
+                            <div class="flex gap-4">
+                                <img src="{% static 'img/status.svg' %}" class="select-none h-6">
+                                <span class="text-gold text-base font-semibold">5d left</span>
+                            </div>
+                            <img src="{% static 'img/trash2.svg' %}" class="h-6 select-none cursor-pointer delete-btn">
+                        </div>
+                        <div class="flex justify-between bg-userContainer border border-userBorder rounded-lg p-2">
+                            <div class="flex gap-4">
+                                <img src="{% static 'img/@.svg' %}" class="select-none h-6">
+                                <span class="text-white text-base font-regular">jan.kowalski@gmail.com</span>
+                            </div>
+                            <div class="flex gap-4">
+                                <img src="{% static 'img/status.svg' %}" class="select-none h-6">
+                                <span class="text-gold text-base font-semibold">5d left</span>
+                            </div>
+                            <img src="{% static 'img/trash2.svg' %}" class="h-6 select-none cursor-pointer delete-btn">
+                        </div>
+                        <div class="flex justify-between bg-userContainer border border-userBorder rounded-lg p-2">
+                            <div class="flex gap-4">
+                                <img src="{% static 'img/@.svg' %}" class="select-none h-6">
+                                <span class="text-white text-base font-regular">jan.kowalski@gmail.com</span>
+                            </div>
+                            <div class="flex gap-4">
+                                <img src="{% static 'img/status.svg' %}" class="select-none h-6">
+                                <span class="text-gold text-base font-semibold">5d left</span>
+                            </div>
+                            <img src="{% static 'img/trash2.svg' %}" class="h-6 select-none cursor-pointer delete-btn">
+                        </div>
+                        <div class="flex justify-between bg-userContainer border border-userBorder rounded-lg p-2">
+                            <div class="flex gap-4">
+                                <img src="{% static 'img/@.svg' %}" class="select-none h-6">
+                                <span class="text-white text-base font-regular">jan.kowalski@gmail.com</span>
+                            </div>
+                            <div class="flex gap-4">
+                                <img src="{% static 'img/status.svg' %}" class="select-none h-6">
+                                <span class="text-gold text-base font-semibold">5d left</span>
+                            </div>
+                            <img src="{% static 'img/trash2.svg' %}" class="h-6 select-none cursor-pointer delete-btn">
+                        </div>
+                        <div class="flex justify-between bg-userContainer border border-userBorder rounded-lg p-2">
+                            <div class="flex gap-4">
+                                <img src="{% static 'img/@.svg' %}" class="select-none h-6">
+                                <span class="text-white text-base font-regular">jan.kowalski@gmail.com</span>
+                            </div>
+                            <div class="flex gap-4">
+                                <img src="{% static 'img/status.svg' %}" class="select-none h-6">
+                                <span class="text-gold text-base font-semibold">5d left</span>
+                            </div>
+                            <img src="{% static 'img/trash2.svg' %}" class="h-6 select-none cursor-pointer delete-btn">
+                        </div>
+                        <div class="flex justify-between bg-userContainer border border-userBorder rounded-lg p-2">
+                            <div class="flex gap-4">
+                                <img src="{% static 'img/@.svg' %}" class="select-none h-6">
+                                <span class="text-white text-base font-regular">jan.kowalski@gmail.com</span>
+                            </div>
+                            <div class="flex gap-4">
+                                <img src="{% static 'img/status.svg' %}" class="select-none h-6">
+                                <span class="text-gold text-base font-semibold">5d left</span>
+                            </div>
+                            <img src="{% static 'img/trash2.svg' %}" class="h-6 select-none cursor-pointer delete-btn">
+                        </div>
+                        <div class="flex justify-between bg-userContainer border border-userBorder rounded-lg p-2">
+                            <div class="flex gap-4">
+                                <img src="{% static 'img/@.svg' %}" class="select-none h-6">
+                                <span class="text-white text-base font-regular">jan.kowalski@gmail.com</span>
+                            </div>
+                            <div class="flex gap-4">
+                                <img src="{% static 'img/status.svg' %}" class="select-none h-6">
+                                <span class="text-gold text-base font-semibold">5d left</span>
+                            </div>
+                            <img src="{% static 'img/trash2.svg' %}" class="h-6 select-none cursor-pointer delete-btn">
+                        </div>
+                        <div class="flex justify-between bg-userContainer border border-userBorder rounded-lg p-2">
+                            <div class="flex gap-4">
+                                <img src="{% static 'img/@.svg' %}" class="select-none h-6">
+                                <span class="text-white text-base font-regular">jan.kowalski@gmail.com</span>
+                            </div>
+                            <div class="flex gap-4">
+                                <img src="{% static 'img/status.svg' %}" class="select-none h-6">
+                                <span class="text-gold text-base font-semibold">5d left</span>
+                            </div>
+                            <img src="{% static 'img/trash2.svg' %}" class="h-6 select-none cursor-pointer delete-btn">
+                        </div>
+                        <div class="flex justify-between bg-userContainer border border-userBorder rounded-lg p-2">
+                            <div class="flex gap-4">
+                                <img src="{% static 'img/@.svg' %}" class="select-none h-6">
+                                <span class="text-white text-base font-regular">jan.kowalski@gmail.com</span>
+                            </div>
+                            <div class="flex gap-4">
+                                <img src="{% static 'img/status.svg' %}" class="select-none h-6">
+                                <span class="text-gold text-base font-semibold">5d left</span>
+                            </div>
+                            <img src="{% static 'img/trash2.svg' %}" class="h-6 select-none cursor-pointer delete-btn">
+                        </div>
+                        <div class="flex justify-between bg-userContainer border border-userBorder rounded-lg p-2">
+                            <div class="flex gap-4">
+                                <img src="{% static 'img/@.svg' %}" class="select-none h-6">
+                                <span class="text-white text-base font-regular">jan.kowalski@gmail.com</span>
+                            </div>
+                            <div class="flex gap-4">
+                                <img src="{% static 'img/status.svg' %}" class="select-none h-6">
+                                <span class="text-gold text-base font-semibold">5d left</span>
+                            </div>
+                            <img src="{% static 'img/trash2.svg' %}" class="h-6 select-none cursor-pointer delete-btn">
+                        </div>
+                        <div class="flex justify-between bg-userContainer border border-userBorder rounded-lg p-2">
+                            <div class="flex gap-4">
+                                <img src="{% static 'img/@.svg' %}" class="select-none h-6">
+                                <span class="text-white text-base font-regular">jan.kowalski@gmail.com</span>
+                            </div>
+                            <div class="flex gap-4">
+                                <img src="{% static 'img/status.svg' %}" class="select-none h-6">
+                                <span class="text-gold text-base font-semibold">5d left</span>
+                            </div>
+                            <img src="{% static 'img/trash2.svg' %}" class="h-6 select-none cursor-pointer delete-btn">
+                        </div>
+                        <div class="flex justify-between bg-userContainer border border-userBorder rounded-lg p-2">
+                            <div class="flex gap-4">
+                                <img src="{% static 'img/@.svg' %}" class="select-none h-6">
+                                <span class="text-white text-base font-regular">jan.kowalski@gmail.com</span>
+                            </div>
+                            <div class="flex gap-4">
+                                <img src="{% static 'img/status.svg' %}" class="select-none h-6">
+                                <span class="text-gold text-base font-semibold">5d left</span>
+                            </div>
+                            <img src="{% static 'img/trash2.svg' %}" class="h-6 select-none cursor-pointer delete-btn">
+                        </div>
+                        <div class="flex justify-between bg-userContainer border border-userBorder rounded-lg p-2">
+                            <div class="flex gap-4">
+                                <img src="{% static 'img/@.svg' %}" class="select-none h-6">
+                                <span class="text-white text-base font-regular">jan.kowalski@gmail.com</span>
+                            </div>
+                            <div class="flex gap-4">
+                                <img src="{% static 'img/status.svg' %}" class="select-none h-6">
+                                <span class="text-gold text-base font-semibold">5d left</span>
+                            </div>
+                            <img src="{% static 'img/trash2.svg' %}" class="h-6 select-none cursor-pointer delete-btn">
+                        </div>
+                        <!-- UP TO HERE -->
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </body>
+</html>

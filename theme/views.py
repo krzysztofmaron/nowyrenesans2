@@ -1,10 +1,13 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.views.decorators.csrf import csrf_exempt
 import json
 from django.http import JsonResponse
 from .models import PaidMember
 from django.conf import settings
 from .decorators import api_key_required
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth import login, authenticate
+from .forms import CustomLoginForm
 
 def home(request):
     print(settings.API_KEY)
@@ -58,10 +61,16 @@ def patch_paid_member(request):
             data = json.loads(request.body)
             email = data["email"]
             canceled = data["canceled"]
-            if not email and not canceled:
-                return JsonResponse({"error": "Email and cancel is required"}, status = 400)
+            failedPayment = data["failed_payment"]
+            if not email:
+                return JsonResponse({"error": "Email is required"}, status = 400)
+            if not canceled and not failedPayment:
+                return JsonResponse({"error": "Boolean field required"}, status = 400)
             member = PaidMember.objects.get(email=email)
-            member.canceled = canceled
+            if canceled:
+                member.canceled = canceled
+            if failedPayment:
+                member.failed_payment = failedPayment
             member.save()
             return JsonResponse({"message": f"Member {email} updated"}, status = 200)
         except PaidMember.DoesNotExist:
@@ -69,3 +78,23 @@ def patch_paid_member(request):
         except json.JSONDecodeError:
             return JsonResponse({"error": "Invalid JSON"}, status = 400)
     return JsonResponse({"error": "Method not allowed"}, status = 405)
+
+@login_required
+def adminpanel(request):
+    return render(request, 'adminpanel.html', {})
+
+
+def login_view(request):
+    if request.method == 'POST':
+        form = CustomLoginForm(request.POST)
+        if form.is_valid():
+            username = form.cleaned_data.get('username')
+            password = form.cleaned_data.get('password')
+            user = authenticate(request, username=username, password=password)
+            if user:
+                login(request, user)
+                return redirect('/adminconsole')
+    else:
+        form = CustomLoginForm()
+
+    return render(request, 'login.html', {'form': form})

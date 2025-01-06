@@ -1,6 +1,6 @@
 # example/urls.py
 from django.urls import path
-
+from django.contrib.auth import views as auth_views
 from . import views
 
 
@@ -10,4 +10,6 @@ urlpatterns = [
     path('members/create', views.create_paid_member, name='create-paid-member'), #POST
     path('members/delete/<str:email>', views.delete_paid_member, name='delete-paid-member'), #DELETE
     path('members/update', views.patch_paid_member, name='patch-paid-member'), #PATCH
+    path('adminconsole', views.adminpanel, name='admin-panel'), #ADMIN PANEL
+    path('login/', views.login_view, name='login'), #LOGIN PAGE
 ]
