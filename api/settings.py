@@ -23,7 +23,7 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 API_KEY = os.getenv("API_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False ###SET THAT TO FALSE IN PRODUCTION
+DEBUG = True ###SET THAT TO FALSE IN PRODUCTION
 
 ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app']
 
@@ -44,13 +44,13 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'tailwind',
     'theme',
-    # 'django_browser_reload', #COMMENT THAT IN PRODUCTION
+    'django_browser_reload', #COMMENT THAT IN PRODUCTION
     'rest_framework'
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    # "django_browser_reload.middleware.BrowserReloadMiddleware", #COMMENT THAT IN PRODUCTION
+    "django_browser_reload.middleware.BrowserReloadMiddleware", #COMMENT THAT IN PRODUCTION
     "whitenoise.middleware.WhiteNoiseMiddleware",
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
