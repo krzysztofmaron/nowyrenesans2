@@ -5,12 +5,7 @@
  * https://unpkg.com/browse/tailwindcss@latest/stubs/defaultConfig.stub.js
  */
 
-const safelist = [
-    'text-red-500',
-]
-
 module.exports = {
-    safelist,
     content: [
         /**
          * HTML. Paths to Django template files that will contain Tailwind CSS classes.
@@ -66,9 +61,6 @@ module.exports = {
             fontFamily: {
                 inter: ['Inter', 'sans-serif'],
             },
-            aspectRatio: {
-                'wide': '4 / 1',
-            }
         },
     },
     plugins: [
