@@ -25,7 +25,7 @@ API_KEY = os.getenv("API_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False ###SET THAT TO FALSE IN PRODUCTION
 
-ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app']
+ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app', 'nowyrenesans.pl', 'www.nowyrenesans.pl']
 
 TAILWIND_APP_NAME = 'theme'
 INTERNAL_IPS = [
