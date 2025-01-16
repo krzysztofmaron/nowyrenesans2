@@ -12,4 +12,6 @@ urlpatterns = [
     path('members/update', views.patch_paid_member, name='patch-paid-member'), #PATCH
     path('adminconsole', views.adminpanel, name='admin-panel'), #ADMIN PANEL
     path('login/', views.login_view, name='login'), #LOGIN PAGE
+    path('privacy', views.privacy, name='privacy'),
+    path('terms', views.terms, name='terms'),
 ]

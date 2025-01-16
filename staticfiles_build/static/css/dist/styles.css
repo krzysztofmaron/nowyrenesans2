@@ -809,12 +809,20 @@ select{
   margin-bottom: 10rem;
 }
 
+.mb-16{
+  margin-bottom: 4rem;
+}
+
 .mb-6{
   margin-bottom: 1.5rem;
 }
 
 .ml-1{
   margin-left: 0.25rem;
+}
+
+.ml-16{
+  margin-left: 4rem;
 }
 
 .ml-4{
@@ -1003,6 +1011,10 @@ select{
 
 .w-\[40\%\]{
   width: 40%;
+}
+
+.w-\[50vw\]{
+  width: 50vw;
 }
 
 .w-\[60\%\]{
@@ -1355,6 +1367,11 @@ select{
 .text-3xl{
   font-size: 1.875rem;
   line-height: 2.25rem;
+}
+
+.text-4xl{
+  font-size: 2.25rem;
+  line-height: 2.5rem;
 }
 
 .text-5xl{
@@ -1749,10 +1766,6 @@ select{
 
   .lg\:w-\[80\%\]{
     width: 80%;
-  }
-
-  .lg\:w-\[90\%\]{
-    width: 90%;
   }
 
   .lg\:min-w-\[25vw\]{

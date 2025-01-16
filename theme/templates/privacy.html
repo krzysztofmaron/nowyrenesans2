@@ -1,0 +1,82 @@
+{% load static tailwind_tags %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    <title>Polityka Prywatności</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="shortcut icon" href="{% static 'img/logoicon.png' %}" type="image/png">
+		{% tailwind_css %}
+	</head>
+
+    <body class="bg-darkBg font-inter">
+		<div id="sparks-overlay" class="sparks w-full h-full">
+
+            <h1 class="text-4xl text-white font-bold ml-16 mt-16">Polityka Prywatności</h1>
+
+            <div class="text-white w-[50vw] flex flex-col gap-6 mt-16 ml-16 mb-16">
+                <div class="flex flex-col gap-2">
+                    <h2 class="text-2xl text-white font-semibold">1. Informacje ogólne</h2>
+                    <p class="text-neutral-400">
+                        Niniejsza Polityka Prywatności określa zasady przetwarzania danych osobowych 
+                        na stronie internetowej, umożliwiającej zakup subskrypcji, której przedmiotem jest
+                        dostęp do społeczności skool "Nowy Renesans Premium".
+                        Dokładamy wszelkich starań, aby zapewnić bezpieczeństwo 
+                        danych osobowych użytkowników i zgodność z obowiązującymi przepisami prawa.
+                    </p>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <h2 class="text-2xl text-white font-semibold">2. Administrator danych</h2>
+                    <p class="text-neutral-400">
+                        Administratorem danych osobowych jest Kacper Chalcarz. Wszelkie dane związane z płatnościami są przetwarzane
+                        przez zewnętrznych dostawców usług płatniczych - Stripe oraz Skool.
+                    </p>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <h2 class="text-2xl text-white font-semibold">3. Zakres i cel przetwarzania</h2>
+                    <p class="text-neutral-400">
+                        Nasza strona zbiera adresy e-mail użytkowników wyłącznie w celach administracyjnych i zarządzania grupą.
+                        Wszystkie dane wymagane do realizacji transakcji subskrypcyjnych (np. dane karty płatniczej) 
+                        są przetwarzane wyłącznie
+                        przez Stripe oraz Skool, zgodnie z ich polityką prywatności.
+                    </p>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <h2 class="text-2xl text-white font-semibold">4. Płatności przez Stripe oraz Skool</h2>
+                    <p class="text-neutral-400">
+                        Do osbługi płatności korzystamy z platform Stripe oraz Skool. Mogą one przetwarzać dane osobowe niezbędne 
+                        do realizacji transakcji, takie jak dane karty płatniczej oraz dane kontaktowe podane przy płatności.
+                        Więcej informacji o przetwarzaniu danych osobowych przez Stripe oraz Skool znajduje się w ich 
+                        polityce prywatności, dostępej pod tymi adresami:
+                        <a href="https://stripe.com/en-pl/privacy" target="_blank">Stripe</a>, 
+                        <a href="https://www.skool.com/legal?t=privacy" target="_blank">Skool</a>.
+                    </p>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <h2 class="text-2xl text-white font-semibold">5. Pliki cookies</h2>
+                    <p class="text-neutral-400">
+                        Strona może wykorzystywać pliki cookies wyłącznie w celach technicznych, 
+                        np. w celu zapewnienia poprawnego działania strony.
+                        Nie zbieramy danych osobowych przy użyciu plików cookies.
+                    </p>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <h2 class="text-2xl text-white font-semibold">6. Kontakt</h2>
+                    <p class="text-neutral-400">
+                        W razie pytań dotyczących niniejszej Polityki Prywatności prosimy o kontakt do Kacper Chalcarz 
+                        pod adresem email kacperchalcarzog@gmail.com
+                    </p>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <h2 class="text-2xl text-white font-semibold">7. Zmiany w Polityce Prywatności</h2>
+                    <p class="text-neutral-400">
+                        Zastrzegamy sobie prawo do wprowadzania zmian w niniejszej Polityce Prywatności. 
+                        Wszelkie zmiany będą publikowane na tej stronie.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

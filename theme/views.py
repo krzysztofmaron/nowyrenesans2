@@ -98,3 +98,10 @@ def login_view(request):
         form = CustomLoginForm()
 
     return render(request, 'login.html', {'form': form})
+
+
+def privacy(request):
+    return render(request, 'privacy.html')
+
+def terms(request):
+    return render(request, 'terms.html')
