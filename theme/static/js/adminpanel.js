@@ -159,7 +159,7 @@ document.addEventListener('DOMContentLoaded', function(){
     function calculateDateDistance(targetDate) {
         const currentDate = new Date()
         const target = new Date(targetDate)
-        target.setMonth(date.getMonth() + 1)
+        target.setMonth(target.getMonth() + 1)
 
         const diffInMs = target - currentDate
         const diffInDays = Math.round(diffInMs / (1000 * 60 * 60 * 24))
