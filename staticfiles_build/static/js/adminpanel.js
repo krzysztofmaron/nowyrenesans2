@@ -1,5 +1,21 @@
 document.addEventListener('DOMContentLoaded', function(){
 
+
+    function calculateDateDistance(targetDate) {
+        const currentDate = new Date()
+        console.log(`current date: ${currentDate}`)
+        const target = new Date(targetDate)
+        console.log(`target date: ${target}`)
+        target.setMonth(target.getMonth() + 1)
+        console.log(`target date: ${target}`)
+
+        const diffInMs = target - currentDate
+        const diffInDays = Math.round(diffInMs / (1000 * 60 * 60 * 24))
+        console.log(diffInDays)
+
+        return diffInDays
+    }
+
     async function getData(url, apiKey)
     {
         try {
@@ -46,6 +62,7 @@ document.addEventListener('DOMContentLoaded', function(){
     async function populatePreCancel()
     {
         const data = await getData('../members', '613d7984-a0ee-4558-b026-9882ac5a97a6')
+        console.log(data)
         await insertHtmlPreCancel(data)
         await insertHtmlCanceled(data)
         await insertNumbers(data)
@@ -154,17 +171,6 @@ document.addEventListener('DOMContentLoaded', function(){
     }
 
     populatePreCancel()
-
-
-    function calculateDateDistance(targetDate) {
-        const currentDate = new Date()
-        const target = new Date(targetDate)
-
-        const diffInMs = target - currentDate
-        const diffInDays = Math.round(diffInMs / (1000 * 60 * 60 * 24))
-
-        return diffInDays
-    }
 
     let boundFunction
 

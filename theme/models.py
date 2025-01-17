@@ -9,3 +9,12 @@ class PaidMember(models.Model):
 
     def __str__(self):
         return str(self.email) + ' | ' + str(self.renewal_date) + ' | ' + str(self.canceled)
+    
+    
+class GlobalPrices(models.Model):
+    one_month_price = models.IntegerField(default=0)
+    three_month_price = models.IntegerField(default=0)
+    twelve_month_price = models.IntegerField(default=0)
+
+    def __str__(self):
+        return "Global Pricing Configuration"
