@@ -60,16 +60,16 @@ def patch_paid_member(request):
         try:
             data = json.loads(request.body)
             email = data["email"]
-            canceled = data["canceled"]
-            failedPayment = data["failed_payment"]
+            canceled = data.get("canceled")
+            failedPayment = data.get("failed_payment")
             if not email:
                 return JsonResponse({"error": "Email is required"}, status = 400)
             if not canceled and not failedPayment:
                 return JsonResponse({"error": "Boolean field required"}, status = 400)
             member = PaidMember.objects.get(email=email)
-            if canceled:
+            if canceled != None:
                 member.canceled = canceled
-            if failedPayment:
+            if failedPayment != None:
                 member.failed_payment = failedPayment
             member.save()
             return JsonResponse({"message": f"Member {email} updated"}, status = 200)
