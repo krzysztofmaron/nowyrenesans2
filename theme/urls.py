@@ -14,4 +14,6 @@ urlpatterns = [
     path('login/', views.login_view, name='login'), #LOGIN PAGE
     path('privacy', views.privacy, name='privacy'),
     path('terms', views.terms, name='terms'),
+    path('globals/', views.get_globals, name='get-globals'),
+    path('globals/update/', views.patch_globals, name='patch-globals'),
 ]

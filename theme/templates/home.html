@@ -26,12 +26,12 @@
 					</div>
 					<div class="flex text-neutral-400 gap-4 md:gap-24 mt-16">
 						<div class="flex flex-col items-center">
-							<h1 class="text-2xl md:text-6xl font-bold">16+</h1>
+							<h1 class="text-2xl md:text-6xl font-bold">{{ globals.courses_count }}+</h1>
 							<p class="w-[80%] md:w-auto font-semibold text-sm md:text-xl lg:text-base text-center">Ekskluzywnych Kursów</p>
 						</div>
 						<div class="w-[1px] h-18 lg:h-20 bg-neutral-400"></div>
 						<div class="flex flex-col items-center">
-							<h1 class="text-2xl md:text-6xl font-bold">300+</h1>
+							<h1 class="text-2xl md:text-6xl font-bold">{{ globals.user_count }}+</h1>
 							<p class="w-[80%] md:w-auto font-semibold text-sm md:text-xl lg:text-base text-center">Aktywnych Użytkowników</p>
 						</div>
 					</div>
@@ -115,7 +115,7 @@
 				<div class="flex flex-col lg:flex-row gap-8 items-center lg:items-start justify-center">
 					<div class="flex flex-col w-[80%] lg:w-[28%] gap-4">
 						<div class="flex items-center gap-4">
-							<h1 class="text-5xl md:text-6xl lg:text-7xl text-mainRed font-black">12+</h1>
+							<h1 class="text-5xl md:text-6xl lg:text-7xl text-mainRed font-black">{{ globals.courses_count }}+</h1>
 							<h1 class="text-2xl md:text-3xl lg:text-4xl text-white font-black">EKSKLUZYWNYCH<br>PROGRAMÓW</h1>
 						</div>
 						<p class="text-md md:text-lg lg:text-xl text-neutral-400 leading-loose">
@@ -391,7 +391,7 @@
 			<div class="flex flex-col items-center gap-24 mt-40 lg:mt-72">
 
 				<div class="flex flex-col items-center w-[90%] md:w-[65%] lg:w-[50%] gap-10">
-					<h1 class="text-center text-white font-black text-3xl md:text-4xl lg:text-5xl">PONAD <span class="text-mainRed">300</span><br>OSÓB TAKICH JAK TY</h1>
+					<h1 class="text-center text-white font-black text-3xl md:text-4xl lg:text-5xl">PONAD <span class="text-mainRed">{{ globals.user_count }}</span><br>OSÓB TAKICH JAK TY</h1>
 					<p class="text-center text-md md:text-lg lg:text-xl text-neutral-400 leading-relaxed">
 						W Nowym Renesansie nie ma czegoś takiego jak przeciętność. Zamiast tego dołączysz do ligi wysoce zmotywowanych, obsesyjnych na punkcie sukcesu
 						ludzi, którzy dążą do wspólnego celu.<br><br>
@@ -406,7 +406,7 @@
 			<div id="vsl" class="flex flex-col items-center gap-24 mt-40 lg:mt-72">
 				<div class="flex flex-col items-center justify-center gap-10">
 					<h1 class="text-3xl md:text-4xl lg:text-5xl font-black text-mainRed text-center">KILKA SŁÓW <span class="text-white">ODE MNIE</span></h1>
-					<iframe class="w-[350px] h-[197px] md:w-[600px] md:h-[337px] lg:w-[1000px] lg:h-[562px]" src="https://www.youtube.com/embed/EPbDlUXkOW4?si=8IQVVO50l6jvSNqb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+					<iframe class="w-[350px] h-[197px] md:w-[600px] md:h-[337px] lg:w-[1000px] lg:h-[562px]" src="{{ globals.vsl_url }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 					<button id="order-3-btn" class="bg-mainRed text-white font-black text-2xl py-3 lg:py-6 rounded-md lg:rounded-xl w-[80%] md:w-[70%] lg:w-[70%]">KUP SUBSKRYPCJĘ</button>
 				</div>
 			</div>
@@ -433,7 +433,7 @@
 					<div class="flex flex-col justify-between gap-10 bg-darkBg border border-mainRed w-80 md:w-96 px-6 pt-4 pb-6 rounded-lg lg:rounded-xl">
 						<div class="flex flex-col gap-10">
 							<h1 class="text-white font-black text-3xl self-center">1 MIESIĄC</h1>
-							<h1 class="text-5xl md:text-6xl lg:text-7xl font-black text-white self-center"><span class="text-lg md:text-xl lg:text-2xl text-neutral-400 font-bold">PLN</span> 90 <span class="text-lg lg:text-2xl text-neutral-400 font-light">/miesiąc</span></h1>
+							<h1 class="text-5xl md:text-6xl lg:text-7xl font-black text-white self-center"><span class="text-lg md:text-xl lg:text-2xl text-neutral-400 font-bold">PLN</span> {{ globals.one_month_price }} <span class="text-lg lg:text-2xl text-neutral-400 font-light">/miesiąc</span></h1>
 							<div class="flex flex-col gap-4">
 								<div class="flex gap-6 items-start">
 									<img src="{% static 'img/check.svg' %}" class="w-4 md:w-5 lg:w-6">
@@ -461,12 +461,12 @@
 								</div>
 							</div>
 						</div>
-						<button id="1mo-btn" class="bg-red10 border border-mainRed rounded-md lg:rounded-lg text-white font-bold text-lg md:text-xl lg:text-2xl py-3 mt-5">KUP TERAZ</button>
+						<a href="https://www.skool.com/nowy-renesans/about" target="_blank" class="text-center bg-red10 border border-mainRed rounded-md lg:rounded-lg text-white font-bold text-lg md:text-xl lg:text-2xl py-3 mt-5">KUP TERAZ</a>
 					</div>
 					<div class="flex flex-col justify-between gap-10 bg-red10 backdrop-blur-sm border border-mainRed w-80 md:w-96 px-6 pt-4 pb-6 rounded-lg lg:rounded-xl">
 						<div class="flex flex-col gap-10">
 							<h1 class="text-white font-black text-3xl self-center">3 MIESIĄCE</h1>
-							<h1 class="text-5xl md:text-6xl lg:text-7xl font-black text-white self-center"><span class="text-lg md:text-xl lg:text-2xl text-redtext font-bold">PLN</span> 70 <span class="text-lg lg:text-2xl text-redtext font-light">/miesiąc</span></h1>
+							<h1 class="text-5xl md:text-6xl lg:text-7xl font-black text-white self-center"><span class="text-lg md:text-xl lg:text-2xl text-redtext font-bold">PLN</span> {{ globals.three_month_price }} <span class="text-lg lg:text-2xl text-redtext font-light">/miesiąc</span></h1>
 							<div class="flex flex-col gap-4">
 								<div class="flex gap-6 items-start">
 									<img src="{% static 'img/check.svg' %}" class="w-4 md:w-5 lg:w-6">
@@ -498,12 +498,12 @@
 								</div>
 							</div>
 						</div>
-						<button id="3mo-btn" class="bg-mainRed border border-mainRed rounded-md lg:rounded-lg text-white font-bold text-lg md:text-xl lg:text-2xl py-3 mt-5">KUP TERAZ</button>
+						<a href="{{ globals.stripe_url }}" target="_blank" class="text-center bg-mainRed border border-mainRed rounded-md lg:rounded-lg text-white font-bold text-lg md:text-xl lg:text-2xl py-3 mt-5">KUP TERAZ</a>
 					</div>
 					<div class="flex flex-col justify-between gap-10 bg-darkBg border border-mainRed w-80 md:w-96 px-6 pt-4 pb-6 rounded-lg lg:rounded-xl">
 						<div class="flex flex-col gap-10">
 							<h1 class="text-white font-black text-3xl self-center">ROCZNA</h1>
-							<h1 class="text-5xl md:text-6xl lg:text-7xl font-black text-white self-center"><span class="text-lg md:text-xl lg:text-2xl text-neutral-400 font-bold">PLN</span> 53 <span class="text-lg lg:text-2xl text-neutral-400 font-light">/miesiąc</span></h1>
+							<h1 class="text-5xl md:text-6xl lg:text-7xl font-black text-white self-center"><span class="text-lg md:text-xl lg:text-2xl text-neutral-400 font-bold">PLN</span> {{ globals.twelve_month_price }} <span class="text-lg lg:text-2xl text-neutral-400 font-light">/miesiąc</span></h1>
 							<div class="flex flex-col gap-4">
 								<div class="flex gap-6 items-start">
 									<img src="{% static 'img/check.svg' %}" class="w-4 md:w-5 lg:w-6">
@@ -531,7 +531,7 @@
 								</div>
 							</div>
 						</div>
-						<button id="12mo-btn" class="bg-red10 border border-mainRed rounded-md lg:rounded-lg text-white font-bold text-lg md:text-xl lg:text-2xl py-3 mt-5">KUP TERAZ</button>
+						<a href="https://www.skool.com/nowy-renesans/about" target="_blank" class="text-center bg-red10 border border-mainRed rounded-md lg:rounded-lg text-white font-bold text-lg md:text-xl lg:text-2xl py-3 mt-5">KUP TERAZ</a>
 					</div>
 				</div>
 			</div>

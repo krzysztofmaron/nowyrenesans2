@@ -38,22 +38,61 @@
                     </div>
                 </div>
                 <!-- THIRD TABLE -->
-                <div class="flex flex-col gap-4 bg-admingray rounded-xl border border-grayBorder p-4 w-[20vw] h-[22.75vh]">
-                    <span class="text-white font-semibold text-2xl">Status</span>
-                    <div class="flex gap-1 items-center">
-                        <div class="bg-green-500 rounded-[50%] w-3 h-3 animation-glow"></div>
-                        <span id="activesubs" class="text-green-500 font-bold text-2xl">300</span>
-                        <span class="ml-4 text-neutral-400 font-regular text-md">Active Users</span>
+                <div class="flex flex-col gap-4">
+                    <div class="flex flex-col gap-4 bg-admingray rounded-xl border border-grayBorder p-4 w-[20vw] h-[22.75vh]">
+                        <span class="text-white font-semibold text-2xl">Status</span>
+                        <div class="flex gap-1 items-center">
+                            <div class="bg-green-500 rounded-[50%] w-3 h-3 animation-glow"></div>
+                            <span id="activesubs" class="text-green-500 font-bold text-2xl">300</span>
+                            <span class="ml-4 text-neutral-400 font-regular text-md">Active Users</span>
+                        </div>
+                        <div class="flex gap-1 items-center">
+                            <div class="bg-gold rounded-[50%] w-3 h-3 animation-glow"></div>
+                            <span id="precanceledsubs" class="text-gold font-bold text-2xl">50</span>
+                            <span class="ml-4 text-neutral-400 font-regular text-md">Pre-Canceled Users</span>
+                        </div>
+                        <div class="flex gap-1 items-center">
+                            <div class="bg-mainRed rounded-[50%] w-3 h-3 animation-glow"></div>
+                            <span id="canceledsubs" class="text-mainRed font-bold text-2xl">10</span>
+                            <span class="ml-4 text-neutral-400 font-regular text-md">Canceled Users</span>
+                        </div>
                     </div>
-                    <div class="flex gap-1 items-center">
-                        <div class="bg-gold rounded-[50%] w-3 h-3 animation-glow"></div>
-                        <span id="precanceledsubs" class="text-gold font-bold text-2xl">50</span>
-                        <span class="ml-4 text-neutral-400 font-regular text-md">Pre-Canceled Users</span>
-                    </div>
-                    <div class="flex gap-1 items-center">
-                        <div class="bg-mainRed rounded-[50%] w-3 h-3 animation-glow"></div>
-                        <span id="canceledsubs" class="text-mainRed font-bold text-2xl">10</span>
-                        <span class="ml-4 text-neutral-400 font-regular text-md">Canceled Users</span>
+
+                    <div class="flex flex-col bg-admingray rounded-xl border border-grayBorder p-4 w-[20vw] gap-4">
+                        <span class="text-white font-semibold text-xl">Prices (USD)</span>
+                        <div class="flex gap-6">
+                            <div class="flex gap-2 flex-col text-white">
+                                <span>1 miesiąc</span>
+                                <input type="number" class="bg-admingray border border-grayBorder w-24 rounded-md text-white" id="1moPrice">
+                            </div>
+                            <div class="flex gap-2 flex-col text-white">
+                                <span>3 miesiące</span>
+                                <input type="number" class="bg-admingray border border-grayBorder w-24 rounded-md text-white" id="3moPrice">
+                            </div>
+                            <div class="flex gap-2 flex-col text-white">
+                                <span>12 miesięcy</span>
+                                <input type="number" class="bg-admingray border border-grayBorder w-24 rounded-md text-white" id="12moPrice">
+                            </div>
+                        </div>
+                        <div class="flex gap-6">
+                            <div class="flex gap-2 flex-col text-white">
+                                <span>Courses Count</span>
+                                <input type="number" class="bg-admingray border border-grayBorder w-36 rounded-md text-white" id="coursesCount">
+                            </div>
+                            <div class="flex gap-2 flex-col text-white">
+                                <span>Members Count</span>
+                                <input type="number" class="bg-admingray border border-grayBorder w-36 rounded-md text-white" id="membersCount">
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <span class="text-white">VSL URL</span>
+                            <input type="text" id="vslUrl" class="w-full h-8 bg-admingray rounded-md border border-grayBorder text-white">
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <span class="text-white">Stripe URL</span>
+                            <input type="text" id="stripeUrl" class="w-full h-8 bg-admingray rounded-md border border-grayBorder text-white">
+                        </div>
+                        <button class="self-start mt-4 px-6 py-1 bg-green-500 hover:bg-green-700 transition-all rounded-md text-white font-semibold" id="saveGlobals">Save</button>
                     </div>
                 </div>
             </div>

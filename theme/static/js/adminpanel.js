@@ -3,15 +3,11 @@ document.addEventListener('DOMContentLoaded', function(){
 
     function calculateDateDistance(targetDate) {
         const currentDate = new Date()
-        console.log(`current date: ${currentDate}`)
         const target = new Date(targetDate)
-        console.log(`target date: ${target}`)
         target.setMonth(target.getMonth() + 1)
-        console.log(`target date: ${target}`)
 
         const diffInMs = target - currentDate
         const diffInDays = Math.round(diffInMs / (1000 * 60 * 60 * 24))
-        console.log(diffInDays)
 
         return diffInDays
     }
@@ -62,7 +58,6 @@ document.addEventListener('DOMContentLoaded', function(){
     async function populatePreCancel()
     {
         const data = await getData('../members', '613d7984-a0ee-4558-b026-9882ac5a97a6')
-        console.log(data)
         await insertHtmlPreCancel(data)
         await insertHtmlCanceled(data)
         await insertNumbers(data)
@@ -189,7 +184,6 @@ document.addEventListener('DOMContentLoaded', function(){
             color = 'text-mainRed'
             trashpath = '/static/img/trash.svg'
         }
-        console.log(`clicked delete on: ${email}`)
         const popupSubmit = document.getElementById("popup-submit")
         boundFunction = deleteUser.bind(null, email)
         popupSubmit.addEventListener('click', boundFunction)
@@ -235,8 +229,6 @@ document.addEventListener('DOMContentLoaded', function(){
 
     async function deleteUser(email)
     {
-        console.log(`delete user ${email}`)
-
         try {
             await deleteMember('../members/delete', '613d7984-a0ee-4558-b026-9882ac5a97a6', email)
             populatePreCancel()
@@ -252,4 +244,65 @@ document.addEventListener('DOMContentLoaded', function(){
         popup.classList.add('pointer-events-none')
         overlay.classList.add('opacity-0')
     }
+
+    //prices and variables
+    async function fetchPricesAndVariables() {
+        const data = await getData('../globals/', '613d7984-a0ee-4558-b026-9882ac5a97a6')
+        
+        const courses = data.globals.coursesCount
+        const users = data.globals.userCount
+        const oneMonth = data.globals.oneMonth
+        const threeMonth = data.globals.threeMonth
+        const twelveMonth = data.globals.twelveMonth
+        const vslUrl = data.globals.vslURL
+        const stripeUrl = data.globals.stripeURL
+
+        document.getElementById('coursesCount').value = courses
+        document.getElementById('membersCount').value = users
+        document.getElementById('1moPrice').value = oneMonth
+        document.getElementById('3moPrice').value = threeMonth
+        document.getElementById('12moPrice').value = twelveMonth
+        document.getElementById('vslUrl').value = vslUrl
+        document.getElementById('stripeUrl').value = stripeUrl
+    }
+
+    fetchPricesAndVariables()
+
+    async function patchGlobals(updatedData, apiKey) {
+        try {
+            const response = await fetch('/globals/update/', {
+                method: 'PATCH',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-API-Key': apiKey
+                },
+                body: JSON.stringify(updatedData)
+            })
+
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`)
+            }
+
+            setTimeout(() => {
+                window.location.reload()
+            }, 500);
+
+        } catch (error) {
+            console.error('Error fetching data: ', error)
+            throw error
+        }
+    }
+
+    const updatebtn = document.getElementById('saveGlobals')
+    updatebtn.addEventListener('click', async function(){
+        await patchGlobals({
+            'one_month_price': document.getElementById('1moPrice').value,
+            'three_month_price': document.getElementById('3moPrice').value,
+            'twelve_month_price': document.getElementById('12moPrice').value,
+            'user_count': document.getElementById('membersCount').value,
+            'courses_count': document.getElementById('coursesCount').value,
+            'vsl_url': document.getElementById('vslUrl').value,
+            'stripe_url': document.getElementById('stripeUrl').value
+        }, '613d7984-a0ee-4558-b026-9882ac5a97a6')
+    })
 })

@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.views.decorators.csrf import csrf_exempt
 import json
 from django.http import JsonResponse
-from .models import PaidMember
+from .models import PaidMember, Globals
 from django.conf import settings
 from .decorators import api_key_required
 from django.contrib.auth.decorators import login_required
@@ -10,8 +10,8 @@ from django.contrib.auth import login, authenticate
 from .forms import CustomLoginForm
 
 def home(request):
-    print(settings.API_KEY)
-    return render(request, 'home.html', {}) 
+    instance = Globals.get_instance()
+    return render(request, 'home.html', {'globals': instance}) 
 
 
 # GET View
@@ -21,6 +21,25 @@ def get_paid_members(request):
         members = list(PaidMember.objects.values())
         return JsonResponse({"members": members}, status = 200)
     return JsonResponse({"error": "Method not allowed"}, status = 405)
+
+@api_key_required
+def get_globals(request):
+    """Retrieve the singleton instance."""
+    if request.method == 'GET':
+        instance = Globals.get_instance()
+        return JsonResponse({
+            "globals": {
+                "oneMonth": instance.one_month_price, 
+                "threeMonth": instance.three_month_price, 
+                "twelveMonth": instance.twelve_month_price,
+                "userCount": instance.user_count,
+                "coursesCount": instance.courses_count,
+                "vslURL": instance.vsl_url,
+                "stripeURL": instance.stripe_url
+            }
+        }, status=200)
+
+    return JsonResponse({"error": "Method not allowed"}, status=405)
 
 # POST View
 @csrf_exempt
@@ -37,6 +56,29 @@ def create_paid_member(request):
             return JsonResponse({"id": member.id, "message": "Member created"}, status = 201)
         except Exception as e:
             return JsonResponse({"error": "Method not allowed"}, status = 405)
+        
+# PATCH View
+@csrf_exempt
+@api_key_required
+def patch_globals(request):
+    """Partially update the singleton instance."""
+    if request.method == 'PATCH':
+        try:
+            data = json.loads(request.body)  # Parse JSON request
+        except json.JSONDecodeError:
+            return JsonResponse({"error": "Invalid JSON"}, status=400)
+
+        instance = Globals.get_instance()
+
+        for key, value in data.items():
+            if hasattr(instance, key):  # Ensure field exists
+                setattr(instance, key, value)
+
+        instance.save()  # Save changes
+
+        return JsonResponse({"message": "Updated successfully"}, status=200)
+
+    return JsonResponse({"error": "Method not allowed"}, status=405)
         
 # DELETE View
 @csrf_exempt
