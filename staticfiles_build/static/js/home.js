@@ -66,6 +66,7 @@ document.addEventListener('DOMContentLoaded', function(){
     })
     const orderbtn = document.getElementById('order-btn')
     const order2btn = document.getElementById('order-2-btn')
+    const order3btn = document.getElementById('order-3-btn')
     function scrollToPrices()
     {
         const order = document.getElementById('order')
@@ -77,6 +78,7 @@ document.addEventListener('DOMContentLoaded', function(){
     }
     orderbtn.addEventListener('click', scrollToPrices)
     order2btn.addEventListener('click', scrollToPrices)
+    order3btn.addEventListener('click', scrollToPrices)
 
     const yt = document.getElementById('yt')
     yt.addEventListener('click', function(){
@@ -86,19 +88,5 @@ document.addEventListener('DOMContentLoaded', function(){
     const ig = document.getElementById('ig')
     ig.addEventListener('click', function(){
         window.open('https://www.instagram.com/kacper.chalcarz/', '_blank')
-    })
-
-    const oneMoBtn = document.getElementById('1mo-btn') 
-    const threeMoBtn = document.getElementById('3mo-btn') 
-    const twelveMoBtn = document.getElementById('12mo-btn')
-
-    oneMoBtn.addEventListener('click', function(){
-        window.open('https://www.skool.com/nowy-renesans/about', '_blank')
-    })
-    threeMoBtn.addEventListener('click', function(){
-        window.open('https://buy.stripe.com/7sI3e6fp92ece76eV1', '_blank')
-    })
-    twelveMoBtn.addEventListener('click', function(){
-        window.open('https://www.skool.com/nowy-renesans/about', '_blank')
     })
 })

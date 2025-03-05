@@ -247,23 +247,28 @@ document.addEventListener('DOMContentLoaded', function(){
 
     //prices and variables
     async function fetchPricesAndVariables() {
-        const data = await getData('../globals/', '613d7984-a0ee-4558-b026-9882ac5a97a6')
-        
-        const courses = data.globals.coursesCount
-        const users = data.globals.userCount
-        const oneMonth = data.globals.oneMonth
-        const threeMonth = data.globals.threeMonth
-        const twelveMonth = data.globals.twelveMonth
-        const vslUrl = data.globals.vslURL
-        const stripeUrl = data.globals.stripeURL
+        try {
+            const data = await getData('../globals/', '613d7984-a0ee-4558-b026-9882ac5a97a6')
+            
+            const courses = data.globals.coursesCount
+            const users = data.globals.userCount
+            const oneMonth = data.globals.oneMonth
+            const threeMonth = data.globals.threeMonth
+            const twelveMonth = data.globals.twelveMonth
+            const vslUrl = data.globals.vslURL
+            const stripeUrl = data.globals.stripeURL
+    
+            document.getElementById('coursesCount').value = courses
+            document.getElementById('membersCount').value = users
+            document.getElementById('1moPrice').value = oneMonth
+            document.getElementById('3moPrice').value = threeMonth
+            document.getElementById('12moPrice').value = twelveMonth
+            document.getElementById('vslUrl').value = vslUrl
+            document.getElementById('stripeUrl').value = stripeUrl
 
-        document.getElementById('coursesCount').value = courses
-        document.getElementById('membersCount').value = users
-        document.getElementById('1moPrice').value = oneMonth
-        document.getElementById('3moPrice').value = threeMonth
-        document.getElementById('12moPrice').value = twelveMonth
-        document.getElementById('vslUrl').value = vslUrl
-        document.getElementById('stripeUrl').value = stripeUrl
+        } catch (error) {
+            console.error('error', error)
+        }
     }
 
     fetchPricesAndVariables()
