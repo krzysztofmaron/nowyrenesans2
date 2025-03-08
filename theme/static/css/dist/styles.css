@@ -833,6 +833,10 @@ select{
   margin-top: 4rem;
 }
 
+.mt-32{
+  margin-top: 8rem;
+}
+
 .mt-4{
   margin-top: 1rem;
 }
@@ -853,8 +857,16 @@ select{
   margin-top: 2rem;
 }
 
+.mt-24{
+  margin-top: 6rem;
+}
+
 .mt-20{
   margin-top: 5rem;
+}
+
+.mt-10{
+  margin-top: 2.5rem;
 }
 
 .block{
@@ -1023,10 +1035,6 @@ select{
 
 .w-\[50vw\]{
   width: 50vw;
-}
-
-.w-\[60\%\]{
-  width: 60%;
 }
 
 .w-\[67vw\]{
@@ -1613,6 +1621,14 @@ input[type=number] {
 }
 
 @media (min-width: 768px){
+  .md\:mt-16{
+    margin-top: 4rem;
+  }
+
+  .md\:mt-0{
+    margin-top: 0px;
+  }
+
   .md\:flex{
     display: flex;
   }
@@ -1729,12 +1745,12 @@ input[type=number] {
     margin-left: 0px;
   }
 
-  .lg\:mt-72{
-    margin-top: 18rem;
-  }
-
   .lg\:mt-36{
     margin-top: 9rem;
+  }
+
+  .lg\:mt-72{
+    margin-top: 18rem;
   }
 
   .lg\:block{
