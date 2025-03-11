@@ -16,13 +16,13 @@
 		<div id="sparks-overlay" class="sparks w-full h-full">
 
 			<div id="hero" class="h-[100svh] w-full flex-col lg:flex-row flex gap-24 justify-center items-center">
-				<div class="flex flex-col gap-10 items-center lg:items-start">
-					<h1 class="text-white font-black text-3xl md:text-6xl text-center lg:text-left mt-6 md:mt-0">STAŃ SIĘ MĘŻCZYZNĄ<br>KTÓRYM ZAWSZE CHCIAŁEŚ BYĆ</h1>
-					<p class="text-neutral-400 text-md md:text-2xl text-center lg:text-left w-[80%] md:w-auto">Mężczyzna Nowego Renesansu to więcej niż bogactwo i atrakcyjność.<br>To mężczyzna kompletny - uosobienie intelektu, kultury i siły fizycznej.<br>Zdyscyplinowany, szanowany i niezastąpiony w każdej dziedzinie życia.</p>
+				<div class="flex flex-col gap-10 items-center lg:items-start xl:ml-12 2xl:ml-0">
+					<h1 class="text-white font-black text-3xl md:text-6xl xl:text-5xl 2xl:text-6xl text-center lg:text-left mt-6 md:mt-0">STAŃ SIĘ MĘŻCZYZNĄ<br>KTÓRYM ZAWSZE CHCIAŁEŚ BYĆ</h1>
+					<p class="text-neutral-400 text-md md:text-2xl xl:text-xl 2xl:text-2xl text-center lg:text-left w-[80%] md:w-auto">Mężczyzna Nowego Renesansu to więcej niż bogactwo i atrakcyjność.<br>To mężczyzna kompletny - uosobienie intelektu, kultury i siły fizycznej.<br>Zdyscyplinowany, szanowany i niezastąpiony w każdej dziedzinie życia.</p>
 					<div class="flex flex-col md:flex-row gap-4 md:gap-10 items-center text-white text-md md:text-xl lg:text-2xl">
-						<button id="order-btn" class="bg-mainRed font-bold rounded-md h-10 w-56 md:h-16 md:w-72">Zacznij Teraz</button>
+						<button id="order-btn" class="bg-mainRed font-bold rounded-md h-10 w-56 md:h-16 md:w-72 xl:w-56 xl:h-14 2xl:w-72 2xl:h-16">Zacznij Teraz</button>
 						<p class="font-light">lub</p>
-						<button id="vsl-btn" class="bg-red10 border border-mainRed rounded-md h-10 w-56 md:h-16 md:w-72 font-bold backdrop-blur-sm">Obejrzyj Wideo</button>
+						<button id="vsl-btn" class="bg-red10 border border-mainRed rounded-md h-10 w-56 md:h-16 md:w-72 xl:w-56 xl:h-14 2xl:w-72 2xl:h-16 font-bold backdrop-blur-sm">Obejrzyj Wideo</button>
 					</div>
 					<div class="flex text-neutral-400 gap-4 md:gap-24 mt-6 md:mt-16">
 						<div class="flex flex-col items-center">
@@ -36,7 +36,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="hidden lg:flex relative lg:w-[28vw] lg:h-[28vw]">
+				<div class="hidden lg:flex relative lg:w-[28vw] lg:h-[28vw] lg:min-w-[28vw] lg:min-h-[28vw] xl:mr-12 2xl:mr-0">
 					<img src="{% static 'img/nrBig.png' %}" alt="" class="w-[100%] h-[100%]">
 					<div class="absolute left-0 top-0 w-full h-full rounded-[50%] bg-redTransparent blur-3xl"></div>
 				</div>
@@ -121,8 +121,8 @@
 			<!-- CONTENT SECTION -->
 			<div class="flex flex-col items-center gap-24 mt-40">
 				<h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-black text-center">CO ZNAJDUJE SIĘ W ŚRODKU</h1>
-				<div class="flex flex-col lg:flex-row gap-8 items-center lg:items-start justify-center">
-					<div class="flex flex-col w-[80%] lg:w-[28%] gap-4">
+				<div class="flex flex-col lg:flex-row gap-8 xl:gap-16 2xl:gap-8 items-center lg:items-start justify-center">
+					<div class="flex flex-col w-[80%] lg:w-[28%] xl:w-[35%] 2xl:w-[28%] gap-4">
 						<div class="flex items-center gap-4">
 							<h1 class="text-5xl md:text-6xl lg:text-7xl text-mainRed font-black">{{ globals.courses_count }}+</h1>
 							<h1 class="text-2xl md:text-3xl lg:text-4xl text-white font-black">EKSKLUZYWNYCH<br>PROGRAMÓW</h1>
@@ -137,7 +137,7 @@
 						<img src="{% static 'img/kursy.png' %}" class="w-full">
 					</div>
 				</div>
-				<div class="flex lg:grid flex-col grid-rows-2 grid-cols-2 gap-8 w-[80%] lg:w-[70%]">
+				<div class="flex lg:grid flex-col grid-rows-2 grid-cols-2 gap-8 xl:gap-16 2xl:gap-8 w-[80%] lg:w-[70%]">
 
 					<div class="flex flex-col gap-4 p-4 bg-darkBg border border-darkgray rounded-xl">
 						<div class="flex items-center gap-4">
@@ -199,9 +199,9 @@
 					<div class="flex flex-col gap-4 p-4 bg-darkgray border border-mainRed backdrop-blur-md rounded-xl w-full lg:w-[80%] custom-gradient-bg red-shadow-2 h-56 md:h-48 lg:h-64">
 						<div class="flex items-center gap-4">
 							<img src="{% static 'img/bookred.svg' %}" class="select-none w-8">
-							<span class="text-white font-bold text-xl md:text-2xl lg:text-3xl">Wiedza</span>
+							<span class="text-white font-bold text-xl md:text-2xl lg:text-3xl xl:text-2xl 2xl:text-3xl">Wiedza</span>
 						</div>
-						<p class="text-neutral-400 leading-loose text-sm md:text-lg lg:text-xl">
+						<p class="text-neutral-400 leading-loose text-sm md:text-lg lg:text-xl xl:text-base 2xl:text-xl">
 							Zdobądź proste wskazówki i sprawdzone sposoby, które krok po kroku pomogą Ci odzyskać kontrolę nad swoim życiem. 
 							A następnie stać się pewnym siebie, wartościowym i atrakcyjnym mężczyzną.
 						</p>
@@ -210,9 +210,9 @@
 					<div class="flex flex-col gap-4 p-4 bg-darkgray border border-mainRed backdrop-blur-md rounded-xl w-full lg:w-[80%] custom-gradient-bg red-shadow-2 h-56 md:h-48 lg:h-64">
 						<div class="flex items-center gap-4">
 							<img src="{% static 'img/help.svg' %}" class="select-none w-8">
-							<span class="text-white font-bold text-xl md:text-2xl lg:text-3xl">Wsparcie</span>
+							<span class="text-white font-bold text-xl md:text-2xl lg:text-3xl xl:text-2xl 2xl:text-3xl">Wsparcie</span>
 						</div>
-						<p class="text-neutral-400 leading-loose text-sm md:text-lg lg:text-xl">
+						<p class="text-neutral-400 leading-loose text-sm md:text-lg lg:text-xl xl:text-base 2xl:text-xl">
 							Dołącz do społeczności ludzi takich jak Ty, którzy uczynią Twoją drogę łatwiejszą i przyjemniejszą. 
 							Przetrwasz trudniejsze chwile, nie poddasz się i ostatecznie osiągniesz swoje upragnione cele.
 						</p>
@@ -221,9 +221,9 @@
 					<div class="flex flex-col gap-4 p-4 bg-darkgray border border-mainRed backdrop-blur-md rounded-xl w-full lg:w-[80%] custom-gradient-bg red-shadow-2 h-56 md:h-48 lg:h-64">
 						<div class="flex items-center gap-4">
 							<img src="{% static 'img/individuality.svg' %}" class="select-none w-8">
-							<span class="text-white font-bold text-xl md:text-2xl lg:text-3xl">Indywidualne podejście</span>
+							<span class="text-white font-bold text-xl md:text-2xl lg:text-3xl xl:text-2xl 2xl:text-3xl">Indywidualne podejście</span>
 						</div>
-						<p class="text-neutral-400 leading-loose text-sm md:text-lg lg:text-xl">
+						<p class="text-neutral-400 leading-loose text-sm md:text-lg lg:text-xl xl:text-base 2xl:text-xl">
 							Zdobądź porady od Kacpra, które pomogą Ci rozwiązać Twoje problemy. 
 							Dzięki temu przestaniesz czuć się bezradny, zyskasz pewność siebie i będziesz wiedział, co robić dalej.
 						</p>
@@ -244,8 +244,8 @@
 						<img src="{% static 'img/path-right.svg' %}" class="select-none h-52 hidden lg:block">
 						<img src="{% static 'img/path-right-tablet.svg' %}" class="select-none h-52 lg:hidden">
 						<div class="min-w-[40vw] max-w-[40vw] lg:min-w-[25vw] lg:max-w-[25vw] my-4 h-44 bg-tGray backdrop-blur-sm rounded-xl flex flex-col px-4 py-2 gap-4">
-							<h1 class="font-bold text-white md:text-xl lg:text-2xl"><span class="md:text-3xl lg:text-4xl text-mainRed font-extrabold">1 </span>MIESIĄC</h1>
-							<p class="text-neutral-400 leading-relaxed md:text-md lg:text-lg">
+							<h1 class="font-bold text-white md:text-xl lg:text-2xl xl:text-xl 2xl:text-2xl"><span class="md:text-3xl lg:text-4xl xl:text-3xl 2xl:text-4xl text-mainRed font-extrabold">1 </span>MIESIĄC</h1>
+							<p class="text-neutral-400 leading-relaxed md:text-md lg:text-lg xl:text-base 2xl:text-lg">
 								W pierwszym miesiącu odblokujesz dostęp do cotygodniowych spotkań live oraz kursów w Nowym Renesansie.
 							</p>
 						</div>
@@ -253,8 +253,8 @@
 					<!-- 3 MIESIĄCE -->
 					<div class="flex justify-center items-center gap-6">
 						<div class="min-w-[40vw] max-w-[40vw] lg:min-w-[25vw] lg:max-w-[25vw] my-4 h-44 bg-tGray backdrop-blur-sm rounded-xl flex flex-col px-4 py-2 gap-4">
-							<h1 class="font-bold text-white md:text-xl lg:text-2xl"><span class="md:text-3xl lg:text-4xl text-mainRed font-extrabold">3 </span>MIESIĄCE</h1>
-							<p class="text-neutral-400 leading-relaxed md:text-md lg:text-lg">
+							<h1 class="font-bold text-white md:text-xl lg:text-2xl xl:text-xl 2xl:text-2xl"><span class="md:text-3xl lg:text-4xl xl:text-3xl 2xl:text-4xl text-mainRed font-extrabold">3 </span>MIESIĄCE</h1>
+							<p class="text-neutral-400 leading-relaxed md:text-md lg:text-lg xl:text-base 2xl:text-lg">
 								Dostęp do spotkań "in real life" organizowanych w kluczowych miastach - pozwala budować i zacieśniać relacje offline.
 							</p>
 						</div>
@@ -268,8 +268,8 @@
 						<img src="{% static 'img/path-right.svg' %}" class="select-none h-52 hidden lg:block">
 						<img src="{% static 'img/path-right-tablet.svg' %}" class="select-none h-52 lg:hidden">
 						<div class="min-w-[40vw] max-w-[40vw] lg:min-w-[25vw] lg:max-w-[25vw] my-4 h-44 bg-tGray backdrop-blur-sm rounded-xl flex flex-col px-4 py-2 gap-4">
-							<h1 class="font-bold text-white md:text-xl lg:text-2xl"><span class="md:text-3xl lg:text-4xl text-mainRed font-extrabold">6 </span>MIESIĘCY</h1>
-							<p class="text-neutral-400 leading-relaxed md:text-md lg:text-lg">
+							<h1 class="font-bold text-white md:text-xl lg:text-2xl xl:text-xl 2xl:text-2xl"><span class="md:text-3xl lg:text-4xl xl:text-3xl 2xl:text-4xl text-mainRed font-extrabold">6 </span>MIESIĘCY</h1>
+							<p class="text-neutral-400 leading-relaxed md:text-md lg:text-lg xl:text-base 2xl:text-lg">
 								Po tym czasie odblokujesz indywidualną, 30-minutowa konsultacja online z Kacprem, oraz odznaka "Półroczny członek".
 							</p>
 						</div>
@@ -277,8 +277,8 @@
 					<!-- 9 MIESIĘCY -->
 					<div class="flex justify-center items-center gap-6">
 						<div class="min-w-[40vw] max-w-[40vw] lg:min-w-[25vw] lg:max-w-[25vw] my-4 h-44 bg-tGray backdrop-blur-sm rounded-xl flex flex-col px-4 py-2 gap-4">
-							<h1 class="font-bold text-white md:text-xl lg:text-2xl"><span class="md:text-3xl lg:text-4xl text-mainRed font-extrabold">9 </span>MIESIĘCY</h1>
-							<p class="text-neutral-400 leading-relaxed md:text-md lg:text-lg">
+							<h1 class="font-bold text-white md:text-xl lg:text-2xl xl:text-xl 2xl:text-2xl"><span class="md:text-3xl lg:text-4xl xl:text-3xl 2xl:text-4xl text-mainRed font-extrabold">9 </span>MIESIĘCY</h1>
+							<p class="text-neutral-400 leading-relaxed md:text-md lg:text-lg xl:text-base 2xl:text-lg">
 								Specjalna Koszulka Nowego Renesansu - ze spersonalizowanym cytatem motywacyjnym, wybranym przez uczestnika.
 							</p>
 						</div>
@@ -292,8 +292,8 @@
 						<img src="{% static 'img/path-right.svg' %}" class="select-none h-52 hidden lg:block">
 						<img src="{% static 'img/path-right-tablet.svg' %}" class="select-none h-52 lg:hidden">
 						<div class="min-w-[40vw] max-w-[40vw] lg:min-w-[25vw] lg:max-w-[25vw] my-4 h-44 custom-gradient-bg border border-mainRed backdrop-blur-sm rounded-xl flex flex-col px-4 py-2 gap-4">
-							<h1 class="font-bold text-white md:text-xl lg:text-2xl"><span class="md:text-3xl lg:text-4xl text-mainRed font-extrabold">12 </span>MIESIĘCY (1 ROK)</h1>
-							<p class="text-neutral-400 leading-relaxed md:text-md lg:text-lg">
+							<h1 class="font-bold text-white md:text-xl lg:text-2xl xl:text-xl 2xl:text-2xl"><span class="md:text-3xl lg:text-4xl xl:text-3xl 2xl:text-4xl text-mainRed font-extrabold">12 </span>MIESIĘCY (1 ROK)</h1>
+							<p class="text-neutral-400 leading-relaxed md:text-md lg:text-lg xl:text-base 2xl:text-lg">
 								Po tym czasie odblokujesz limitowany dostęp do ekskluzywnego tajnego kursu wideo + dyplom "Roczny członek społeczności".
 							</p>
 						</div>
@@ -301,8 +301,8 @@
 					<!-- 24 MIESIĄCE -->
 					<div class="flex justify-center items-center gap-6">
 						<div class="min-w-[40vw] max-w-[40vw] lg:min-w-[25vw] lg:max-w-[25vw] my-4 h-44 backdrop-blur-sm rounded-xl px-4 py-2 custom-gradient-bg border border-mainRed flex flex-col gap-4">
-							<h1 class="font-bold text-white md:text-xl lg:text-2xl"><span class="md:text-3xl lg:text-4xl text-mainRed font-extrabold">24 </span>MIESIĄCE (2 LATA)</h1>
-							<p class="text-neutral-400 leading-relaxed md:text-md lg:text-lg">
+							<h1 class="font-bold text-white md:text-xl lg:text-2xl xl:text-xl 2xl:text-2xl"><span class="md:text-3xl lg:text-4xl xl:text-3xl 2xl:text-4xl text-mainRed font-extrabold">24 </span>MIESIĄCE (2 LATA)</h1>
+							<p class="text-neutral-400 leading-relaxed md:text-md lg:text-lg xl:text-base 2xl:text-lg">
 								Koszulka premium, kubek, ekskluzywny notatnik Nowego Renesansu, oraz zaproszenie VIP na spotkanie z Kacprem na żywo.
 							</p>
 						</div>
@@ -316,8 +316,8 @@
 						<img src="{% static 'img/path-last.svg' %}" class="select-none h-52 hidden lg:block">
 						<img src="{% static 'img/path-last-tablet.svg' %}" class="select-none h-52 lg:hidden">
 						<div class="min-w-[40vw] max-w-[40vw] lg:min-w-[25vw] lg:max-w-[25vw] my-4 h-44 custom-gradient-bg border border-mainRed backdrop-blur-sm rounded-xl flex flex-col px-4 py-2 gap-4">
-							<h1 class="font-bold text-white md:text-xl lg:text-2xl"><span class="md:text-3xl lg:text-4xl text-mainRed font-extrabold">ORAZ </span>WIĘCEJ BONUSÓW</h1>
-							<p class="text-neutral-400 leading-relaxed md:text-md lg:text-lg">
+							<h1 class="font-bold text-white md:text-xl lg:text-2xl xl:text-xl 2xl:text-2xl"><span class="md:text-3xl lg:text-4xl xl:text-3xl 2xl:text-4xl text-mainRed font-extrabold">ORAZ </span>WIĘCEJ BONUSÓW</h1>
+							<p class="text-neutral-400 leading-relaxed md:text-md lg:text-lg xl:text-base 2xl:text-lg">
 								W Nowym Renesansie, użytkownicy otrzymują bonusy również za czas w społeczności. (dodatkowe kursy, przedpremierowe publikacje itd.)
 							</p>
 						</div>
